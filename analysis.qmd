@@ -1,0 +1,72 @@
+---
+title: "social-rl prelim analysis"
+format: html
+---
+
+Packages.
+
+```{r}
+library(here)
+library(tidyverse)
+library(janitor)
+```
+
+Load data. 
+
+```{r}
+d_raw <- read_csv(here("data","AMGDB.gamelogs.csv")) |>
+  clean_names() 
+```
+Clean up data. 
+
+```{r}
+d <- d_raw |>
+  filter(!is.na(condition_index)) |>
+  select(-id, -v)
+```
+
+# Descriptives
+
+```{r}
+d |>
+  select(uid) |>
+  distinct() |>
+  count()
+```
+```{r}
+d |>
+  group_by(uid) |>
+  summarise(time = max(timestamp) - min(timestamp))
+```
+
+
+# Main analysis
+
+Aggregation. 
+
+
+```{r}
+participant_block_scores <- d |> 
+  group_by(uid, condition_index, teacher, block_index, game_type) |>
+  summarise(total_reward = max(total_reward))
+```
+
+```{r}
+mean_block_scores <- participant_block_scores |>
+  group_by(uid, condition_index) |>
+  arrange(uid, condition_index, block_index, game_type) |>
+  mutate(teacher_condition = teacher[!is.na(teacher)][1], 
+         block_condition = reduce(game_type, paste)) |>
+  group_by(teacher_condition, block_condition, block_index, game_type) |>
+  summarize(mean_reward = mean(total_reward))
+```
+
+
+```{r}
+ggplot(mean_block_scores, 
+       aes(x = block_index, y = mean_reward, col = teacher_condition)) +
+  facet_wrap(~block_condition) + 
+  geom_point(aes(shape = game_type)) +
+  geom_line()
+```
+
