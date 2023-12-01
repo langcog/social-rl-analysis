@@ -58,7 +58,10 @@ mean_block_scores <- participant_block_scores |>
   mutate(teacher_condition = teacher[!is.na(teacher)][1], 
          block_condition = reduce(game_type, paste)) |>
   group_by(teacher_condition, block_condition, block_index, game_type) |>
-  summarize(mean_reward = mean(total_reward))
+  summarize(mean_reward = mean(total_reward),
+            sd_reward = sd(total_reward), 
+            sem_reward = sd(total_reward)/sqrt(length(total_reward)),
+            ci_reward = 1.96 * sem_reward)
 ```
 
 
@@ -66,7 +69,9 @@ mean_block_scores <- participant_block_scores |>
 ggplot(mean_block_scores, 
        aes(x = block_index, y = mean_reward, col = teacher_condition)) +
   facet_wrap(~block_condition) + 
-  geom_point(aes(shape = game_type)) +
+  geom_pointrange(aes(shape = game_type, ymin = mean_reward - ci_reward, 
+                      ymax = mean_reward + ci_reward), 
+                  position = position_dodge(width = .1)) +
   geom_line()
 ```
 
