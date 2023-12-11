@@ -14,16 +14,42 @@ library(janitor)
 Load data. 
 
 ```{r}
-d_raw <- read_csv(here("data","AMGDB.gamelogs.csv")) |>
+run <- "pilota"
+```
+
+```{r}
+if (run == "pilota"){
+  d_raw <- read_csv(here("data","amg_gamelogs_pilota.csv")) |>
   clean_names() 
+} else if (run == "pilotb") {
+  d_raw <- read_csv(here("data","amg_gamelogs_pilotb.csv")) |>
+  clean_names() 
+} else if (run == "exp1") {
+  d_raw <- read_csv(here("data","amg_gamelogs_experiment1.csv")) |>
+  clean_names() 
+}
+
 ```
 Clean up data. 
 
 ```{r}
-d <- d_raw |>
+if (run == "pilota"){
+    d <- d_raw |>
+    filter(!is.na(condition_index)) |>
+    select(-id, -v)
+} else if (run == "pilotb") { 
+  d <- d_raw |>
+  filter(prolific_id!="Julio_test") |>
+  filter(uid!="lpz173o40.k42j9exeqx") |>
   filter(!is.na(condition_index)) |>
   select(-id, -v)
+} else if (run == "exp1") { 
+  d <- d_raw
+}
+
+  
 ```
+
 
 # Descriptives
 
