@@ -1,0 +1,98 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+Packages.
+
+```{r}
+library(here)
+library(tidyverse)
+library(janitor)
+```
+
+
+```{r}
+demographics <- read_csv(here("data","prolific_demographics_experiment2.csv"))
+experiment <- read_csv(here("data", "amg_gamelogs_experiment2.csv"))
+
+# Get list of participants with a return code and who are not colorblind
+filtered_demographics_df <- demographics |>
+  filter(`Completion code` == 'CTVM94DF') |>
+  filter(Colourblindness != "Yes, I'm colourblind")
+
+participant_ids <- filtered_demographics_df$`Participant id`
+
+# filter out participants who refreshed their page
+ids_to_remove <- filtered_experiment_df |>
+    filter(refresh_count > 0) |>
+    distinct(prolific_id) |>
+    pull(prolific_id)
+
+filtered_experiment_df <- experiment |>
+  filter(prolific_id %in% participant_ids) |> # Keep only participants with no colorblindness and a return code
+  filter(prolific_id != '6509ef2182c4abf47b1cb961') |> # user gas a watch game_type with block_index=2 -- bug, use  filter(block_index == 2, game_type == 'watch') to find
+  filter(game_type != 'practice') |> # filter out practice trials 
+  filter(game_type != 'complete') |> # filter out complete trials -- note that they completed the experiment
+  filter(!prolific_id %in% ids_to_remove) # filter out participants who refreshed their page
+filtered_experiment_df
+
+filtered_experiment_df |>
+  group_by(prolific_id) |>
+  summarise(time = max(timestamp) - min(timestamp)) |>
+  ungroup()
+
+# Preprocessing 
+preprocessed_experiment_df <-  filtered_experiment_df |>
+  mutate(
+    teacher = ifelse(block_id == "block_type3", "None", teacher),  # Updating 'teacher' column
+    block_condition = case_when(
+      block_id == "block_type1" ~ "play watch play",
+      block_id == "block_type2" ~ "watch play play",
+      block_id == "block_type3" ~ "play play play",
+      TRUE ~ NA_character_  # Handle other cases (if any)
+    )
+  ) |>
+  mutate(teacher = ifelse(block_id == "block_type3", "no demo", teacher)) |>
+  group_by(prolific_id, condition_index, block_condition) |>
+  mutate(teacher = ifelse(all(is.na(teacher)), NA, first(na.omit(teacher))))  |> # Replace NA values in 'teacher' column with the non-NA value in the group
+
+  arrange(prolific_id, condition_index, block_index, game_type) |>
+  ungroup() |>
+  select(prolific_id, step, position, action, block_condition, teacher, game_type, block_id, condition_index, block_index, condition_count_index , total_reward, refresh_count)
+preprocessed_experiment_df
+
+# Summarize per group
+summarized_rewards_df <- preprocessed_experiment_df |>
+  group_by(prolific_id, condition_index, condition_count_index, block_condition, teacher, block_index, game_type) |>
+  summarise(total_reward = max(total_reward)) |>
+  ungroup() |>
+  select(teacher, block_condition, block_index, game_type, condition_index, condition_count_index, total_reward)
+summarized_rewards_df$method <- "participants"
+  
+summarized_rewards_df
+write_csv(summarized_rewards_df, here("data","exp2_human_performance.csv"))
+```
+
+```{r}
+combined_scores <- summarized_rewards_df #bind_rows(human_scores, model_scores)
+
+mean_block_scores <- combined_scores |>
+  group_by(teacher, block_condition, block_index, game_type) |>
+  summarize(mean_reward = mean(total_reward),
+            sd_reward = sd(total_reward),
+            sem_reward = sd(total_reward)/sqrt(length(total_reward)),
+            ci_reward = 1.96 * sem_reward)
+mean_block_scores
+
+
+ggplot(mean_block_scores, 
+       aes(x = block_index, y = mean_reward, col = teacher)) +
+  facet_wrap(~block_condition) + 
+  geom_pointrange(aes(shape = game_type, ymin = mean_reward - ci_reward, 
+                      ymax = mean_reward + ci_reward), 
+                  position = position_dodge(width = .1)) +
+  labs( x = "block index", y = "mean reward") +
+  geom_line()
+```

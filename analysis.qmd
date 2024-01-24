@@ -14,7 +14,7 @@ library(janitor)
 Load data. 
 
 ```{r}
-run <- "pilota"
+run <- "exp1"
 ```
 
 ```{r}
@@ -28,6 +28,7 @@ if (run == "pilota"){
   d_raw <- read_csv(here("data","amg_gamelogs_experiment1.csv")) |>
   clean_names() 
 }
+d_raw
 
 ```
 Clean up data. 
@@ -42,20 +43,76 @@ if (run == "pilota"){
   filter(prolific_id!="Julio_test") |>
   filter(uid!="lpz173o40.k42j9exeqx") |>
   filter(!is.na(condition_index)) |>
-  select(-id, -v)
+  select(-id, -v, -payoffs, -payoffs_id, -policy)
+  
+  # Remove users who refresh their web-browser
+  ids_to_remove <- d |>
+    filter(refresh_count > 0) |>
+    distinct(prolific_id) |>
+    pull(prolific_id)
+  
+  d <- d |>
+    filter(!prolific_id %in% ids_to_remove)
+  
+  
 } else if (run == "exp1") { 
-  d <- d_raw
+  prolific_ids_to_remove <- c('650c562d8a6ee3fcc26ee7ba', unique(filter(d_raw, refresh_count > 0)$prolific_id) )
+  uids_to_remove <- c("lq1fvt8g0.ohk0zzv23oa", "lq1guank0.7qsa7lr1yjq", "lq1gdwe80.5ogj3d9flwk")
+  
+  d <- d_raw |>
+    filter(!prolific_id %in% prolific_ids_to_remove) |>
+    filter(!uid %in% uids_to_remove) |>
+    filter(!is.na(condition_index)) |>
+    select(-id, -v, -payoffs, -payoffs_id, -policy)
 }
 
-  
+d  
 ```
+
+```{r}
+# Assuming your dataframe is named df
+# Check for condition_count_index
+df <- d
+
+uids_condition_count <- df |> 
+  group_by(uid, condition_index, block_index) |> 
+  summarise(unique_condition_count = n_distinct(condition_count_index)) |> 
+  filter(unique_condition_count != 2) |> 
+  pull(uid)
+
+# Check for block_index
+uids_block <- df |> 
+  group_by(uid, condition_index) |> 
+  summarise(unique_blocks = n_distinct(block_index)) |> 
+  filter(unique_blocks != 3) |> 
+  pull(uid)
+
+# Check for condition_index
+uids_condition <- df |> 
+  group_by(uid) |> 
+  summarise(unique_conditions = n_distinct(condition_index)) |> 
+  filter(unique_conditions != 4) |> 
+  pull(uid)
+
+# Combine all uids and get unique values
+uids_not_satisfying <- unique(c(uids_condition_count, uids_block, uids_condition))
+
+# View the uids that do not satisfy the criteria
+print(uids_not_satisfying)
+
+d <- d |>
+    filter(!uid %in% uids_not_satisfying)
+
+
+```
+
 
 
 # Descriptives
 
 ```{r}
 d |>
-  select(uid) |>
+  select(prolific_id) |>
   distinct() |>
   count()
 ```
@@ -65,17 +122,31 @@ d |>
   summarise(time = max(timestamp) - min(timestamp))
 ```
 
-
 # Main analysis
 
 Aggregation. 
-
-
 ```{r}
 participant_block_scores <- d |> 
   group_by(uid, condition_index, teacher, block_index, game_type) |>
   summarise(total_reward = max(total_reward))
+participant_block_scores
 ```
+
+```{r}
+mean_block_scores <- participant_block_scores |>
+  group_by(uid, condition_index) |>
+  arrange(uid, condition_index, block_index, game_type) |>
+  mutate(teacher_condition = teacher[!is.na(teacher)][1], 
+         block_condition = reduce(game_type, paste)) |>
+  group_by(teacher_condition, block_condition, block_index, game_type) |>
+  select(teacher_condition, block_condition, block_index, game_type, condition_index, total_reward)
+
+mean_block_scores$method <- "participants"
+  
+mean_block_scores
+write_csv(mean_block_scores, here("data","exp1_human_performance.csv"))
+```
+
 
 ```{r}
 mean_block_scores <- participant_block_scores |>
@@ -88,6 +159,7 @@ mean_block_scores <- participant_block_scores |>
             sd_reward = sd(total_reward), 
             sem_reward = sd(total_reward)/sqrt(length(total_reward)),
             ci_reward = 1.96 * sem_reward)
+mean_block_scores
 ```
 
 
@@ -98,6 +170,7 @@ ggplot(mean_block_scores,
   geom_pointrange(aes(shape = game_type, ymin = mean_reward - ci_reward, 
                       ymax = mean_reward + ci_reward), 
                   position = position_dodge(width = .1)) +
+  labs( x = "block index", y = "mean reward") +
   geom_line()
 ```
 
