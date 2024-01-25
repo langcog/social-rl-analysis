@@ -14,8 +14,9 @@ library(janitor)
 
 
 ```{r}
-demographics <- read_csv(here("data","prolific_demographics_experiment2.csv"))
-experiment <- read_csv(here("data", "amg_gamelogs_experiment2.csv"))
+demographics <- read_csv(here("data","prolific_demographics_experiment2.csv")) 
+experiment <- read_csv(here("data", "amg_gamelogs_experiment2.csv")) |>
+  clean_names() 
 
 # Get list of participants with a return code and who are not colorblind
 filtered_demographics_df <- demographics |>
@@ -23,9 +24,10 @@ filtered_demographics_df <- demographics |>
   filter(Colourblindness != "Yes, I'm colourblind")
 
 participant_ids <- filtered_demographics_df$`Participant id`
+prolific_ids_with_logging_errors <- c('5eaa5d8b040c211e56dc98c0', '5f1215c24862ae13032bad4e', '610898813e48dc2864965122', '655fd299a33617af94bb00ee', '6561f9edfd7315a2f858adff', '656f47c38d6a2aa50bccb845')
 
 # filter out participants who refreshed their page
-ids_to_remove <- filtered_experiment_df |>
+prolific_ids_to_remove <- experiment |>
     filter(refresh_count > 0) |>
     distinct(prolific_id) |>
     pull(prolific_id)
@@ -35,13 +37,10 @@ filtered_experiment_df <- experiment |>
   filter(prolific_id != '6509ef2182c4abf47b1cb961') |> # user gas a watch game_type with block_index=2 -- bug, use  filter(block_index == 2, game_type == 'watch') to find
   filter(game_type != 'practice') |> # filter out practice trials 
   filter(game_type != 'complete') |> # filter out complete trials -- note that they completed the experiment
-  filter(!prolific_id %in% ids_to_remove) # filter out participants who refreshed their page
+  filter(!prolific_id %in% prolific_ids_to_remove) |> # filter out participants who refreshed their page
+  filter(!prolific_id %in% prolific_ids_with_logging_errors) |> # filter out participants with logging errors
+  select(-id, -`v`, -payoffs, -policy) 
 filtered_experiment_df
-
-filtered_experiment_df |>
-  group_by(prolific_id) |>
-  summarise(time = max(timestamp) - min(timestamp)) |>
-  ungroup()
 
 # Preprocessing 
 preprocessed_experiment_df <-  filtered_experiment_df |>
@@ -54,32 +53,43 @@ preprocessed_experiment_df <-  filtered_experiment_df |>
       TRUE ~ NA_character_  # Handle other cases (if any)
     )
   ) |>
-  mutate(teacher = ifelse(block_id == "block_type3", "no demo", teacher)) |>
+  mutate(teacher = ifelse(block_id == "block_type3", "no teacher", teacher)) |>
   group_by(prolific_id, condition_index, block_condition) |>
   mutate(teacher = ifelse(all(is.na(teacher)), NA, first(na.omit(teacher))))  |> # Replace NA values in 'teacher' column with the non-NA value in the group
-
-  arrange(prolific_id, condition_index, block_index, game_type) |>
+  #arrange(prolific_id, condition_index, block_index, game_type) |>
   ungroup() |>
-  select(prolific_id, step, position, action, block_condition, teacher, game_type, block_id, condition_index, block_index, condition_count_index , total_reward, refresh_count)
+  rename('teacher_condition' = 'teacher')
 preprocessed_experiment_df
+write_csv(preprocessed_experiment_df, here("data","preprocessed_gamelogs_experiment2.csv"))
 
 # Summarize per group
 summarized_rewards_df <- preprocessed_experiment_df |>
-  group_by(prolific_id, condition_index, condition_count_index, block_condition, teacher, block_index, game_type) |>
+  select(prolific_id, step, position, action, block_condition, teacher_condition, game_type, block_id, condition_index, block_index, condition_count_index , total_reward, refresh_count) |>
+  group_by(prolific_id, condition_index, condition_count_index, block_condition, teacher_condition, block_index, game_type) |>
   summarise(total_reward = max(total_reward)) |>
   ungroup() |>
-  select(teacher, block_condition, block_index, game_type, condition_index, condition_count_index, total_reward)
+  select(teacher_condition, block_condition, block_index, game_type, condition_index, condition_count_index, total_reward)
 summarized_rewards_df$method <- "participants"
   
 summarized_rewards_df
 write_csv(summarized_rewards_df, here("data","exp2_human_performance.csv"))
+
+# compute avg time taken to complete
+filtered_experiment_df |>
+  group_by(prolific_id) |>
+  summarise(time = max(timestamp) - min(timestamp)) |>
+  ungroup()
+```
+```{r}
+model_scores <- read_csv(here("data", "exp2_model_performance.csv"))
+model_scores
 ```
 
 ```{r}
 combined_scores <- summarized_rewards_df #bind_rows(human_scores, model_scores)
 
 mean_block_scores <- combined_scores |>
-  group_by(teacher, block_condition, block_index, game_type) |>
+  group_by(teacher_condition, block_condition, block_index, game_type) |>
   summarize(mean_reward = mean(total_reward),
             sd_reward = sd(total_reward),
             sem_reward = sd(total_reward)/sqrt(length(total_reward)),
@@ -88,11 +98,75 @@ mean_block_scores
 
 
 ggplot(mean_block_scores, 
-       aes(x = block_index, y = mean_reward, col = teacher)) +
+       aes(x = block_index, y = mean_reward, col = teacher_condition)) +
   facet_wrap(~block_condition) + 
   geom_pointrange(aes(shape = game_type, ymin = mean_reward - ci_reward, 
                       ymax = mean_reward + ci_reward), 
                   position = position_dodge(width = .1)) +
   labs( x = "block index", y = "mean reward") +
   geom_line()
+```
+
+
+```{r}
+combined_scores <- model_scores #bind_rows(human_scores, model_scores)
+
+mean_block_scores <- combined_scores |>
+  group_by(teacher_condition, block_condition, block_index, game_type, method) |>
+  summarize(mean_reward = mean(total_reward),
+            sd_reward = sd(total_reward),
+            sem_reward = sd(total_reward)/sqrt(length(total_reward)),
+            ci_reward = 1.96 * sem_reward)
+
+mean_block_scores <- mean_block_scores |>
+    mutate(block_index_char = case_when(
+    block_condition == "play watch play" & block_index == 0 ~ "1st-Play",
+    block_condition == "play watch play" & block_index == 2 ~ "2nd-Play",
+    block_condition == "watch play play" & block_index == 1 ~ "1st-Play",
+    block_condition == "watch play play" & block_index == 2 ~ "2nd-Play",
+    block_condition == "play play play" & block_index == 0 ~ "1st-Play",
+    block_condition == "play play play" & block_index == 1 ~ "2nd-Play",
+    block_condition == "play play play" & block_index == 2 ~ "3rd-Play",
+    TRUE ~ as.character(block_index)  # Keep other values as they are, converting to character
+  )) |>
+  filter(!(block_condition == "play play play" & block_index == 2)) |>
+  mutate(play_index = case_when(
+    block_index_char == "1st-Play" ~ 0,
+    block_index_char == "2nd-Play" ~ 1,
+    TRUE ~ NA_real_  # Assign NA for cases that do not match the above conditions
+  ))
+
+mean_block_scores
+
+
+ggplot(mean_block_scores, aes(x = block_index, y = mean_reward, col = teacher_condition)) +
+  facet_grid(method ~ block_condition) +
+  geom_pointrange(aes(ymin = mean_reward - ci_reward, ymax = mean_reward + ci_reward), 
+                  position = position_dodge(width = .1)) +
+  labs(x = "block index", y = "mean reward") +
+  geom_line()
+```
+```{r}
+ggplot(mean_block_scores, aes(x = play_index, y = mean_reward, col = teacher_condition)) +
+  facet_grid(method ~ block_condition) +
+  geom_pointrange(aes(ymin = mean_reward - ci_reward, ymax = mean_reward + ci_reward), 
+                  position = position_dodge(width = .1)) +
+  labs(x = "block index", y = "mean reward") +
+  geom_line() +
+  scale_x_continuous(breaks = unique(mean_block_scores$play_index),
+                     labels = unique(mean_block_scores$block_index_char)) + 
+  theme(panel.spacing.x = unit(1.5, "lines"), panel.spacing.y = unit(0.7, "lines")) 
+
+```
+```{r}
+ggplot(mean_block_scores, aes(x = play_index, y = mean_reward, col = teacher_condition)) +
+  facet_grid(method ~ block_condition) +
+  geom_errorbar(aes(ymin = mean_reward - ci_reward, ymax = mean_reward + ci_reward), 
+                position = position_dodge(width = .1), width = 0.2) +  # Adjust 'width' as needed
+  labs(x = "block index", y = "mean reward") +
+  geom_line() +
+  scale_x_continuous(breaks = unique(mean_block_scores$play_index),
+                     labels = unique(mean_block_scores$block_index_char)) + 
+  theme(panel.spacing.x = unit(1.5, "lines"), panel.spacing.y = unit(0.7, "lines"))
+
 ```

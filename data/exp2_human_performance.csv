@@ -1,16 +1,16 @@
-teacher,block_condition,block_index,game_type,condition_index,condition_count_index,total_reward,method
+teacher_condition,block_condition,block_index,game_type,condition_index,condition_count_index,total_reward,method
 expert,play watch play,0,play,0,0,20,participants
 expert,play watch play,1,watch,0,0,17,participants
 expert,play watch play,2,play,0,0,21,participants
 expert,play watch play,0,play,0,1,12,participants
 expert,play watch play,1,watch,0,1,16,participants
 expert,play watch play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,22,participants
-no demo,play play play,1,play,1,0,22,participants
-no demo,play play play,2,play,1,0,21,participants
-no demo,play play play,0,play,1,1,19,participants
-no demo,play play play,1,play,1,1,21,participants
-no demo,play play play,2,play,1,1,16,participants
+no teacher,play play play,0,play,1,0,22,participants
+no teacher,play play play,1,play,1,0,22,participants
+no teacher,play play play,2,play,1,0,21,participants
+no teacher,play play play,0,play,1,1,19,participants
+no teacher,play play play,1,play,1,1,21,participants
+no teacher,play play play,2,play,1,1,16,participants
 novice,play watch play,0,play,2,0,17,participants
 novice,play watch play,1,watch,2,0,12,participants
 novice,play watch play,2,play,2,0,14,participants
@@ -47,12 +47,12 @@ expert,watch play play,2,play,2,0,20,participants
 expert,watch play play,0,watch,2,1,18,participants
 expert,watch play play,1,play,2,1,13,participants
 expert,watch play play,2,play,2,1,15,participants
-no demo,play play play,0,play,3,0,18,participants
-no demo,play play play,1,play,3,0,6,participants
-no demo,play play play,2,play,3,0,20,participants
-no demo,play play play,0,play,3,1,19,participants
-no demo,play play play,1,play,3,1,20,participants
-no demo,play play play,2,play,3,1,23,participants
+no teacher,play play play,0,play,3,0,18,participants
+no teacher,play play play,1,play,3,0,6,participants
+no teacher,play play play,2,play,3,0,20,participants
+no teacher,play play play,0,play,3,1,19,participants
+no teacher,play play play,1,play,3,1,20,participants
+no teacher,play play play,2,play,3,1,23,participants
 novice,watch play play,0,watch,4,0,13,participants
 novice,watch play play,1,play,4,0,16,participants
 novice,watch play play,2,play,4,0,20,participants
@@ -71,12 +71,12 @@ expert,play watch play,2,play,1,0,23,participants
 expert,play watch play,0,play,1,1,15,participants
 expert,play watch play,1,watch,1,1,19,participants
 expert,play watch play,2,play,1,1,19,participants
-no demo,play play play,0,play,2,0,15,participants
-no demo,play play play,1,play,2,0,11,participants
-no demo,play play play,2,play,2,0,16,participants
-no demo,play play play,0,play,2,1,9,participants
-no demo,play play play,1,play,2,1,12,participants
-no demo,play play play,2,play,2,1,17,participants
+no teacher,play play play,0,play,2,0,15,participants
+no teacher,play play play,1,play,2,0,11,participants
+no teacher,play play play,2,play,2,0,16,participants
+no teacher,play play play,0,play,2,1,9,participants
+no teacher,play play play,1,play,2,1,12,participants
+no teacher,play play play,2,play,2,1,17,participants
 novice,watch play play,0,watch,3,0,14,participants
 novice,watch play play,1,play,3,0,19,participants
 novice,watch play play,2,play,3,0,22,participants
@@ -113,12 +113,12 @@ novice,watch play play,2,play,3,0,19,participants
 novice,watch play play,0,watch,3,1,11,participants
 novice,watch play play,1,play,3,1,10,participants
 novice,watch play play,2,play,3,1,9,participants
-no demo,play play play,0,play,4,0,15,participants
-no demo,play play play,1,play,4,0,12,participants
-no demo,play play play,2,play,4,0,13,participants
-no demo,play play play,0,play,4,1,8,participants
-no demo,play play play,1,play,4,1,8,participants
-no demo,play play play,2,play,4,1,16,participants
+no teacher,play play play,0,play,4,0,15,participants
+no teacher,play play play,1,play,4,0,12,participants
+no teacher,play play play,2,play,4,0,13,participants
+no teacher,play play play,0,play,4,1,8,participants
+no teacher,play play play,1,play,4,1,8,participants
+no teacher,play play play,2,play,4,1,16,participants
 expert,watch play play,0,watch,0,0,15,participants
 expert,watch play play,1,play,0,0,18,participants
 expert,watch play play,2,play,0,0,22,participants
@@ -131,12 +131,12 @@ novice,watch play play,2,play,1,0,7,participants
 novice,watch play play,0,watch,1,1,13,participants
 novice,watch play play,1,play,1,1,22,participants
 novice,watch play play,2,play,1,1,22,participants
-no demo,play play play,0,play,2,0,14,participants
-no demo,play play play,1,play,2,0,20,participants
-no demo,play play play,2,play,2,0,23,participants
-no demo,play play play,0,play,2,1,17,participants
-no demo,play play play,1,play,2,1,16,participants
-no demo,play play play,2,play,2,1,11,participants
+no teacher,play play play,0,play,2,0,14,participants
+no teacher,play play play,1,play,2,0,20,participants
+no teacher,play play play,2,play,2,0,23,participants
+no teacher,play play play,0,play,2,1,17,participants
+no teacher,play play play,1,play,2,1,16,participants
+no teacher,play play play,2,play,2,1,11,participants
 novice,play watch play,0,play,3,0,18,participants
 novice,play watch play,1,watch,3,0,5,participants
 novice,play watch play,2,play,3,0,23,participants
@@ -155,12 +155,12 @@ novice,play watch play,2,play,0,0,12,participants
 novice,play watch play,0,play,0,1,9,participants
 novice,play watch play,1,watch,0,1,15,participants
 novice,play watch play,2,play,0,1,18,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,13,participants
-no demo,play play play,2,play,1,0,18,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,13,participants
-no demo,play play play,2,play,1,1,17,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,13,participants
+no teacher,play play play,2,play,1,0,18,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,13,participants
+no teacher,play play play,2,play,1,1,17,participants
 expert,watch play play,0,watch,2,0,19,participants
 expert,watch play play,1,play,2,0,22,participants
 expert,watch play play,2,play,2,0,22,participants
@@ -191,12 +191,12 @@ expert,play watch play,2,play,1,0,21,participants
 expert,play watch play,0,play,1,1,12,participants
 expert,play watch play,1,watch,1,1,15,participants
 expert,play watch play,2,play,1,1,11,participants
-no demo,play play play,0,play,2,0,12,participants
-no demo,play play play,1,play,2,0,23,participants
-no demo,play play play,2,play,2,0,20,participants
-no demo,play play play,0,play,2,1,8,participants
-no demo,play play play,1,play,2,1,17,participants
-no demo,play play play,2,play,2,1,16,participants
+no teacher,play play play,0,play,2,0,12,participants
+no teacher,play play play,1,play,2,0,23,participants
+no teacher,play play play,2,play,2,0,20,participants
+no teacher,play play play,0,play,2,1,8,participants
+no teacher,play play play,1,play,2,1,17,participants
+no teacher,play play play,2,play,2,1,16,participants
 novice,watch play play,0,watch,3,0,11,participants
 novice,watch play play,1,play,3,0,18,participants
 novice,watch play play,2,play,3,0,19,participants
@@ -221,12 +221,12 @@ expert,watch play play,2,play,1,0,21,participants
 expert,watch play play,0,watch,1,1,19,participants
 expert,watch play play,1,play,1,1,21,participants
 expert,watch play play,2,play,1,1,23,participants
-no demo,play play play,0,play,2,0,21,participants
-no demo,play play play,1,play,2,0,22,participants
-no demo,play play play,2,play,2,0,22,participants
-no demo,play play play,0,play,2,1,21,participants
-no demo,play play play,1,play,2,1,23,participants
-no demo,play play play,2,play,2,1,19,participants
+no teacher,play play play,0,play,2,0,21,participants
+no teacher,play play play,1,play,2,0,22,participants
+no teacher,play play play,2,play,2,0,22,participants
+no teacher,play play play,0,play,2,1,21,participants
+no teacher,play play play,1,play,2,1,23,participants
+no teacher,play play play,2,play,2,1,19,participants
 novice,watch play play,0,watch,3,0,10,participants
 novice,watch play play,1,play,3,0,20,participants
 novice,watch play play,2,play,3,0,23,participants
@@ -257,12 +257,12 @@ expert,play watch play,2,play,2,0,20,participants
 expert,play watch play,0,play,2,1,16,participants
 expert,play watch play,1,watch,2,1,15,participants
 expert,play watch play,2,play,2,1,20,participants
-no demo,play play play,0,play,3,0,22,participants
-no demo,play play play,1,play,3,0,18,participants
-no demo,play play play,2,play,3,0,19,participants
-no demo,play play play,0,play,3,1,17,participants
-no demo,play play play,1,play,3,1,22,participants
-no demo,play play play,2,play,3,1,21,participants
+no teacher,play play play,0,play,3,0,22,participants
+no teacher,play play play,1,play,3,0,18,participants
+no teacher,play play play,2,play,3,0,19,participants
+no teacher,play play play,0,play,3,1,17,participants
+no teacher,play play play,1,play,3,1,22,participants
+no teacher,play play play,2,play,3,1,21,participants
 novice,play watch play,0,play,4,0,13,participants
 novice,play watch play,1,watch,4,0,11,participants
 novice,play watch play,2,play,4,0,19,participants
@@ -275,12 +275,12 @@ expert,watch play play,2,play,0,0,13,participants
 expert,watch play play,0,watch,0,1,16,participants
 expert,watch play play,1,play,0,1,22,participants
 expert,watch play play,2,play,0,1,21,participants
-no demo,play play play,0,play,1,0,23,participants
-no demo,play play play,1,play,1,0,22,participants
-no demo,play play play,2,play,1,0,22,participants
-no demo,play play play,0,play,1,1,15,participants
-no demo,play play play,1,play,1,1,14,participants
-no demo,play play play,2,play,1,1,13,participants
+no teacher,play play play,0,play,1,0,23,participants
+no teacher,play play play,1,play,1,0,22,participants
+no teacher,play play play,2,play,1,0,22,participants
+no teacher,play play play,0,play,1,1,15,participants
+no teacher,play play play,1,play,1,1,14,participants
+no teacher,play play play,2,play,1,1,13,participants
 novice,watch play play,0,watch,2,0,14,participants
 novice,watch play play,1,play,2,0,23,participants
 novice,watch play play,2,play,2,0,18,participants
@@ -305,12 +305,12 @@ expert,watch play play,2,play,0,0,14,participants
 expert,watch play play,0,watch,0,1,17,participants
 expert,watch play play,1,play,0,1,20,participants
 expert,watch play play,2,play,0,1,17,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,12,participants
-no demo,play play play,2,play,1,0,13,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,15,participants
-no demo,play play play,2,play,1,1,13,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,12,participants
+no teacher,play play play,2,play,1,0,13,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,15,participants
+no teacher,play play play,2,play,1,1,13,participants
 novice,play watch play,0,play,2,0,10,participants
 novice,play watch play,1,watch,2,0,8,participants
 novice,play watch play,2,play,2,0,12,participants
@@ -335,12 +335,12 @@ novice,play watch play,2,play,0,0,10,participants
 novice,play watch play,0,play,0,1,13,participants
 novice,play watch play,1,watch,0,1,14,participants
 novice,play watch play,2,play,0,1,11,participants
-no demo,play play play,0,play,1,0,8,participants
-no demo,play play play,1,play,1,0,16,participants
-no demo,play play play,2,play,1,0,13,participants
-no demo,play play play,0,play,1,1,16,participants
-no demo,play play play,1,play,1,1,13,participants
-no demo,play play play,2,play,1,1,19,participants
+no teacher,play play play,0,play,1,0,8,participants
+no teacher,play play play,1,play,1,0,16,participants
+no teacher,play play play,2,play,1,0,13,participants
+no teacher,play play play,0,play,1,1,16,participants
+no teacher,play play play,1,play,1,1,13,participants
+no teacher,play play play,2,play,1,1,19,participants
 novice,watch play play,0,watch,2,0,12,participants
 novice,watch play play,1,play,2,0,11,participants
 novice,watch play play,2,play,2,0,11,participants
@@ -377,12 +377,12 @@ expert,play watch play,2,play,2,0,20,participants
 expert,play watch play,0,play,2,1,10,participants
 expert,play watch play,1,watch,2,1,17,participants
 expert,play watch play,2,play,2,1,12,participants
-no demo,play play play,0,play,3,0,10,participants
-no demo,play play play,1,play,3,0,13,participants
-no demo,play play play,2,play,3,0,8,participants
-no demo,play play play,0,play,3,1,6,participants
-no demo,play play play,1,play,3,1,19,participants
-no demo,play play play,2,play,3,1,21,participants
+no teacher,play play play,0,play,3,0,10,participants
+no teacher,play play play,1,play,3,0,13,participants
+no teacher,play play play,2,play,3,0,8,participants
+no teacher,play play play,0,play,3,1,6,participants
+no teacher,play play play,1,play,3,1,19,participants
+no teacher,play play play,2,play,3,1,21,participants
 novice,watch play play,0,watch,4,0,12,participants
 novice,watch play play,1,play,4,0,18,participants
 novice,watch play play,2,play,4,0,20,participants
@@ -395,12 +395,12 @@ novice,play watch play,2,play,0,0,14,participants
 novice,play watch play,0,play,0,1,15,participants
 novice,play watch play,1,watch,0,1,12,participants
 novice,play watch play,2,play,0,1,16,participants
-no demo,play play play,0,play,1,0,20,participants
-no demo,play play play,1,play,1,0,12,participants
-no demo,play play play,2,play,1,0,21,participants
-no demo,play play play,0,play,1,1,18,participants
-no demo,play play play,1,play,1,1,17,participants
-no demo,play play play,2,play,1,1,21,participants
+no teacher,play play play,0,play,1,0,20,participants
+no teacher,play play play,1,play,1,0,12,participants
+no teacher,play play play,2,play,1,0,21,participants
+no teacher,play play play,0,play,1,1,18,participants
+no teacher,play play play,1,play,1,1,17,participants
+no teacher,play play play,2,play,1,1,21,participants
 expert,play watch play,0,play,2,0,20,participants
 expert,play watch play,1,watch,2,0,20,participants
 expert,play watch play,2,play,2,0,22,participants
@@ -419,12 +419,12 @@ expert,watch play play,2,play,4,0,16,participants
 expert,watch play play,0,watch,4,1,20,participants
 expert,watch play play,1,play,4,1,17,participants
 expert,watch play play,2,play,4,1,15,participants
-no demo,play play play,0,play,0,0,12,participants
-no demo,play play play,1,play,0,0,7,participants
-no demo,play play play,2,play,0,0,10,participants
-no demo,play play play,0,play,0,1,11,participants
-no demo,play play play,1,play,0,1,20,participants
-no demo,play play play,2,play,0,1,23,participants
+no teacher,play play play,0,play,0,0,12,participants
+no teacher,play play play,1,play,0,0,7,participants
+no teacher,play play play,2,play,0,0,10,participants
+no teacher,play play play,0,play,0,1,11,participants
+no teacher,play play play,1,play,0,1,20,participants
+no teacher,play play play,2,play,0,1,23,participants
 expert,watch play play,0,watch,1,0,18,participants
 expert,watch play play,1,play,1,0,13,participants
 expert,watch play play,2,play,1,0,12,participants
@@ -467,12 +467,12 @@ expert,watch play play,2,play,2,0,13,participants
 expert,watch play play,0,watch,2,1,18,participants
 expert,watch play play,1,play,2,1,16,participants
 expert,watch play play,2,play,2,1,13,participants
-no demo,play play play,0,play,3,0,18,participants
-no demo,play play play,1,play,3,0,10,participants
-no demo,play play play,2,play,3,0,12,participants
-no demo,play play play,0,play,3,1,14,participants
-no demo,play play play,1,play,3,1,15,participants
-no demo,play play play,2,play,3,1,14,participants
+no teacher,play play play,0,play,3,0,18,participants
+no teacher,play play play,1,play,3,0,10,participants
+no teacher,play play play,2,play,3,0,12,participants
+no teacher,play play play,0,play,3,1,14,participants
+no teacher,play play play,1,play,3,1,15,participants
+no teacher,play play play,2,play,3,1,14,participants
 expert,play watch play,0,play,4,0,9,participants
 expert,play watch play,1,watch,4,0,16,participants
 expert,play watch play,2,play,4,0,11,participants
@@ -485,12 +485,12 @@ novice,play watch play,2,play,0,0,13,participants
 novice,play watch play,0,play,0,1,11,participants
 novice,play watch play,1,watch,0,1,11,participants
 novice,play watch play,2,play,0,1,14,participants
-no demo,play play play,0,play,1,0,15,participants
-no demo,play play play,1,play,1,0,12,participants
-no demo,play play play,2,play,1,0,20,participants
-no demo,play play play,0,play,1,1,15,participants
-no demo,play play play,1,play,1,1,14,participants
-no demo,play play play,2,play,1,1,13,participants
+no teacher,play play play,0,play,1,0,15,participants
+no teacher,play play play,1,play,1,0,12,participants
+no teacher,play play play,2,play,1,0,20,participants
+no teacher,play play play,0,play,1,1,15,participants
+no teacher,play play play,1,play,1,1,14,participants
+no teacher,play play play,2,play,1,1,13,participants
 expert,play watch play,0,play,2,0,6,participants
 expert,play watch play,1,watch,2,0,16,participants
 expert,play watch play,2,play,2,0,23,participants
@@ -521,12 +521,12 @@ expert,play watch play,2,play,1,0,21,participants
 expert,play watch play,0,play,1,1,14,participants
 expert,play watch play,1,watch,1,1,17,participants
 expert,play watch play,2,play,1,1,18,participants
-no demo,play play play,0,play,2,0,18,participants
-no demo,play play play,1,play,2,0,18,participants
-no demo,play play play,2,play,2,0,19,participants
-no demo,play play play,0,play,2,1,15,participants
-no demo,play play play,1,play,2,1,22,participants
-no demo,play play play,2,play,2,1,24,participants
+no teacher,play play play,0,play,2,0,18,participants
+no teacher,play play play,1,play,2,0,18,participants
+no teacher,play play play,2,play,2,0,19,participants
+no teacher,play play play,0,play,2,1,15,participants
+no teacher,play play play,1,play,2,1,22,participants
+no teacher,play play play,2,play,2,1,24,participants
 novice,watch play play,0,watch,3,0,9,participants
 novice,watch play play,1,play,3,0,17,participants
 novice,watch play play,2,play,3,0,13,participants
@@ -563,12 +563,12 @@ novice,watch play play,2,play,3,0,19,participants
 novice,watch play play,0,watch,3,1,10,participants
 novice,watch play play,1,play,3,1,20,participants
 novice,watch play play,2,play,3,1,19,participants
-no demo,play play play,0,play,4,0,11,participants
-no demo,play play play,1,play,4,0,8,participants
-no demo,play play play,2,play,4,0,16,participants
-no demo,play play play,0,play,4,1,12,participants
-no demo,play play play,1,play,4,1,10,participants
-no demo,play play play,2,play,4,1,12,participants
+no teacher,play play play,0,play,4,0,11,participants
+no teacher,play play play,1,play,4,0,8,participants
+no teacher,play play play,2,play,4,0,16,participants
+no teacher,play play play,0,play,4,1,12,participants
+no teacher,play play play,1,play,4,1,10,participants
+no teacher,play play play,2,play,4,1,12,participants
 expert,watch play play,0,watch,0,0,15,participants
 expert,watch play play,1,play,0,0,23,participants
 expert,watch play play,2,play,0,0,20,participants
@@ -581,12 +581,12 @@ expert,play watch play,2,play,1,0,20,participants
 expert,play watch play,0,play,1,1,10,participants
 expert,play watch play,1,watch,1,1,19,participants
 expert,play watch play,2,play,1,1,19,participants
-no demo,play play play,0,play,2,0,15,participants
-no demo,play play play,1,play,2,0,9,participants
-no demo,play play play,2,play,2,0,16,participants
-no demo,play play play,0,play,2,1,20,participants
-no demo,play play play,1,play,2,1,20,participants
-no demo,play play play,2,play,2,1,20,participants
+no teacher,play play play,0,play,2,0,15,participants
+no teacher,play play play,1,play,2,0,9,participants
+no teacher,play play play,2,play,2,0,16,participants
+no teacher,play play play,0,play,2,1,20,participants
+no teacher,play play play,1,play,2,1,20,participants
+no teacher,play play play,2,play,2,1,20,participants
 novice,play watch play,0,play,3,0,13,participants
 novice,play watch play,1,watch,3,0,14,participants
 novice,play watch play,2,play,3,0,16,participants
@@ -611,12 +611,12 @@ novice,play watch play,2,play,1,0,16,participants
 novice,play watch play,0,play,1,1,15,participants
 novice,play watch play,1,watch,1,1,12,participants
 novice,play watch play,2,play,1,1,21,participants
-no demo,play play play,0,play,2,0,17,participants
-no demo,play play play,1,play,2,0,20,participants
-no demo,play play play,2,play,2,0,22,participants
-no demo,play play play,0,play,2,1,10,participants
-no demo,play play play,1,play,2,1,10,participants
-no demo,play play play,2,play,2,1,11,participants
+no teacher,play play play,0,play,2,0,17,participants
+no teacher,play play play,1,play,2,0,20,participants
+no teacher,play play play,2,play,2,0,22,participants
+no teacher,play play play,0,play,2,1,10,participants
+no teacher,play play play,1,play,2,1,10,participants
+no teacher,play play play,2,play,2,1,11,participants
 novice,watch play play,0,watch,3,0,11,participants
 novice,watch play play,1,play,3,0,11,participants
 novice,watch play play,2,play,3,0,12,participants
@@ -647,12 +647,12 @@ novice,play watch play,2,play,2,0,22,participants
 novice,play watch play,0,play,2,1,12,participants
 novice,play watch play,1,watch,2,1,11,participants
 novice,play watch play,2,play,2,1,12,participants
-no demo,play play play,0,play,3,0,7,participants
-no demo,play play play,1,play,3,0,18,participants
-no demo,play play play,2,play,3,0,19,participants
-no demo,play play play,0,play,3,1,9,participants
-no demo,play play play,1,play,3,1,17,participants
-no demo,play play play,2,play,3,1,18,participants
+no teacher,play play play,0,play,3,0,7,participants
+no teacher,play play play,1,play,3,0,18,participants
+no teacher,play play play,2,play,3,0,19,participants
+no teacher,play play play,0,play,3,1,9,participants
+no teacher,play play play,1,play,3,1,17,participants
+no teacher,play play play,2,play,3,1,18,participants
 expert,watch play play,0,watch,4,0,19,participants
 expert,watch play play,1,play,4,0,22,participants
 expert,watch play play,2,play,4,0,19,participants
@@ -683,18 +683,18 @@ novice,watch play play,2,play,3,0,22,participants
 novice,watch play play,0,watch,3,1,11,participants
 novice,watch play play,1,play,3,1,20,participants
 novice,watch play play,2,play,3,1,20,participants
-no demo,play play play,0,play,4,0,11,participants
-no demo,play play play,1,play,4,0,19,participants
-no demo,play play play,2,play,4,0,22,participants
-no demo,play play play,0,play,4,1,11,participants
-no demo,play play play,1,play,4,1,19,participants
-no demo,play play play,2,play,4,1,21,participants
-no demo,play play play,0,play,0,0,19,participants
-no demo,play play play,1,play,0,0,23,participants
-no demo,play play play,2,play,0,0,18,participants
-no demo,play play play,0,play,0,1,15,participants
-no demo,play play play,1,play,0,1,21,participants
-no demo,play play play,2,play,0,1,22,participants
+no teacher,play play play,0,play,4,0,11,participants
+no teacher,play play play,1,play,4,0,19,participants
+no teacher,play play play,2,play,4,0,22,participants
+no teacher,play play play,0,play,4,1,11,participants
+no teacher,play play play,1,play,4,1,19,participants
+no teacher,play play play,2,play,4,1,21,participants
+no teacher,play play play,0,play,0,0,19,participants
+no teacher,play play play,1,play,0,0,23,participants
+no teacher,play play play,2,play,0,0,18,participants
+no teacher,play play play,0,play,0,1,15,participants
+no teacher,play play play,1,play,0,1,21,participants
+no teacher,play play play,2,play,0,1,22,participants
 expert,watch play play,0,watch,1,0,16,participants
 expert,watch play play,1,play,1,0,18,participants
 expert,watch play play,2,play,1,0,18,participants
@@ -731,12 +731,12 @@ novice,watch play play,2,play,1,0,18,participants
 novice,watch play play,0,watch,1,1,11,participants
 novice,watch play play,1,play,1,1,19,participants
 novice,watch play play,2,play,1,1,22,participants
-no demo,play play play,0,play,2,0,10,participants
-no demo,play play play,1,play,2,0,14,participants
-no demo,play play play,2,play,2,0,22,participants
-no demo,play play play,0,play,2,1,10,participants
-no demo,play play play,1,play,2,1,17,participants
-no demo,play play play,2,play,2,1,20,participants
+no teacher,play play play,0,play,2,0,10,participants
+no teacher,play play play,1,play,2,0,14,participants
+no teacher,play play play,2,play,2,0,22,participants
+no teacher,play play play,0,play,2,1,10,participants
+no teacher,play play play,1,play,2,1,17,participants
+no teacher,play play play,2,play,2,1,20,participants
 expert,watch play play,0,watch,3,0,20,participants
 expert,watch play play,1,play,3,0,21,participants
 expert,watch play play,2,play,3,0,23,participants
@@ -755,12 +755,12 @@ expert,play watch play,2,play,0,0,17,participants
 expert,play watch play,0,play,0,1,20,participants
 expert,play watch play,1,watch,0,1,17,participants
 expert,play watch play,2,play,0,1,18,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,23,participants
-no demo,play play play,2,play,1,0,17,participants
-no demo,play play play,0,play,1,1,6,participants
-no demo,play play play,1,play,1,1,8,participants
-no demo,play play play,2,play,1,1,13,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,23,participants
+no teacher,play play play,2,play,1,0,17,participants
+no teacher,play play play,0,play,1,1,6,participants
+no teacher,play play play,1,play,1,1,8,participants
+no teacher,play play play,2,play,1,1,13,participants
 expert,watch play play,0,watch,2,0,15,participants
 expert,watch play play,1,play,2,0,22,participants
 expert,watch play play,2,play,2,0,21,participants
@@ -785,12 +785,12 @@ expert,watch play play,2,play,0,0,18,participants
 expert,watch play play,0,watch,0,1,15,participants
 expert,watch play play,1,play,0,1,19,participants
 expert,watch play play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,8,participants
-no demo,play play play,1,play,1,0,9,participants
-no demo,play play play,2,play,1,0,10,participants
-no demo,play play play,0,play,1,1,8,participants
-no demo,play play play,1,play,1,1,10,participants
-no demo,play play play,2,play,1,1,14,participants
+no teacher,play play play,0,play,1,0,8,participants
+no teacher,play play play,1,play,1,0,9,participants
+no teacher,play play play,2,play,1,0,10,participants
+no teacher,play play play,0,play,1,1,8,participants
+no teacher,play play play,1,play,1,1,10,participants
+no teacher,play play play,2,play,1,1,14,participants
 novice,watch play play,0,watch,2,0,11,participants
 novice,watch play play,1,play,2,0,14,participants
 novice,watch play play,2,play,2,0,11,participants
@@ -833,12 +833,12 @@ novice,play watch play,2,play,3,0,17,participants
 novice,play watch play,0,play,3,1,3,participants
 novice,play watch play,1,watch,3,1,9,participants
 novice,play watch play,2,play,3,1,13,participants
-no demo,play play play,0,play,4,0,11,participants
-no demo,play play play,1,play,4,0,10,participants
-no demo,play play play,2,play,4,0,14,participants
-no demo,play play play,0,play,4,1,16,participants
-no demo,play play play,1,play,4,1,12,participants
-no demo,play play play,2,play,4,1,17,participants
+no teacher,play play play,0,play,4,0,11,participants
+no teacher,play play play,1,play,4,0,10,participants
+no teacher,play play play,2,play,4,0,14,participants
+no teacher,play play play,0,play,4,1,16,participants
+no teacher,play play play,1,play,4,1,12,participants
+no teacher,play play play,2,play,4,1,17,participants
 expert,watch play play,0,watch,0,0,19,participants
 expert,watch play play,1,play,0,0,19,participants
 expert,watch play play,2,play,0,0,21,participants
@@ -857,12 +857,12 @@ expert,play watch play,2,play,2,0,21,participants
 expert,play watch play,0,play,2,1,8,participants
 expert,play watch play,1,watch,2,1,12,participants
 expert,play watch play,2,play,2,1,12,participants
-no demo,play play play,0,play,3,0,12,participants
-no demo,play play play,1,play,3,0,22,participants
-no demo,play play play,2,play,3,0,21,participants
-no demo,play play play,0,play,3,1,10,participants
-no demo,play play play,1,play,3,1,9,participants
-no demo,play play play,2,play,3,1,21,participants
+no teacher,play play play,0,play,3,0,12,participants
+no teacher,play play play,1,play,3,0,22,participants
+no teacher,play play play,2,play,3,0,21,participants
+no teacher,play play play,0,play,3,1,10,participants
+no teacher,play play play,1,play,3,1,9,participants
+no teacher,play play play,2,play,3,1,21,participants
 novice,play watch play,0,play,4,0,11,participants
 novice,play watch play,1,watch,4,0,11,participants
 novice,play watch play,2,play,4,0,14,participants
@@ -893,12 +893,12 @@ novice,play watch play,2,play,3,0,10,participants
 novice,play watch play,0,play,3,1,13,participants
 novice,play watch play,1,watch,3,1,11,participants
 novice,play watch play,2,play,3,1,16,participants
-no demo,play play play,0,play,4,0,10,participants
-no demo,play play play,1,play,4,0,15,participants
-no demo,play play play,2,play,4,0,13,participants
-no demo,play play play,0,play,4,1,16,participants
-no demo,play play play,1,play,4,1,8,participants
-no demo,play play play,2,play,4,1,16,participants
+no teacher,play play play,0,play,4,0,10,participants
+no teacher,play play play,1,play,4,0,15,participants
+no teacher,play play play,2,play,4,0,13,participants
+no teacher,play play play,0,play,4,1,16,participants
+no teacher,play play play,1,play,4,1,8,participants
+no teacher,play play play,2,play,4,1,16,participants
 novice,play watch play,0,play,0,0,10,participants
 novice,play watch play,1,watch,0,0,10,participants
 novice,play watch play,2,play,0,0,11,participants
@@ -911,12 +911,12 @@ expert,play watch play,2,play,1,0,13,participants
 expert,play watch play,0,play,1,1,14,participants
 expert,play watch play,1,watch,1,1,9,participants
 expert,play watch play,2,play,1,1,8,participants
-no demo,play play play,0,play,2,0,8,participants
-no demo,play play play,1,play,2,0,14,participants
-no demo,play play play,2,play,2,0,18,participants
-no demo,play play play,0,play,2,1,9,participants
-no demo,play play play,1,play,2,1,12,participants
-no demo,play play play,2,play,2,1,7,participants
+no teacher,play play play,0,play,2,0,8,participants
+no teacher,play play play,1,play,2,0,14,participants
+no teacher,play play play,2,play,2,0,18,participants
+no teacher,play play play,0,play,2,1,9,participants
+no teacher,play play play,1,play,2,1,12,participants
+no teacher,play play play,2,play,2,1,7,participants
 expert,watch play play,0,watch,3,0,18,participants
 expert,watch play play,1,play,3,0,14,participants
 expert,watch play play,2,play,3,0,8,participants
@@ -929,12 +929,12 @@ novice,watch play play,2,play,4,0,11,participants
 novice,watch play play,0,watch,4,1,9,participants
 novice,watch play play,1,play,4,1,8,participants
 novice,watch play play,2,play,4,1,11,participants
-no demo,play play play,0,play,0,0,9,participants
-no demo,play play play,1,play,0,0,8,participants
-no demo,play play play,2,play,0,0,15,participants
-no demo,play play play,0,play,0,1,8,participants
-no demo,play play play,1,play,0,1,11,participants
-no demo,play play play,2,play,0,1,14,participants
+no teacher,play play play,0,play,0,0,9,participants
+no teacher,play play play,1,play,0,0,8,participants
+no teacher,play play play,2,play,0,0,15,participants
+no teacher,play play play,0,play,0,1,8,participants
+no teacher,play play play,1,play,0,1,11,participants
+no teacher,play play play,2,play,0,1,14,participants
 novice,play watch play,0,play,1,0,13,participants
 novice,play watch play,1,watch,1,0,13,participants
 novice,play watch play,2,play,1,0,6,participants
@@ -959,12 +959,12 @@ expert,watch play play,2,play,4,0,11,participants
 expert,watch play play,0,watch,4,1,12,participants
 expert,watch play play,1,play,4,1,17,participants
 expert,watch play play,2,play,4,1,4,participants
-no demo,play play play,0,play,0,0,15,participants
-no demo,play play play,1,play,0,0,18,participants
-no demo,play play play,2,play,0,0,18,participants
-no demo,play play play,0,play,0,1,13,participants
-no demo,play play play,1,play,0,1,17,participants
-no demo,play play play,2,play,0,1,15,participants
+no teacher,play play play,0,play,0,0,15,participants
+no teacher,play play play,1,play,0,0,18,participants
+no teacher,play play play,2,play,0,0,18,participants
+no teacher,play play play,0,play,0,1,13,participants
+no teacher,play play play,1,play,0,1,17,participants
+no teacher,play play play,2,play,0,1,15,participants
 expert,play watch play,0,play,1,0,9,participants
 expert,play watch play,1,watch,1,0,15,participants
 expert,play watch play,2,play,1,0,20,participants
@@ -1013,12 +1013,12 @@ expert,play watch play,2,play,3,0,22,participants
 expert,play watch play,0,play,3,1,11,participants
 expert,play watch play,1,watch,3,1,16,participants
 expert,play watch play,2,play,3,1,21,participants
-no demo,play play play,0,play,4,0,10,participants
-no demo,play play play,1,play,4,0,12,participants
-no demo,play play play,2,play,4,0,11,participants
-no demo,play play play,0,play,4,1,12,participants
-no demo,play play play,1,play,4,1,11,participants
-no demo,play play play,2,play,4,1,14,participants
+no teacher,play play play,0,play,4,0,10,participants
+no teacher,play play play,1,play,4,0,12,participants
+no teacher,play play play,2,play,4,0,11,participants
+no teacher,play play play,0,play,4,1,12,participants
+no teacher,play play play,1,play,4,1,11,participants
+no teacher,play play play,2,play,4,1,14,participants
 novice,watch play play,0,watch,0,0,16,participants
 novice,watch play play,1,play,0,0,15,participants
 novice,watch play play,2,play,0,0,11,participants
@@ -1031,12 +1031,12 @@ expert,watch play play,2,play,1,0,17,participants
 expert,watch play play,0,watch,1,1,19,participants
 expert,watch play play,1,play,1,1,19,participants
 expert,watch play play,2,play,1,1,21,participants
-no demo,play play play,0,play,2,0,9,participants
-no demo,play play play,1,play,2,0,13,participants
-no demo,play play play,2,play,2,0,10,participants
-no demo,play play play,0,play,2,1,14,participants
-no demo,play play play,1,play,2,1,10,participants
-no demo,play play play,2,play,2,1,11,participants
+no teacher,play play play,0,play,2,0,9,participants
+no teacher,play play play,1,play,2,0,13,participants
+no teacher,play play play,2,play,2,0,10,participants
+no teacher,play play play,0,play,2,1,14,participants
+no teacher,play play play,1,play,2,1,10,participants
+no teacher,play play play,2,play,2,1,11,participants
 novice,play watch play,0,play,3,0,11,participants
 novice,play watch play,1,watch,3,0,12,participants
 novice,play watch play,2,play,3,0,16,participants
@@ -1055,12 +1055,12 @@ expert,watch play play,2,play,0,0,17,participants
 expert,watch play play,0,watch,0,1,17,participants
 expert,watch play play,1,play,0,1,20,participants
 expert,watch play play,2,play,0,1,19,participants
-no demo,play play play,0,play,1,0,10,participants
-no demo,play play play,1,play,1,0,13,participants
-no demo,play play play,2,play,1,0,16,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,16,participants
-no demo,play play play,2,play,1,1,14,participants
+no teacher,play play play,0,play,1,0,10,participants
+no teacher,play play play,1,play,1,0,13,participants
+no teacher,play play play,2,play,1,0,16,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,16,participants
+no teacher,play play play,2,play,1,1,14,participants
 novice,play watch play,0,play,2,0,13,participants
 novice,play watch play,1,watch,2,0,11,participants
 novice,play watch play,2,play,2,0,11,participants
@@ -1097,12 +1097,12 @@ expert,watch play play,2,play,2,0,21,participants
 expert,watch play play,0,watch,2,1,15,participants
 expert,watch play play,1,play,2,1,20,participants
 expert,watch play play,2,play,2,1,15,participants
-no demo,play play play,0,play,3,0,11,participants
-no demo,play play play,1,play,3,0,11,participants
-no demo,play play play,2,play,3,0,17,participants
-no demo,play play play,0,play,3,1,10,participants
-no demo,play play play,1,play,3,1,13,participants
-no demo,play play play,2,play,3,1,14,participants
+no teacher,play play play,0,play,3,0,11,participants
+no teacher,play play play,1,play,3,0,11,participants
+no teacher,play play play,2,play,3,0,17,participants
+no teacher,play play play,0,play,3,1,10,participants
+no teacher,play play play,1,play,3,1,13,participants
+no teacher,play play play,2,play,3,1,14,participants
 novice,watch play play,0,watch,4,0,13,participants
 novice,watch play play,1,play,4,0,18,participants
 novice,watch play play,2,play,4,0,11,participants
@@ -1127,12 +1127,12 @@ expert,watch play play,2,play,2,0,22,participants
 expert,watch play play,0,watch,2,1,19,participants
 expert,watch play play,1,play,2,1,16,participants
 expert,watch play play,2,play,2,1,20,participants
-no demo,play play play,0,play,3,0,11,participants
-no demo,play play play,1,play,3,0,14,participants
-no demo,play play play,2,play,3,0,12,participants
-no demo,play play play,0,play,3,1,12,participants
-no demo,play play play,1,play,3,1,13,participants
-no demo,play play play,2,play,3,1,13,participants
+no teacher,play play play,0,play,3,0,11,participants
+no teacher,play play play,1,play,3,0,14,participants
+no teacher,play play play,2,play,3,0,12,participants
+no teacher,play play play,0,play,3,1,12,participants
+no teacher,play play play,1,play,3,1,13,participants
+no teacher,play play play,2,play,3,1,13,participants
 novice,watch play play,0,watch,4,0,11,participants
 novice,watch play play,1,play,4,0,10,participants
 novice,watch play play,2,play,4,0,18,participants
@@ -1145,12 +1145,12 @@ novice,watch play play,2,play,0,0,12,participants
 novice,watch play play,0,watch,0,1,10,participants
 novice,watch play play,1,play,0,1,19,participants
 novice,watch play play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,10,participants
-no demo,play play play,1,play,1,0,18,participants
-no demo,play play play,2,play,1,0,21,participants
-no demo,play play play,0,play,1,1,14,participants
-no demo,play play play,1,play,1,1,13,participants
-no demo,play play play,2,play,1,1,12,participants
+no teacher,play play play,0,play,1,0,10,participants
+no teacher,play play play,1,play,1,0,18,participants
+no teacher,play play play,2,play,1,0,21,participants
+no teacher,play play play,0,play,1,1,14,participants
+no teacher,play play play,1,play,1,1,13,participants
+no teacher,play play play,2,play,1,1,12,participants
 expert,play watch play,0,play,2,0,14,participants
 expert,play watch play,1,watch,2,0,21,participants
 expert,play watch play,2,play,2,0,24,participants
@@ -1181,12 +1181,12 @@ novice,watch play play,2,play,1,0,20,participants
 novice,watch play play,0,watch,1,1,11,participants
 novice,watch play play,1,play,1,1,16,participants
 novice,watch play play,2,play,1,1,15,participants
-no demo,play play play,0,play,2,0,10,participants
-no demo,play play play,1,play,2,0,17,participants
-no demo,play play play,2,play,2,0,15,participants
-no demo,play play play,0,play,2,1,11,participants
-no demo,play play play,1,play,2,1,18,participants
-no demo,play play play,2,play,2,1,18,participants
+no teacher,play play play,0,play,2,0,10,participants
+no teacher,play play play,1,play,2,0,17,participants
+no teacher,play play play,2,play,2,0,15,participants
+no teacher,play play play,0,play,2,1,11,participants
+no teacher,play play play,1,play,2,1,18,participants
+no teacher,play play play,2,play,2,1,18,participants
 novice,play watch play,0,play,3,0,14,participants
 novice,play watch play,1,watch,3,0,11,participants
 novice,play watch play,2,play,3,0,13,participants
@@ -1223,24 +1223,24 @@ expert,watch play play,2,play,3,0,20,participants
 expert,watch play play,0,watch,3,1,16,participants
 expert,watch play play,1,play,3,1,21,participants
 expert,watch play play,2,play,3,1,20,participants
-no demo,play play play,0,play,4,0,9,participants
-no demo,play play play,1,play,4,0,12,participants
-no demo,play play play,2,play,4,0,16,participants
-no demo,play play play,0,play,4,1,15,participants
-no demo,play play play,1,play,4,1,7,participants
-no demo,play play play,2,play,4,1,20,participants
+no teacher,play play play,0,play,4,0,9,participants
+no teacher,play play play,1,play,4,0,12,participants
+no teacher,play play play,2,play,4,0,16,participants
+no teacher,play play play,0,play,4,1,15,participants
+no teacher,play play play,1,play,4,1,7,participants
+no teacher,play play play,2,play,4,1,20,participants
 novice,play watch play,0,play,0,0,20,participants
 novice,play watch play,1,watch,0,0,14,participants
 novice,play watch play,2,play,0,0,19,participants
 novice,play watch play,0,play,0,1,16,participants
 novice,play watch play,1,watch,0,1,15,participants
 novice,play watch play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,20,participants
-no demo,play play play,2,play,1,0,17,participants
-no demo,play play play,0,play,1,1,14,participants
-no demo,play play play,1,play,1,1,15,participants
-no demo,play play play,2,play,1,1,12,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,20,participants
+no teacher,play play play,2,play,1,0,17,participants
+no teacher,play play play,0,play,1,1,14,participants
+no teacher,play play play,1,play,1,1,15,participants
+no teacher,play play play,2,play,1,1,12,participants
 novice,watch play play,0,watch,2,0,14,participants
 novice,watch play play,1,play,2,0,11,participants
 novice,watch play play,2,play,2,0,11,participants
@@ -1265,12 +1265,12 @@ novice,watch play play,2,play,0,0,13,participants
 novice,watch play play,0,watch,0,1,12,participants
 novice,watch play play,1,play,0,1,10,participants
 novice,watch play play,2,play,0,1,11,participants
-no demo,play play play,0,play,1,0,15,participants
-no demo,play play play,1,play,1,0,12,participants
-no demo,play play play,2,play,1,0,10,participants
-no demo,play play play,0,play,1,1,17,participants
-no demo,play play play,1,play,1,1,11,participants
-no demo,play play play,2,play,1,1,13,participants
+no teacher,play play play,0,play,1,0,15,participants
+no teacher,play play play,1,play,1,0,12,participants
+no teacher,play play play,2,play,1,0,10,participants
+no teacher,play play play,0,play,1,1,17,participants
+no teacher,play play play,1,play,1,1,11,participants
+no teacher,play play play,2,play,1,1,13,participants
 expert,watch play play,0,watch,2,0,16,participants
 expert,watch play play,1,play,2,0,16,participants
 expert,watch play play,2,play,2,0,16,participants
@@ -1295,12 +1295,12 @@ expert,watch play play,2,play,0,0,20,participants
 expert,watch play play,0,watch,0,1,18,participants
 expert,watch play play,1,play,0,1,17,participants
 expert,watch play play,2,play,0,1,17,participants
-no demo,play play play,0,play,1,0,8,participants
-no demo,play play play,1,play,1,0,11,participants
-no demo,play play play,2,play,1,0,15,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,9,participants
-no demo,play play play,2,play,1,1,10,participants
+no teacher,play play play,0,play,1,0,8,participants
+no teacher,play play play,1,play,1,0,11,participants
+no teacher,play play play,2,play,1,0,15,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,9,participants
+no teacher,play play play,2,play,1,1,10,participants
 expert,play watch play,0,play,2,0,10,participants
 expert,play watch play,1,watch,2,0,19,participants
 expert,play watch play,2,play,2,0,17,participants
@@ -1325,12 +1325,12 @@ novice,watch play play,2,play,0,0,15,participants
 novice,watch play play,0,watch,0,1,10,participants
 novice,watch play play,1,play,0,1,20,participants
 novice,watch play play,2,play,0,1,17,participants
-no demo,play play play,0,play,1,0,18,participants
-no demo,play play play,1,play,1,0,22,participants
-no demo,play play play,2,play,1,0,23,participants
-no demo,play play play,0,play,1,1,16,participants
-no demo,play play play,1,play,1,1,7,participants
-no demo,play play play,2,play,1,1,9,participants
+no teacher,play play play,0,play,1,0,18,participants
+no teacher,play play play,1,play,1,0,22,participants
+no teacher,play play play,2,play,1,0,23,participants
+no teacher,play play play,0,play,1,1,16,participants
+no teacher,play play play,1,play,1,1,7,participants
+no teacher,play play play,2,play,1,1,9,participants
 expert,play watch play,0,play,2,0,8,participants
 expert,play watch play,1,watch,2,0,13,participants
 expert,play watch play,2,play,2,0,23,participants
@@ -1349,12 +1349,12 @@ expert,watch play play,2,play,4,0,19,participants
 expert,watch play play,0,watch,4,1,15,participants
 expert,watch play play,1,play,4,1,7,participants
 expert,watch play play,2,play,4,1,7,participants
-no demo,play play play,0,play,0,0,11,participants
-no demo,play play play,1,play,0,0,17,participants
-no demo,play play play,2,play,0,0,21,participants
-no demo,play play play,0,play,0,1,21,participants
-no demo,play play play,1,play,0,1,14,participants
-no demo,play play play,2,play,0,1,9,participants
+no teacher,play play play,0,play,0,0,11,participants
+no teacher,play play play,1,play,0,0,17,participants
+no teacher,play play play,2,play,0,0,21,participants
+no teacher,play play play,0,play,0,1,21,participants
+no teacher,play play play,1,play,0,1,14,participants
+no teacher,play play play,2,play,0,1,9,participants
 novice,watch play play,0,watch,1,0,16,participants
 novice,watch play play,1,play,1,0,19,participants
 novice,watch play play,2,play,1,0,20,participants
@@ -1391,12 +1391,12 @@ expert,watch play play,2,play,1,0,19,participants
 expert,watch play play,0,watch,1,1,16,participants
 expert,watch play play,1,play,1,1,17,participants
 expert,watch play play,2,play,1,1,23,participants
-no demo,play play play,0,play,2,0,15,participants
-no demo,play play play,1,play,2,0,19,participants
-no demo,play play play,2,play,2,0,20,participants
-no demo,play play play,0,play,2,1,14,participants
-no demo,play play play,1,play,2,1,21,participants
-no demo,play play play,2,play,2,1,21,participants
+no teacher,play play play,0,play,2,0,15,participants
+no teacher,play play play,1,play,2,0,19,participants
+no teacher,play play play,2,play,2,0,20,participants
+no teacher,play play play,0,play,2,1,14,participants
+no teacher,play play play,1,play,2,1,21,participants
+no teacher,play play play,2,play,2,1,21,participants
 novice,play watch play,0,play,3,0,19,participants
 novice,play watch play,1,watch,3,0,8,participants
 novice,play watch play,2,play,3,0,21,participants
@@ -1415,12 +1415,12 @@ expert,watch play play,2,play,0,0,15,participants
 expert,watch play play,0,watch,0,1,17,participants
 expert,watch play play,1,play,0,1,19,participants
 expert,watch play play,2,play,0,1,24,participants
-no demo,play play play,0,play,1,0,16,participants
-no demo,play play play,1,play,1,0,19,participants
-no demo,play play play,2,play,1,0,19,participants
-no demo,play play play,0,play,1,1,21,participants
-no demo,play play play,1,play,1,1,23,participants
-no demo,play play play,2,play,1,1,20,participants
+no teacher,play play play,0,play,1,0,16,participants
+no teacher,play play play,1,play,1,0,19,participants
+no teacher,play play play,2,play,1,0,19,participants
+no teacher,play play play,0,play,1,1,21,participants
+no teacher,play play play,1,play,1,1,23,participants
+no teacher,play play play,2,play,1,1,20,participants
 novice,watch play play,0,watch,2,0,14,participants
 novice,watch play play,1,play,2,0,9,participants
 novice,watch play play,2,play,2,0,21,participants
@@ -1439,12 +1439,12 @@ expert,play watch play,2,play,4,0,13,participants
 expert,play watch play,0,play,4,1,23,participants
 expert,play watch play,1,watch,4,1,18,participants
 expert,play watch play,2,play,4,1,21,participants
-no demo,play play play,0,play,0,0,14,participants
-no demo,play play play,1,play,0,0,8,participants
-no demo,play play play,2,play,0,0,7,participants
-no demo,play play play,0,play,0,1,19,participants
-no demo,play play play,1,play,0,1,20,participants
-no demo,play play play,2,play,0,1,21,participants
+no teacher,play play play,0,play,0,0,14,participants
+no teacher,play play play,1,play,0,0,8,participants
+no teacher,play play play,2,play,0,0,7,participants
+no teacher,play play play,0,play,0,1,19,participants
+no teacher,play play play,1,play,0,1,20,participants
+no teacher,play play play,2,play,0,1,21,participants
 novice,play watch play,0,play,1,0,13,participants
 novice,play watch play,1,watch,1,0,13,participants
 novice,play watch play,2,play,1,0,18,participants
@@ -1493,12 +1493,12 @@ expert,watch play play,2,play,3,0,22,participants
 expert,watch play play,0,watch,3,1,17,participants
 expert,watch play play,1,play,3,1,11,participants
 expert,watch play play,2,play,3,1,16,participants
-no demo,play play play,0,play,4,0,12,participants
-no demo,play play play,1,play,4,0,17,participants
-no demo,play play play,2,play,4,0,13,participants
-no demo,play play play,0,play,4,1,17,participants
-no demo,play play play,1,play,4,1,20,participants
-no demo,play play play,2,play,4,1,12,participants
+no teacher,play play play,0,play,4,0,12,participants
+no teacher,play play play,1,play,4,0,17,participants
+no teacher,play play play,2,play,4,0,13,participants
+no teacher,play play play,0,play,4,1,17,participants
+no teacher,play play play,1,play,4,1,20,participants
+no teacher,play play play,2,play,4,1,12,participants
 expert,watch play play,0,watch,0,0,19,participants
 expert,watch play play,1,play,0,0,21,participants
 expert,watch play play,2,play,0,0,22,participants
@@ -1517,24 +1517,24 @@ novice,play watch play,2,play,2,0,13,participants
 novice,play watch play,0,play,2,1,11,participants
 novice,play watch play,1,watch,2,1,13,participants
 novice,play watch play,2,play,2,1,14,participants
-no demo,play play play,0,play,3,0,12,participants
-no demo,play play play,1,play,3,0,22,participants
-no demo,play play play,2,play,3,0,22,participants
-no demo,play play play,0,play,3,1,11,participants
-no demo,play play play,1,play,3,1,8,participants
-no demo,play play play,2,play,3,1,17,participants
+no teacher,play play play,0,play,3,0,12,participants
+no teacher,play play play,1,play,3,0,22,participants
+no teacher,play play play,2,play,3,0,22,participants
+no teacher,play play play,0,play,3,1,11,participants
+no teacher,play play play,1,play,3,1,8,participants
+no teacher,play play play,2,play,3,1,17,participants
 expert,play watch play,0,play,4,0,11,participants
 expert,play watch play,1,watch,4,0,17,participants
 expert,play watch play,2,play,4,0,20,participants
 expert,play watch play,0,play,4,1,12,participants
 expert,play watch play,1,watch,4,1,13,participants
 expert,play watch play,2,play,4,1,20,participants
-no demo,play play play,0,play,0,0,21,participants
-no demo,play play play,1,play,0,0,22,participants
-no demo,play play play,2,play,0,0,21,participants
-no demo,play play play,0,play,0,1,16,participants
-no demo,play play play,1,play,0,1,18,participants
-no demo,play play play,2,play,0,1,21,participants
+no teacher,play play play,0,play,0,0,21,participants
+no teacher,play play play,1,play,0,0,22,participants
+no teacher,play play play,2,play,0,0,21,participants
+no teacher,play play play,0,play,0,1,16,participants
+no teacher,play play play,1,play,0,1,18,participants
+no teacher,play play play,2,play,0,1,21,participants
 expert,play watch play,0,play,1,0,15,participants
 expert,play watch play,1,watch,1,0,16,participants
 expert,play watch play,2,play,1,0,18,participants
@@ -1571,12 +1571,12 @@ expert,watch play play,2,play,1,0,22,participants
 expert,watch play play,0,watch,1,1,18,participants
 expert,watch play play,1,play,1,1,21,participants
 expert,watch play play,2,play,1,1,22,participants
-no demo,play play play,0,play,2,0,13,participants
-no demo,play play play,1,play,2,0,15,participants
-no demo,play play play,2,play,2,0,21,participants
-no demo,play play play,0,play,2,1,14,participants
-no demo,play play play,1,play,2,1,15,participants
-no demo,play play play,2,play,2,1,20,participants
+no teacher,play play play,0,play,2,0,13,participants
+no teacher,play play play,1,play,2,0,15,participants
+no teacher,play play play,2,play,2,0,21,participants
+no teacher,play play play,0,play,2,1,14,participants
+no teacher,play play play,1,play,2,1,15,participants
+no teacher,play play play,2,play,2,1,20,participants
 novice,watch play play,0,watch,3,0,12,participants
 novice,watch play play,1,play,3,0,19,participants
 novice,watch play play,2,play,3,0,14,participants
@@ -1589,12 +1589,12 @@ expert,play watch play,2,play,4,0,12,participants
 expert,play watch play,0,play,4,1,8,participants
 expert,play watch play,1,watch,4,1,14,participants
 expert,play watch play,2,play,4,1,20,participants
-no demo,play play play,0,play,0,0,10,participants
-no demo,play play play,1,play,0,0,14,participants
-no demo,play play play,2,play,0,0,17,participants
-no demo,play play play,0,play,0,1,16,participants
-no demo,play play play,1,play,0,1,21,participants
-no demo,play play play,2,play,0,1,22,participants
+no teacher,play play play,0,play,0,0,10,participants
+no teacher,play play play,1,play,0,0,14,participants
+no teacher,play play play,2,play,0,0,17,participants
+no teacher,play play play,0,play,0,1,16,participants
+no teacher,play play play,1,play,0,1,21,participants
+no teacher,play play play,2,play,0,1,22,participants
 novice,watch play play,0,watch,1,0,14,participants
 novice,watch play play,1,play,1,0,10,participants
 novice,watch play play,2,play,1,0,13,participants
@@ -1637,12 +1637,12 @@ novice,play watch play,2,play,2,0,13,participants
 novice,play watch play,0,play,2,1,12,participants
 novice,play watch play,1,watch,2,1,12,participants
 novice,play watch play,2,play,2,1,19,participants
-no demo,play play play,0,play,3,0,18,participants
-no demo,play play play,1,play,3,0,17,participants
-no demo,play play play,2,play,3,0,21,participants
-no demo,play play play,0,play,3,1,19,participants
-no demo,play play play,1,play,3,1,21,participants
-no demo,play play play,2,play,3,1,20,participants
+no teacher,play play play,0,play,3,0,18,participants
+no teacher,play play play,1,play,3,0,17,participants
+no teacher,play play play,2,play,3,0,21,participants
+no teacher,play play play,0,play,3,1,19,participants
+no teacher,play play play,1,play,3,1,21,participants
+no teacher,play play play,2,play,3,1,20,participants
 novice,watch play play,0,watch,4,0,12,participants
 novice,watch play play,1,play,4,0,19,participants
 novice,watch play play,2,play,4,0,16,participants
@@ -1655,12 +1655,12 @@ expert,watch play play,2,play,0,0,19,participants
 expert,watch play play,0,watch,0,1,12,participants
 expert,watch play play,1,play,0,1,20,participants
 expert,watch play play,2,play,0,1,21,participants
-no demo,play play play,0,play,1,0,10,participants
-no demo,play play play,1,play,1,0,23,participants
-no demo,play play play,2,play,1,0,19,participants
-no demo,play play play,0,play,1,1,9,participants
-no demo,play play play,1,play,1,1,18,participants
-no demo,play play play,2,play,1,1,10,participants
+no teacher,play play play,0,play,1,0,10,participants
+no teacher,play play play,1,play,1,0,23,participants
+no teacher,play play play,2,play,1,0,19,participants
+no teacher,play play play,0,play,1,1,9,participants
+no teacher,play play play,1,play,1,1,18,participants
+no teacher,play play play,2,play,1,1,10,participants
 expert,play watch play,0,play,2,0,11,participants
 expert,play watch play,1,watch,2,0,18,participants
 expert,play watch play,2,play,2,0,24,participants
@@ -1691,12 +1691,12 @@ expert,play watch play,2,play,1,0,20,participants
 expert,play watch play,0,play,1,1,15,participants
 expert,play watch play,1,watch,1,1,14,participants
 expert,play watch play,2,play,1,1,20,participants
-no demo,play play play,0,play,2,0,12,participants
-no demo,play play play,1,play,2,0,21,participants
-no demo,play play play,2,play,2,0,20,participants
-no demo,play play play,0,play,2,1,13,participants
-no demo,play play play,1,play,2,1,13,participants
-no demo,play play play,2,play,2,1,16,participants
+no teacher,play play play,0,play,2,0,12,participants
+no teacher,play play play,1,play,2,0,21,participants
+no teacher,play play play,2,play,2,0,20,participants
+no teacher,play play play,0,play,2,1,13,participants
+no teacher,play play play,1,play,2,1,13,participants
+no teacher,play play play,2,play,2,1,16,participants
 novice,play watch play,0,play,3,0,19,participants
 novice,play watch play,1,watch,3,0,7,participants
 novice,play watch play,2,play,3,0,21,participants
@@ -1727,24 +1727,24 @@ novice,watch play play,2,play,2,0,17,participants
 novice,watch play play,0,watch,2,1,10,participants
 novice,watch play play,1,play,2,1,10,participants
 novice,watch play play,2,play,2,1,16,participants
-no demo,play play play,0,play,3,0,15,participants
-no demo,play play play,1,play,3,0,19,participants
-no demo,play play play,2,play,3,0,14,participants
-no demo,play play play,0,play,3,1,10,participants
-no demo,play play play,1,play,3,1,11,participants
-no demo,play play play,2,play,3,1,17,participants
+no teacher,play play play,0,play,3,0,15,participants
+no teacher,play play play,1,play,3,0,19,participants
+no teacher,play play play,2,play,3,0,14,participants
+no teacher,play play play,0,play,3,1,10,participants
+no teacher,play play play,1,play,3,1,11,participants
+no teacher,play play play,2,play,3,1,17,participants
 expert,play watch play,0,play,4,0,14,participants
 expert,play watch play,1,watch,4,0,16,participants
 expert,play watch play,2,play,4,0,15,participants
 expert,play watch play,0,play,4,1,13,participants
 expert,play watch play,1,watch,4,1,21,participants
 expert,play watch play,2,play,4,1,18,participants
-no demo,play play play,0,play,0,0,19,participants
-no demo,play play play,1,play,0,0,21,participants
-no demo,play play play,2,play,0,0,17,participants
-no demo,play play play,0,play,0,1,11,participants
-no demo,play play play,1,play,0,1,11,participants
-no demo,play play play,2,play,0,1,19,participants
+no teacher,play play play,0,play,0,0,19,participants
+no teacher,play play play,1,play,0,0,21,participants
+no teacher,play play play,2,play,0,0,17,participants
+no teacher,play play play,0,play,0,1,11,participants
+no teacher,play play play,1,play,0,1,11,participants
+no teacher,play play play,2,play,0,1,19,participants
 novice,play watch play,0,play,1,0,14,participants
 novice,play watch play,1,watch,1,0,7,participants
 novice,play watch play,2,play,1,0,22,participants
@@ -1775,12 +1775,12 @@ expert,watch play play,2,play,0,0,15,participants
 expert,watch play play,0,watch,0,1,16,participants
 expert,watch play play,1,play,0,1,15,participants
 expert,watch play play,2,play,0,1,16,participants
-no demo,play play play,0,play,1,0,15,participants
-no demo,play play play,1,play,1,0,12,participants
-no demo,play play play,2,play,1,0,14,participants
-no demo,play play play,0,play,1,1,8,participants
-no demo,play play play,1,play,1,1,15,participants
-no demo,play play play,2,play,1,1,20,participants
+no teacher,play play play,0,play,1,0,15,participants
+no teacher,play play play,1,play,1,0,12,participants
+no teacher,play play play,2,play,1,0,14,participants
+no teacher,play play play,0,play,1,1,8,participants
+no teacher,play play play,1,play,1,1,15,participants
+no teacher,play play play,2,play,1,1,20,participants
 novice,watch play play,0,watch,2,0,7,participants
 novice,watch play play,1,play,2,0,14,participants
 novice,watch play play,2,play,2,0,20,participants
@@ -1811,12 +1811,12 @@ expert,play watch play,2,play,1,0,21,participants
 expert,play watch play,0,play,1,1,14,participants
 expert,play watch play,1,watch,1,1,15,participants
 expert,play watch play,2,play,1,1,23,participants
-no demo,play play play,0,play,2,0,8,participants
-no demo,play play play,1,play,2,0,12,participants
-no demo,play play play,2,play,2,0,15,participants
-no demo,play play play,0,play,2,1,19,participants
-no demo,play play play,1,play,2,1,15,participants
-no demo,play play play,2,play,2,1,13,participants
+no teacher,play play play,0,play,2,0,8,participants
+no teacher,play play play,1,play,2,0,12,participants
+no teacher,play play play,2,play,2,0,15,participants
+no teacher,play play play,0,play,2,1,19,participants
+no teacher,play play play,1,play,2,1,15,participants
+no teacher,play play play,2,play,2,1,13,participants
 novice,watch play play,0,watch,3,0,13,participants
 novice,watch play play,1,play,3,0,20,participants
 novice,watch play play,2,play,3,0,23,participants
@@ -1835,12 +1835,12 @@ novice,watch play play,2,play,0,0,18,participants
 novice,watch play play,0,watch,0,1,12,participants
 novice,watch play play,1,play,0,1,8,participants
 novice,watch play play,2,play,0,1,16,participants
-no demo,play play play,0,play,1,0,18,participants
-no demo,play play play,1,play,1,0,21,participants
-no demo,play play play,2,play,1,0,23,participants
-no demo,play play play,0,play,1,1,10,participants
-no demo,play play play,1,play,1,1,12,participants
-no demo,play play play,2,play,1,1,8,participants
+no teacher,play play play,0,play,1,0,18,participants
+no teacher,play play play,1,play,1,0,21,participants
+no teacher,play play play,2,play,1,0,23,participants
+no teacher,play play play,0,play,1,1,10,participants
+no teacher,play play play,1,play,1,1,12,participants
+no teacher,play play play,2,play,1,1,8,participants
 expert,play watch play,0,play,2,0,16,participants
 expert,play watch play,1,watch,2,0,15,participants
 expert,play watch play,2,play,2,0,22,participants
@@ -1859,35 +1859,6 @@ expert,watch play play,2,play,4,0,23,participants
 expert,watch play play,0,watch,4,1,23,participants
 expert,watch play play,1,play,4,1,22,participants
 expert,watch play play,2,play,4,1,19,participants
-expert,play watch play,0,play,0,0,12,participants
-expert,play watch play,1,watch,0,0,16,participants
-expert,play watch play,2,play,0,0,23,participants
-expert,play watch play,0,play,0,1,11,participants
-expert,play watch play,1,watch,0,1,15,participants
-expert,watch play play,0,watch,1,0,18,participants
-expert,watch play play,1,play,1,0,23,participants
-expert,watch play play,2,play,1,0,22,participants
-expert,watch play play,0,watch,1,1,14,participants
-expert,watch play play,1,play,1,1,13,participants
-expert,watch play play,2,play,1,1,14,participants
-novice,play watch play,0,play,2,0,6,participants
-novice,play watch play,1,watch,2,0,14,participants
-novice,play watch play,2,play,2,0,14,participants
-novice,play watch play,0,play,2,1,14,participants
-novice,play watch play,1,watch,2,1,10,participants
-novice,play watch play,2,play,2,1,21,participants
-novice,watch play play,0,watch,3,0,13,participants
-novice,watch play play,1,play,3,0,22,participants
-novice,watch play play,2,play,3,0,22,participants
-novice,watch play play,0,watch,3,1,11,participants
-novice,watch play play,1,play,3,1,21,participants
-novice,watch play play,2,play,3,1,17,participants
-no demo,play play play,0,play,4,0,13,participants
-no demo,play play play,1,play,4,0,12,participants
-no demo,play play play,2,play,4,0,9,participants
-no demo,play play play,0,play,4,1,13,participants
-no demo,play play play,1,play,4,1,13,participants
-no demo,play play play,2,play,4,1,19,participants
 expert,watch play play,0,watch,0,0,17,participants
 expert,watch play play,1,play,0,0,11,participants
 expert,watch play play,2,play,0,0,17,participants
@@ -1912,12 +1883,12 @@ novice,watch play play,2,play,3,0,14,participants
 novice,watch play play,0,watch,3,1,13,participants
 novice,watch play play,1,play,3,1,11,participants
 novice,watch play play,2,play,3,1,16,participants
-no demo,play play play,0,play,4,0,9,participants
-no demo,play play play,1,play,4,0,19,participants
-no demo,play play play,2,play,4,0,9,participants
-no demo,play play play,0,play,4,1,9,participants
-no demo,play play play,1,play,4,1,13,participants
-no demo,play play play,2,play,4,1,18,participants
+no teacher,play play play,0,play,4,0,9,participants
+no teacher,play play play,1,play,4,0,19,participants
+no teacher,play play play,2,play,4,0,9,participants
+no teacher,play play play,0,play,4,1,9,participants
+no teacher,play play play,1,play,4,1,13,participants
+no teacher,play play play,2,play,4,1,18,participants
 expert,play watch play,0,play,0,0,13,participants
 expert,play watch play,1,watch,0,0,15,participants
 expert,play watch play,2,play,0,0,16,participants
@@ -1942,24 +1913,24 @@ expert,watch play play,2,play,3,0,11,participants
 expert,watch play play,0,watch,3,1,17,participants
 expert,watch play play,1,play,3,1,17,participants
 expert,watch play play,2,play,3,1,20,participants
-no demo,play play play,0,play,4,0,16,participants
-no demo,play play play,1,play,4,0,21,participants
-no demo,play play play,2,play,4,0,23,participants
-no demo,play play play,0,play,4,1,18,participants
-no demo,play play play,1,play,4,1,17,participants
-no demo,play play play,2,play,4,1,15,participants
+no teacher,play play play,0,play,4,0,16,participants
+no teacher,play play play,1,play,4,0,21,participants
+no teacher,play play play,2,play,4,0,23,participants
+no teacher,play play play,0,play,4,1,18,participants
+no teacher,play play play,1,play,4,1,17,participants
+no teacher,play play play,2,play,4,1,15,participants
 expert,watch play play,0,watch,0,0,19,participants
 expert,watch play play,1,play,0,0,18,participants
 expert,watch play play,2,play,0,0,18,participants
 expert,watch play play,0,watch,0,1,16,participants
 expert,watch play play,1,play,0,1,21,participants
 expert,watch play play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,12,participants
-no demo,play play play,1,play,1,0,17,participants
-no demo,play play play,2,play,1,0,22,participants
-no demo,play play play,0,play,1,1,9,participants
-no demo,play play play,1,play,1,1,11,participants
-no demo,play play play,2,play,1,1,12,participants
+no teacher,play play play,0,play,1,0,12,participants
+no teacher,play play play,1,play,1,0,17,participants
+no teacher,play play play,2,play,1,0,22,participants
+no teacher,play play play,0,play,1,1,9,participants
+no teacher,play play play,1,play,1,1,11,participants
+no teacher,play play play,2,play,1,1,12,participants
 novice,watch play play,0,watch,2,0,14,participants
 novice,watch play play,1,play,2,0,6,participants
 novice,watch play play,2,play,2,0,12,participants
@@ -1990,12 +1961,12 @@ expert,play watch play,2,play,1,0,12,participants
 expert,play watch play,0,play,1,1,14,participants
 expert,play watch play,1,watch,1,1,13,participants
 expert,play watch play,2,play,1,1,23,participants
-no demo,play play play,0,play,2,0,8,participants
-no demo,play play play,1,play,2,0,14,participants
-no demo,play play play,2,play,2,0,19,participants
-no demo,play play play,0,play,2,1,17,participants
-no demo,play play play,1,play,2,1,13,participants
-no demo,play play play,2,play,2,1,13,participants
+no teacher,play play play,0,play,2,0,8,participants
+no teacher,play play play,1,play,2,0,14,participants
+no teacher,play play play,2,play,2,0,19,participants
+no teacher,play play play,0,play,2,1,17,participants
+no teacher,play play play,1,play,2,1,13,participants
+no teacher,play play play,2,play,2,1,13,participants
 expert,watch play play,0,watch,3,0,14,participants
 expert,watch play play,1,play,3,0,18,participants
 expert,watch play play,2,play,3,0,7,participants
@@ -2008,41 +1979,6 @@ novice,play watch play,2,play,4,0,19,participants
 novice,play watch play,0,play,4,1,15,participants
 novice,play watch play,1,watch,4,1,11,participants
 novice,play watch play,2,play,4,1,20,participants
-novice,play watch play,0,play,0,0,14,participants
-novice,play watch play,1,watch,0,0,18,participants
-novice,play watch play,2,play,0,0,12,participants
-novice,play watch play,0,play,0,1,12,participants
-novice,play watch play,1,watch,0,1,20,participants
-novice,play watch play,2,play,0,1,23,participants
-no demo,play play play,0,play,1,0,19,participants
-no demo,play play play,1,play,1,0,21,participants
-no demo,play play play,2,play,1,0,21,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,11,participants
-no demo,play play play,2,play,1,1,15,participants
-expert,play watch play,0,play,2,0,14,participants
-expert,play watch play,1,watch,2,0,18,participants
-expert,play watch play,2,play,2,0,19,participants
-expert,watch play play,0,watch,2,0,13,participants
-expert,watch play play,1,play,2,0,19,participants
-expert,play watch play,0,play,2,1,12,participants
-expert,play watch play,1,watch,2,1,17,participants
-expert,play watch play,2,play,2,1,14,participants
-expert,watch play play,0,watch,2,1,19,participants
-expert,watch play play,1,play,2,1,16,participants
-expert,watch play play,2,play,2,1,15,participants
-expert,watch play play,0,watch,3,0,13,participants
-expert,watch play play,1,play,3,0,11,participants
-expert,watch play play,2,play,3,0,15,participants
-expert,watch play play,0,watch,3,1,18,participants
-expert,watch play play,1,play,3,1,9,participants
-expert,watch play play,2,play,3,1,7,participants
-novice,play watch play,0,play,4,0,11,participants
-novice,play watch play,1,watch,4,0,13,participants
-novice,play watch play,2,play,4,0,7,participants
-novice,play watch play,0,play,4,1,16,participants
-novice,play watch play,1,watch,4,1,15,participants
-novice,play watch play,2,play,4,1,12,participants
 novice,watch play play,0,watch,0,0,6,participants
 novice,watch play play,1,play,0,0,11,participants
 novice,watch play play,2,play,0,0,11,participants
@@ -2055,12 +1991,12 @@ expert,play watch play,2,play,1,0,14,participants
 expert,play watch play,0,play,1,1,15,participants
 expert,play watch play,1,watch,1,1,17,participants
 expert,play watch play,2,play,1,1,16,participants
-no demo,play play play,0,play,2,0,13,participants
-no demo,play play play,1,play,2,0,22,participants
-no demo,play play play,2,play,2,0,22,participants
-no demo,play play play,0,play,2,1,10,participants
-no demo,play play play,1,play,2,1,15,participants
-no demo,play play play,2,play,2,1,22,participants
+no teacher,play play play,0,play,2,0,13,participants
+no teacher,play play play,1,play,2,0,22,participants
+no teacher,play play play,2,play,2,0,22,participants
+no teacher,play play play,0,play,2,1,10,participants
+no teacher,play play play,1,play,2,1,15,participants
+no teacher,play play play,2,play,2,1,22,participants
 novice,play watch play,0,play,3,0,17,participants
 novice,play watch play,1,watch,3,0,11,participants
 novice,play watch play,2,play,3,0,19,participants
@@ -2073,12 +2009,12 @@ expert,watch play play,2,play,4,0,19,participants
 expert,watch play play,0,watch,4,1,18,participants
 expert,watch play play,1,play,4,1,20,participants
 expert,watch play play,2,play,4,1,22,participants
-no demo,play play play,0,play,0,0,15,participants
-no demo,play play play,1,play,0,0,16,participants
-no demo,play play play,2,play,0,0,10,participants
-no demo,play play play,0,play,0,1,10,participants
-no demo,play play play,1,play,0,1,19,participants
-no demo,play play play,2,play,0,1,18,participants
+no teacher,play play play,0,play,0,0,15,participants
+no teacher,play play play,1,play,0,0,16,participants
+no teacher,play play play,2,play,0,0,10,participants
+no teacher,play play play,0,play,0,1,10,participants
+no teacher,play play play,1,play,0,1,19,participants
+no teacher,play play play,2,play,0,1,18,participants
 novice,play watch play,0,play,1,0,12,participants
 novice,play watch play,1,watch,1,0,11,participants
 novice,play watch play,2,play,1,0,16,participants
@@ -2127,24 +2063,24 @@ novice,watch play play,2,play,3,0,13,participants
 novice,watch play play,0,watch,3,1,12,participants
 novice,watch play play,1,play,3,1,19,participants
 novice,watch play play,2,play,3,1,21,participants
-no demo,play play play,0,play,4,0,14,participants
-no demo,play play play,1,play,4,0,15,participants
-no demo,play play play,2,play,4,0,14,participants
-no demo,play play play,0,play,4,1,14,participants
-no demo,play play play,1,play,4,1,17,participants
-no demo,play play play,2,play,4,1,9,participants
+no teacher,play play play,0,play,4,0,14,participants
+no teacher,play play play,1,play,4,0,15,participants
+no teacher,play play play,2,play,4,0,14,participants
+no teacher,play play play,0,play,4,1,14,participants
+no teacher,play play play,1,play,4,1,17,participants
+no teacher,play play play,2,play,4,1,9,participants
 expert,watch play play,0,watch,0,0,18,participants
 expert,watch play play,1,play,0,0,12,participants
 expert,watch play play,2,play,0,0,15,participants
 expert,watch play play,0,watch,0,1,17,participants
 expert,watch play play,1,play,0,1,13,participants
 expert,watch play play,2,play,0,1,13,participants
-no demo,play play play,0,play,1,0,14,participants
-no demo,play play play,1,play,1,0,16,participants
-no demo,play play play,2,play,1,0,19,participants
-no demo,play play play,0,play,1,1,19,participants
-no demo,play play play,1,play,1,1,13,participants
-no demo,play play play,2,play,1,1,11,participants
+no teacher,play play play,0,play,1,0,14,participants
+no teacher,play play play,1,play,1,0,16,participants
+no teacher,play play play,2,play,1,0,19,participants
+no teacher,play play play,0,play,1,1,19,participants
+no teacher,play play play,1,play,1,1,13,participants
+no teacher,play play play,2,play,1,1,11,participants
 expert,play watch play,0,play,2,0,8,participants
 expert,play watch play,1,watch,2,0,17,participants
 expert,play watch play,2,play,2,0,18,participants
@@ -2163,12 +2099,12 @@ novice,play watch play,2,play,4,0,19,participants
 novice,play watch play,0,play,4,1,9,participants
 novice,play watch play,1,watch,4,1,10,participants
 novice,play watch play,2,play,4,1,11,participants
-no demo,play play play,0,play,0,0,15,participants
-no demo,play play play,1,play,0,0,13,participants
-no demo,play play play,2,play,0,0,17,participants
-no demo,play play play,0,play,0,1,10,participants
-no demo,play play play,1,play,0,1,19,participants
-no demo,play play play,2,play,0,1,12,participants
+no teacher,play play play,0,play,0,0,15,participants
+no teacher,play play play,1,play,0,0,13,participants
+no teacher,play play play,2,play,0,0,17,participants
+no teacher,play play play,0,play,0,1,10,participants
+no teacher,play play play,1,play,0,1,19,participants
+no teacher,play play play,2,play,0,1,12,participants
 novice,play watch play,0,play,1,0,11,participants
 novice,play watch play,1,watch,1,0,12,participants
 novice,play watch play,2,play,1,0,16,participants
@@ -2193,12 +2129,12 @@ expert,watch play play,2,play,4,0,23,participants
 expert,watch play play,0,watch,4,1,18,participants
 expert,watch play play,1,play,4,1,23,participants
 expert,watch play play,2,play,4,1,18,participants
-no demo,play play play,0,play,0,0,12,participants
-no demo,play play play,1,play,0,0,15,participants
-no demo,play play play,2,play,0,0,15,participants
-no demo,play play play,0,play,0,1,16,participants
-no demo,play play play,1,play,0,1,19,participants
-no demo,play play play,2,play,0,1,14,participants
+no teacher,play play play,0,play,0,0,12,participants
+no teacher,play play play,1,play,0,0,15,participants
+no teacher,play play play,2,play,0,0,15,participants
+no teacher,play play play,0,play,0,1,16,participants
+no teacher,play play play,1,play,0,1,19,participants
+no teacher,play play play,2,play,0,1,14,participants
 novice,play watch play,0,play,1,0,13,participants
 novice,play watch play,1,watch,1,0,10,participants
 novice,play watch play,2,play,1,0,10,participants
@@ -2223,12 +2159,12 @@ expert,play watch play,2,play,4,0,18,participants
 expert,play watch play,0,play,4,1,11,participants
 expert,play watch play,1,watch,4,1,15,participants
 expert,play watch play,2,play,4,1,11,participants
-no demo,play play play,0,play,0,0,12,participants
-no demo,play play play,1,play,0,0,18,participants
-no demo,play play play,2,play,0,0,15,participants
-no demo,play play play,0,play,0,1,16,participants
-no demo,play play play,1,play,0,1,15,participants
-no demo,play play play,2,play,0,1,14,participants
+no teacher,play play play,0,play,0,0,12,participants
+no teacher,play play play,1,play,0,0,18,participants
+no teacher,play play play,2,play,0,0,15,participants
+no teacher,play play play,0,play,0,1,16,participants
+no teacher,play play play,1,play,0,1,15,participants
+no teacher,play play play,2,play,0,1,14,participants
 novice,watch play play,0,watch,1,0,14,participants
 novice,watch play play,1,play,1,0,11,participants
 novice,watch play play,2,play,1,0,14,participants
@@ -2271,12 +2207,12 @@ novice,play watch play,2,play,2,0,8,participants
 novice,play watch play,0,play,2,1,22,participants
 novice,play watch play,1,watch,2,1,17,participants
 novice,play watch play,2,play,2,1,21,participants
-no demo,play play play,0,play,3,0,8,participants
-no demo,play play play,1,play,3,0,14,participants
-no demo,play play play,2,play,3,0,13,participants
-no demo,play play play,0,play,3,1,10,participants
-no demo,play play play,1,play,3,1,13,participants
-no demo,play play play,2,play,3,1,11,participants
+no teacher,play play play,0,play,3,0,8,participants
+no teacher,play play play,1,play,3,0,14,participants
+no teacher,play play play,2,play,3,0,13,participants
+no teacher,play play play,0,play,3,1,10,participants
+no teacher,play play play,1,play,3,1,13,participants
+no teacher,play play play,2,play,3,1,11,participants
 expert,play watch play,0,play,4,0,15,participants
 expert,play watch play,1,watch,4,0,18,participants
 expert,play watch play,2,play,4,0,14,participants
@@ -2289,12 +2225,12 @@ novice,play watch play,2,play,0,0,20,participants
 novice,play watch play,0,play,0,1,10,participants
 novice,play watch play,1,watch,0,1,13,participants
 novice,play watch play,2,play,0,1,13,participants
-no demo,play play play,0,play,1,0,18,participants
-no demo,play play play,1,play,1,0,12,participants
-no demo,play play play,2,play,1,0,14,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,11,participants
-no demo,play play play,2,play,1,1,9,participants
+no teacher,play play play,0,play,1,0,18,participants
+no teacher,play play play,1,play,1,0,12,participants
+no teacher,play play play,2,play,1,0,14,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,11,participants
+no teacher,play play play,2,play,1,1,9,participants
 expert,play watch play,0,play,2,0,20,participants
 expert,play watch play,1,watch,2,0,18,participants
 expert,play watch play,2,play,2,0,22,participants
@@ -2313,12 +2249,12 @@ novice,watch play play,2,play,4,0,20,participants
 novice,watch play play,0,watch,4,1,11,participants
 novice,watch play play,1,play,4,1,21,participants
 novice,watch play play,2,play,4,1,21,participants
-no demo,play play play,0,play,0,0,17,participants
-no demo,play play play,1,play,0,0,10,participants
-no demo,play play play,2,play,0,0,14,participants
-no demo,play play play,0,play,0,1,18,participants
-no demo,play play play,1,play,0,1,13,participants
-no demo,play play play,2,play,0,1,17,participants
+no teacher,play play play,0,play,0,0,17,participants
+no teacher,play play play,1,play,0,0,10,participants
+no teacher,play play play,2,play,0,0,14,participants
+no teacher,play play play,0,play,0,1,18,participants
+no teacher,play play play,1,play,0,1,13,participants
+no teacher,play play play,2,play,0,1,17,participants
 expert,watch play play,0,watch,1,0,15,participants
 expert,watch play play,1,play,1,0,21,participants
 expert,watch play play,2,play,1,0,20,participants
@@ -2367,24 +2303,24 @@ novice,play watch play,2,play,3,0,19,participants
 novice,play watch play,0,play,3,1,5,participants
 novice,play watch play,1,watch,3,1,12,participants
 novice,play watch play,2,play,3,1,15,participants
-no demo,play play play,0,play,4,0,9,participants
-no demo,play play play,1,play,4,0,13,participants
-no demo,play play play,2,play,4,0,19,participants
-no demo,play play play,0,play,4,1,14,participants
-no demo,play play play,1,play,4,1,21,participants
-no demo,play play play,2,play,4,1,18,participants
+no teacher,play play play,0,play,4,0,9,participants
+no teacher,play play play,1,play,4,0,13,participants
+no teacher,play play play,2,play,4,0,19,participants
+no teacher,play play play,0,play,4,1,14,participants
+no teacher,play play play,1,play,4,1,21,participants
+no teacher,play play play,2,play,4,1,18,participants
 expert,watch play play,0,watch,0,0,17,participants
 expert,watch play play,1,play,0,0,15,participants
 expert,watch play play,2,play,0,0,24,participants
 expert,watch play play,0,watch,0,1,14,participants
 expert,watch play play,1,play,0,1,18,participants
 expert,watch play play,2,play,0,1,17,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,20,participants
-no demo,play play play,2,play,1,0,18,participants
-no demo,play play play,0,play,1,1,11,participants
-no demo,play play play,1,play,1,1,16,participants
-no demo,play play play,2,play,1,1,16,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,20,participants
+no teacher,play play play,2,play,1,0,18,participants
+no teacher,play play play,0,play,1,1,11,participants
+no teacher,play play play,1,play,1,1,16,participants
+no teacher,play play play,2,play,1,1,16,participants
 novice,play watch play,0,play,2,0,19,participants
 novice,play watch play,1,watch,2,0,8,participants
 novice,play watch play,2,play,2,0,23,participants
@@ -2415,12 +2351,12 @@ novice,play watch play,2,play,1,0,13,participants
 novice,play watch play,0,play,1,1,13,participants
 novice,play watch play,1,watch,1,1,9,participants
 novice,play watch play,2,play,1,1,8,participants
-no demo,play play play,0,play,2,0,14,participants
-no demo,play play play,1,play,2,0,20,participants
-no demo,play play play,2,play,2,0,9,participants
-no demo,play play play,0,play,2,1,8,participants
-no demo,play play play,1,play,2,1,6,participants
-no demo,play play play,2,play,2,1,6,participants
+no teacher,play play play,0,play,2,0,14,participants
+no teacher,play play play,1,play,2,0,20,participants
+no teacher,play play play,2,play,2,0,9,participants
+no teacher,play play play,0,play,2,1,8,participants
+no teacher,play play play,1,play,2,1,6,participants
+no teacher,play play play,2,play,2,1,6,participants
 expert,play watch play,0,play,3,0,9,participants
 expert,play watch play,1,watch,3,0,18,participants
 expert,play watch play,2,play,3,0,7,participants
@@ -2445,12 +2381,12 @@ novice,watch play play,2,play,1,0,11,participants
 novice,watch play play,0,watch,1,1,13,participants
 novice,watch play play,1,play,1,1,8,participants
 novice,watch play play,2,play,1,1,12,participants
-no demo,play play play,0,play,2,0,11,participants
-no demo,play play play,1,play,2,0,9,participants
-no demo,play play play,2,play,2,0,12,participants
-no demo,play play play,0,play,2,1,13,participants
-no demo,play play play,1,play,2,1,14,participants
-no demo,play play play,2,play,2,1,12,participants
+no teacher,play play play,0,play,2,0,11,participants
+no teacher,play play play,1,play,2,0,9,participants
+no teacher,play play play,2,play,2,0,12,participants
+no teacher,play play play,0,play,2,1,13,participants
+no teacher,play play play,1,play,2,1,14,participants
+no teacher,play play play,2,play,2,1,12,participants
 expert,watch play play,0,watch,3,0,19,participants
 expert,watch play play,1,play,3,0,20,participants
 expert,watch play play,2,play,3,0,20,participants
@@ -2463,12 +2399,12 @@ expert,play watch play,2,play,4,0,22,participants
 expert,play watch play,0,play,4,1,11,participants
 expert,play watch play,1,watch,4,1,18,participants
 expert,play watch play,2,play,4,1,18,participants
-no demo,play play play,0,play,0,0,13,participants
-no demo,play play play,1,play,0,0,21,participants
-no demo,play play play,2,play,0,0,22,participants
-no demo,play play play,0,play,0,1,7,participants
-no demo,play play play,1,play,0,1,14,participants
-no demo,play play play,2,play,0,1,11,participants
+no teacher,play play play,0,play,0,0,13,participants
+no teacher,play play play,1,play,0,0,21,participants
+no teacher,play play play,2,play,0,0,22,participants
+no teacher,play play play,0,play,0,1,7,participants
+no teacher,play play play,1,play,0,1,14,participants
+no teacher,play play play,2,play,0,1,11,participants
 expert,watch play play,0,watch,1,0,20,participants
 expert,watch play play,1,play,1,0,21,participants
 expert,watch play play,2,play,1,0,20,participants
@@ -2511,24 +2447,24 @@ expert,watch play play,2,play,2,0,18,participants
 expert,watch play play,0,watch,2,1,13,participants
 expert,watch play play,1,play,2,1,16,participants
 expert,watch play play,2,play,2,1,14,participants
-no demo,play play play,0,play,3,0,13,participants
-no demo,play play play,1,play,3,0,15,participants
-no demo,play play play,2,play,3,0,18,participants
-no demo,play play play,0,play,3,1,19,participants
-no demo,play play play,1,play,3,1,21,participants
-no demo,play play play,2,play,3,1,23,participants
+no teacher,play play play,0,play,3,0,13,participants
+no teacher,play play play,1,play,3,0,15,participants
+no teacher,play play play,2,play,3,0,18,participants
+no teacher,play play play,0,play,3,1,19,participants
+no teacher,play play play,1,play,3,1,21,participants
+no teacher,play play play,2,play,3,1,23,participants
 novice,play watch play,0,play,4,0,11,participants
 novice,play watch play,1,watch,4,0,11,participants
 novice,play watch play,2,play,4,0,14,participants
 novice,play watch play,0,play,4,1,15,participants
 novice,play watch play,1,watch,4,1,10,participants
 novice,play watch play,2,play,4,1,14,participants
-no demo,play play play,0,play,0,0,14,participants
-no demo,play play play,1,play,0,0,8,participants
-no demo,play play play,2,play,0,0,22,participants
-no demo,play play play,0,play,0,1,14,participants
-no demo,play play play,1,play,0,1,14,participants
-no demo,play play play,2,play,0,1,14,participants
+no teacher,play play play,0,play,0,0,14,participants
+no teacher,play play play,1,play,0,0,8,participants
+no teacher,play play play,2,play,0,0,22,participants
+no teacher,play play play,0,play,0,1,14,participants
+no teacher,play play play,1,play,0,1,14,participants
+no teacher,play play play,2,play,0,1,14,participants
 novice,watch play play,0,watch,1,0,10,participants
 novice,watch play play,1,play,1,0,15,participants
 novice,watch play play,2,play,1,0,12,participants
@@ -2565,12 +2501,12 @@ expert,play watch play,2,play,1,0,18,participants
 expert,play watch play,0,play,1,1,19,participants
 expert,play watch play,1,watch,1,1,18,participants
 expert,play watch play,2,play,1,1,18,participants
-no demo,play play play,0,play,2,0,13,participants
-no demo,play play play,1,play,2,0,23,participants
-no demo,play play play,2,play,2,0,16,participants
-no demo,play play play,0,play,2,1,13,participants
-no demo,play play play,1,play,2,1,14,participants
-no demo,play play play,2,play,2,1,12,participants
+no teacher,play play play,0,play,2,0,13,participants
+no teacher,play play play,1,play,2,0,23,participants
+no teacher,play play play,2,play,2,0,16,participants
+no teacher,play play play,0,play,2,1,13,participants
+no teacher,play play play,1,play,2,1,14,participants
+no teacher,play play play,2,play,2,1,12,participants
 expert,watch play play,0,watch,3,0,20,participants
 expert,watch play play,1,play,3,0,17,participants
 expert,watch play play,2,play,3,0,18,participants
@@ -2607,12 +2543,12 @@ expert,watch play play,2,play,3,0,21,participants
 expert,watch play play,0,watch,3,1,12,participants
 expert,watch play play,1,play,3,1,11,participants
 expert,watch play play,2,play,3,1,16,participants
-no demo,play play play,0,play,4,0,12,participants
-no demo,play play play,1,play,4,0,16,participants
-no demo,play play play,2,play,4,0,12,participants
-no demo,play play play,0,play,4,1,9,participants
-no demo,play play play,1,play,4,1,14,participants
-no demo,play play play,2,play,4,1,12,participants
+no teacher,play play play,0,play,4,0,12,participants
+no teacher,play play play,1,play,4,0,16,participants
+no teacher,play play play,2,play,4,0,12,participants
+no teacher,play play play,0,play,4,1,9,participants
+no teacher,play play play,1,play,4,1,14,participants
+no teacher,play play play,2,play,4,1,12,participants
 expert,watch play play,0,watch,0,0,18,participants
 expert,watch play play,1,play,0,0,13,participants
 expert,watch play play,2,play,0,0,22,participants
@@ -2637,12 +2573,12 @@ novice,play watch play,2,play,3,0,17,participants
 novice,play watch play,0,play,3,1,10,participants
 novice,play watch play,1,watch,3,1,11,participants
 novice,play watch play,2,play,3,1,17,participants
-no demo,play play play,0,play,4,0,10,participants
-no demo,play play play,1,play,4,0,12,participants
-no demo,play play play,2,play,4,0,14,participants
-no demo,play play play,0,play,4,1,14,participants
-no demo,play play play,1,play,4,1,11,participants
-no demo,play play play,2,play,4,1,17,participants
+no teacher,play play play,0,play,4,0,10,participants
+no teacher,play play play,1,play,4,0,12,participants
+no teacher,play play play,2,play,4,0,14,participants
+no teacher,play play play,0,play,4,1,14,participants
+no teacher,play play play,1,play,4,1,11,participants
+no teacher,play play play,2,play,4,1,17,participants
 novice,watch play play,0,watch,0,0,15,participants
 novice,watch play play,1,play,0,0,10,participants
 novice,watch play play,2,play,0,0,11,participants
@@ -2661,12 +2597,12 @@ expert,play watch play,2,play,2,0,18,participants
 expert,play watch play,0,play,2,1,16,participants
 expert,play watch play,1,watch,2,1,14,participants
 expert,play watch play,2,play,2,1,18,participants
-no demo,play play play,0,play,3,0,11,participants
-no demo,play play play,1,play,3,0,10,participants
-no demo,play play play,2,play,3,0,7,participants
-no demo,play play play,0,play,3,1,7,participants
-no demo,play play play,1,play,3,1,18,participants
-no demo,play play play,2,play,3,1,16,participants
+no teacher,play play play,0,play,3,0,11,participants
+no teacher,play play play,1,play,3,0,10,participants
+no teacher,play play play,2,play,3,0,7,participants
+no teacher,play play play,0,play,3,1,7,participants
+no teacher,play play play,1,play,3,1,18,participants
+no teacher,play play play,2,play,3,1,16,participants
 expert,watch play play,0,watch,4,0,16,participants
 expert,watch play play,1,play,4,0,19,participants
 expert,watch play play,2,play,4,0,20,participants
@@ -2697,24 +2633,24 @@ expert,watch play play,2,play,3,0,22,participants
 expert,watch play play,0,watch,3,1,16,participants
 expert,watch play play,1,play,3,1,11,participants
 expert,watch play play,2,play,3,1,23,participants
-no demo,play play play,0,play,4,0,12,participants
-no demo,play play play,1,play,4,0,20,participants
-no demo,play play play,2,play,4,0,19,participants
-no demo,play play play,0,play,4,1,18,participants
-no demo,play play play,1,play,4,1,23,participants
-no demo,play play play,2,play,4,1,24,participants
+no teacher,play play play,0,play,4,0,12,participants
+no teacher,play play play,1,play,4,0,20,participants
+no teacher,play play play,2,play,4,0,19,participants
+no teacher,play play play,0,play,4,1,18,participants
+no teacher,play play play,1,play,4,1,23,participants
+no teacher,play play play,2,play,4,1,24,participants
 expert,play watch play,0,play,0,0,18,participants
 expert,play watch play,1,watch,0,0,16,participants
 expert,play watch play,2,play,0,0,19,participants
 expert,play watch play,0,play,0,1,12,participants
 expert,play watch play,1,watch,0,1,13,participants
 expert,play watch play,2,play,0,1,24,participants
-no demo,play play play,0,play,1,0,15,participants
-no demo,play play play,1,play,1,0,17,participants
-no demo,play play play,2,play,1,0,19,participants
-no demo,play play play,0,play,1,1,19,participants
-no demo,play play play,1,play,1,1,22,participants
-no demo,play play play,2,play,1,1,19,participants
+no teacher,play play play,0,play,1,0,15,participants
+no teacher,play play play,1,play,1,0,17,participants
+no teacher,play play play,2,play,1,0,19,participants
+no teacher,play play play,0,play,1,1,19,participants
+no teacher,play play play,1,play,1,1,22,participants
+no teacher,play play play,2,play,1,1,19,participants
 novice,play watch play,0,play,2,0,12,participants
 novice,play watch play,1,watch,2,0,11,participants
 novice,play watch play,2,play,2,0,22,participants
@@ -2751,12 +2687,12 @@ expert,watch play play,2,play,2,0,12,participants
 expert,watch play play,0,watch,2,1,19,participants
 expert,watch play play,1,play,2,1,20,participants
 expert,watch play play,2,play,2,1,11,participants
-no demo,play play play,0,play,3,0,13,participants
-no demo,play play play,1,play,3,0,13,participants
-no demo,play play play,2,play,3,0,10,participants
-no demo,play play play,0,play,3,1,6,participants
-no demo,play play play,1,play,3,1,17,participants
-no demo,play play play,2,play,3,1,12,participants
+no teacher,play play play,0,play,3,0,13,participants
+no teacher,play play play,1,play,3,0,13,participants
+no teacher,play play play,2,play,3,0,10,participants
+no teacher,play play play,0,play,3,1,6,participants
+no teacher,play play play,1,play,3,1,17,participants
+no teacher,play play play,2,play,3,1,12,participants
 expert,play watch play,0,play,4,0,12,participants
 expert,play watch play,1,watch,4,0,11,participants
 expert,play watch play,2,play,4,0,17,participants
@@ -2787,12 +2723,12 @@ expert,play watch play,2,play,3,0,15,participants
 expert,play watch play,0,play,3,1,8,participants
 expert,play watch play,1,watch,3,1,18,participants
 expert,play watch play,2,play,3,1,23,participants
-no demo,play play play,0,play,4,0,23,participants
-no demo,play play play,1,play,4,0,19,participants
-no demo,play play play,2,play,4,0,15,participants
-no demo,play play play,0,play,4,1,7,participants
-no demo,play play play,1,play,4,1,10,participants
-no demo,play play play,2,play,4,1,21,participants
+no teacher,play play play,0,play,4,0,23,participants
+no teacher,play play play,1,play,4,0,19,participants
+no teacher,play play play,2,play,4,0,15,participants
+no teacher,play play play,0,play,4,1,7,participants
+no teacher,play play play,1,play,4,1,10,participants
+no teacher,play play play,2,play,4,1,21,participants
 expert,play watch play,0,play,0,0,20,participants
 expert,play watch play,1,watch,0,0,16,participants
 expert,play watch play,2,play,0,0,20,participants
@@ -2817,18 +2753,18 @@ novice,play watch play,2,play,3,0,16,participants
 novice,play watch play,0,play,3,1,17,participants
 novice,play watch play,1,watch,3,1,9,participants
 novice,play watch play,2,play,3,1,22,participants
-no demo,play play play,0,play,4,0,14,participants
-no demo,play play play,1,play,4,0,11,participants
-no demo,play play play,2,play,4,0,7,participants
-no demo,play play play,0,play,4,1,10,participants
-no demo,play play play,1,play,4,1,12,participants
-no demo,play play play,2,play,4,1,16,participants
-no demo,play play play,0,play,0,0,13,participants
-no demo,play play play,1,play,0,0,13,participants
-no demo,play play play,2,play,0,0,8,participants
-no demo,play play play,0,play,0,1,11,participants
-no demo,play play play,1,play,0,1,2,participants
-no demo,play play play,2,play,0,1,15,participants
+no teacher,play play play,0,play,4,0,14,participants
+no teacher,play play play,1,play,4,0,11,participants
+no teacher,play play play,2,play,4,0,7,participants
+no teacher,play play play,0,play,4,1,10,participants
+no teacher,play play play,1,play,4,1,12,participants
+no teacher,play play play,2,play,4,1,16,participants
+no teacher,play play play,0,play,0,0,13,participants
+no teacher,play play play,1,play,0,0,13,participants
+no teacher,play play play,2,play,0,0,8,participants
+no teacher,play play play,0,play,0,1,11,participants
+no teacher,play play play,1,play,0,1,2,participants
+no teacher,play play play,2,play,0,1,15,participants
 novice,play watch play,0,play,1,0,13,participants
 novice,play watch play,1,watch,1,0,13,participants
 novice,play watch play,2,play,1,0,10,participants
@@ -2865,12 +2801,12 @@ expert,watch play play,2,play,1,0,24,participants
 expert,watch play play,0,watch,1,1,12,participants
 expert,watch play play,1,play,1,1,23,participants
 expert,watch play play,2,play,1,1,20,participants
-no demo,play play play,0,play,2,0,22,participants
-no demo,play play play,1,play,2,0,23,participants
-no demo,play play play,2,play,2,0,18,participants
-no demo,play play play,0,play,2,1,14,participants
-no demo,play play play,1,play,2,1,13,participants
-no demo,play play play,2,play,2,1,18,participants
+no teacher,play play play,0,play,2,0,22,participants
+no teacher,play play play,1,play,2,0,23,participants
+no teacher,play play play,2,play,2,0,18,participants
+no teacher,play play play,0,play,2,1,14,participants
+no teacher,play play play,1,play,2,1,13,participants
+no teacher,play play play,2,play,2,1,18,participants
 novice,watch play play,0,watch,3,0,8,participants
 novice,watch play play,1,play,3,0,21,participants
 novice,watch play play,2,play,3,0,18,participants
@@ -2889,12 +2825,12 @@ expert,watch play play,2,play,0,0,14,participants
 expert,watch play play,0,watch,0,1,17,participants
 expert,watch play play,1,play,0,1,19,participants
 expert,watch play play,2,play,0,1,13,participants
-no demo,play play play,0,play,1,0,14,participants
-no demo,play play play,1,play,1,0,11,participants
-no demo,play play play,2,play,1,0,11,participants
-no demo,play play play,0,play,1,1,10,participants
-no demo,play play play,1,play,1,1,20,participants
-no demo,play play play,2,play,1,1,22,participants
+no teacher,play play play,0,play,1,0,14,participants
+no teacher,play play play,1,play,1,0,11,participants
+no teacher,play play play,2,play,1,0,11,participants
+no teacher,play play play,0,play,1,1,10,participants
+no teacher,play play play,1,play,1,1,20,participants
+no teacher,play play play,2,play,1,1,22,participants
 expert,play watch play,0,play,2,0,22,participants
 expert,play watch play,1,watch,2,0,21,participants
 expert,play watch play,2,play,2,0,20,participants
@@ -2913,36 +2849,6 @@ novice,play watch play,2,play,4,0,13,participants
 novice,play watch play,0,play,4,1,11,participants
 novice,play watch play,1,watch,4,1,9,participants
 novice,play watch play,2,play,4,1,14,participants
-no demo,play play play,0,play,0,0,13,participants
-no demo,play play play,1,play,0,0,13,participants
-no demo,play play play,2,play,0,0,10,participants
-no demo,play play play,0,play,0,1,15,participants
-no demo,play play play,1,play,0,1,10,participants
-no demo,play play play,2,play,0,1,15,participants
-expert,watch play play,0,watch,1,0,19,participants
-expert,watch play play,1,play,1,0,21,participants
-expert,watch play play,2,play,1,0,23,participants
-expert,watch play play,0,watch,1,1,18,participants
-expert,watch play play,1,play,1,1,23,participants
-expert,watch play play,2,play,1,1,22,participants
-expert,play watch play,0,play,2,0,11,participants
-expert,play watch play,1,watch,2,0,15,participants
-expert,play watch play,2,play,2,0,11,participants
-expert,play watch play,0,play,2,1,13,participants
-expert,play watch play,1,watch,2,1,17,participants
-expert,play watch play,2,play,2,1,21,participants
-novice,play watch play,0,play,3,0,14,participants
-novice,play watch play,1,watch,3,0,11,participants
-novice,play watch play,2,play,3,0,11,participants
-novice,play watch play,0,play,3,1,10,participants
-novice,play watch play,1,watch,3,1,9,participants
-novice,play watch play,2,play,3,1,22,participants
-novice,watch play play,0,watch,4,0,13,participants
-novice,watch play play,1,play,4,0,13,participants
-novice,watch play play,2,play,4,0,14,participants
-novice,watch play play,0,watch,4,1,10,participants
-novice,watch play play,1,play,4,1,20,participants
-novice,watch play play,2,play,4,1,24,participants
 novice,play watch play,0,play,0,0,17,participants
 novice,play watch play,1,watch,0,0,12,participants
 novice,play watch play,2,play,0,0,13,participants
@@ -2961,12 +2867,12 @@ expert,play watch play,2,play,2,0,23,participants
 expert,play watch play,0,play,2,1,15,participants
 expert,play watch play,1,watch,2,1,12,participants
 expert,play watch play,2,play,2,1,22,participants
-no demo,play play play,0,play,3,0,14,participants
-no demo,play play play,1,play,3,0,16,participants
-no demo,play play play,2,play,3,0,13,participants
-no demo,play play play,0,play,3,1,14,participants
-no demo,play play play,1,play,3,1,9,participants
-no demo,play play play,2,play,3,1,13,participants
+no teacher,play play play,0,play,3,0,14,participants
+no teacher,play play play,1,play,3,0,16,participants
+no teacher,play play play,2,play,3,0,13,participants
+no teacher,play play play,0,play,3,1,14,participants
+no teacher,play play play,1,play,3,1,9,participants
+no teacher,play play play,2,play,3,1,13,participants
 expert,watch play play,0,watch,4,0,17,participants
 expert,watch play play,1,play,4,0,22,participants
 expert,watch play play,2,play,4,0,21,participants
@@ -2997,12 +2903,12 @@ expert,play watch play,2,play,3,0,19,participants
 expert,play watch play,0,play,3,1,14,participants
 expert,play watch play,1,watch,3,1,13,participants
 expert,play watch play,2,play,3,1,12,participants
-no demo,play play play,0,play,4,0,9,participants
-no demo,play play play,1,play,4,0,10,participants
-no demo,play play play,2,play,4,0,15,participants
-no demo,play play play,0,play,4,1,11,participants
-no demo,play play play,1,play,4,1,19,participants
-no demo,play play play,2,play,4,1,13,participants
+no teacher,play play play,0,play,4,0,9,participants
+no teacher,play play play,1,play,4,0,10,participants
+no teacher,play play play,2,play,4,0,15,participants
+no teacher,play play play,0,play,4,1,11,participants
+no teacher,play play play,1,play,4,1,19,participants
+no teacher,play play play,2,play,4,1,13,participants
 expert,play watch play,0,play,0,0,16,participants
 expert,play watch play,1,watch,0,0,14,participants
 expert,play watch play,2,play,0,0,12,participants
@@ -3021,12 +2927,12 @@ expert,watch play play,2,play,2,0,20,participants
 expert,watch play play,0,watch,2,1,21,participants
 expert,watch play play,1,play,2,1,18,participants
 expert,watch play play,2,play,2,1,18,participants
-no demo,play play play,0,play,3,0,11,participants
-no demo,play play play,1,play,3,0,19,participants
-no demo,play play play,2,play,3,0,22,participants
-no demo,play play play,0,play,3,1,20,participants
-no demo,play play play,1,play,3,1,21,participants
-no demo,play play play,2,play,3,1,18,participants
+no teacher,play play play,0,play,3,0,11,participants
+no teacher,play play play,1,play,3,0,19,participants
+no teacher,play play play,2,play,3,0,22,participants
+no teacher,play play play,0,play,3,1,20,participants
+no teacher,play play play,1,play,3,1,21,participants
+no teacher,play play play,2,play,3,1,18,participants
 novice,watch play play,0,watch,4,0,8,participants
 novice,watch play play,1,play,4,0,19,participants
 novice,watch play play,2,play,4,0,21,participants
@@ -3039,12 +2945,12 @@ expert,watch play play,2,play,0,0,23,participants
 expert,watch play play,0,watch,0,1,14,participants
 expert,watch play play,1,play,0,1,20,participants
 expert,watch play play,2,play,0,1,21,participants
-no demo,play play play,0,play,1,0,18,participants
-no demo,play play play,1,play,1,0,21,participants
-no demo,play play play,2,play,1,0,18,participants
-no demo,play play play,0,play,1,1,16,participants
-no demo,play play play,1,play,1,1,11,participants
-no demo,play play play,2,play,1,1,11,participants
+no teacher,play play play,0,play,1,0,18,participants
+no teacher,play play play,1,play,1,0,21,participants
+no teacher,play play play,2,play,1,0,18,participants
+no teacher,play play play,0,play,1,1,16,participants
+no teacher,play play play,1,play,1,1,11,participants
+no teacher,play play play,2,play,1,1,11,participants
 novice,play watch play,0,play,2,0,12,participants
 novice,play watch play,1,watch,2,0,17,participants
 novice,play watch play,2,play,2,0,16,participants
@@ -3081,24 +2987,24 @@ novice,play watch play,2,play,2,0,8,participants
 novice,play watch play,0,play,2,1,11,participants
 novice,play watch play,1,watch,2,1,15,participants
 novice,play watch play,2,play,2,1,14,participants
-no demo,play play play,0,play,3,0,11,participants
-no demo,play play play,1,play,3,0,9,participants
-no demo,play play play,2,play,3,0,16,participants
-no demo,play play play,0,play,3,1,7,participants
-no demo,play play play,1,play,3,1,13,participants
-no demo,play play play,2,play,3,1,11,participants
+no teacher,play play play,0,play,3,0,11,participants
+no teacher,play play play,1,play,3,0,9,participants
+no teacher,play play play,2,play,3,0,16,participants
+no teacher,play play play,0,play,3,1,7,participants
+no teacher,play play play,1,play,3,1,13,participants
+no teacher,play play play,2,play,3,1,11,participants
 expert,play watch play,0,play,4,0,15,participants
 expert,play watch play,1,watch,4,0,13,participants
 expert,play watch play,2,play,4,0,10,participants
 expert,play watch play,0,play,4,1,12,participants
 expert,play watch play,1,watch,4,1,13,participants
 expert,play watch play,2,play,4,1,19,participants
-no demo,play play play,0,play,0,0,10,participants
-no demo,play play play,1,play,0,0,22,participants
-no demo,play play play,2,play,0,0,16,participants
-no demo,play play play,0,play,0,1,12,participants
-no demo,play play play,1,play,0,1,14,participants
-no demo,play play play,2,play,0,1,17,participants
+no teacher,play play play,0,play,0,0,10,participants
+no teacher,play play play,1,play,0,0,22,participants
+no teacher,play play play,2,play,0,0,16,participants
+no teacher,play play play,0,play,0,1,12,participants
+no teacher,play play play,1,play,0,1,14,participants
+no teacher,play play play,2,play,0,1,17,participants
 expert,watch play play,0,watch,1,0,18,participants
 expert,watch play play,1,play,1,0,18,participants
 expert,watch play play,2,play,1,0,17,participants
@@ -3123,12 +3029,12 @@ novice,play watch play,2,play,4,0,17,participants
 novice,play watch play,0,play,4,1,19,participants
 novice,play watch play,1,watch,4,1,12,participants
 novice,play watch play,2,play,4,1,16,participants
-no demo,play play play,0,play,0,0,10,participants
-no demo,play play play,1,play,0,0,10,participants
-no demo,play play play,2,play,0,0,12,participants
-no demo,play play play,0,play,0,1,12,participants
-no demo,play play play,1,play,0,1,12,participants
-no demo,play play play,2,play,0,1,12,participants
+no teacher,play play play,0,play,0,0,10,participants
+no teacher,play play play,1,play,0,0,10,participants
+no teacher,play play play,2,play,0,0,12,participants
+no teacher,play play play,0,play,0,1,12,participants
+no teacher,play play play,1,play,0,1,12,participants
+no teacher,play play play,2,play,0,1,12,participants
 expert,watch play play,0,watch,1,0,17,participants
 expert,watch play play,1,play,1,0,21,participants
 expert,watch play play,2,play,1,0,22,participants
@@ -3153,12 +3059,12 @@ novice,watch play play,2,play,4,0,15,participants
 novice,watch play play,0,watch,4,1,12,participants
 novice,watch play play,1,play,4,1,11,participants
 novice,watch play play,2,play,4,1,15,participants
-no demo,play play play,0,play,0,0,18,participants
-no demo,play play play,1,play,0,0,11,participants
-no demo,play play play,2,play,0,0,9,participants
-no demo,play play play,0,play,0,1,15,participants
-no demo,play play play,1,play,0,1,7,participants
-no demo,play play play,2,play,0,1,14,participants
+no teacher,play play play,0,play,0,0,18,participants
+no teacher,play play play,1,play,0,0,11,participants
+no teacher,play play play,2,play,0,0,9,participants
+no teacher,play play play,0,play,0,1,15,participants
+no teacher,play play play,1,play,0,1,7,participants
+no teacher,play play play,2,play,0,1,14,participants
 novice,play watch play,0,play,1,0,8,participants
 novice,play watch play,1,watch,1,0,9,participants
 novice,play watch play,2,play,1,0,12,participants
@@ -3201,12 +3107,12 @@ novice,watch play play,2,play,2,0,17,participants
 novice,watch play play,0,watch,2,1,12,participants
 novice,watch play play,1,play,2,1,13,participants
 novice,watch play play,2,play,2,1,8,participants
-no demo,play play play,0,play,3,0,7,participants
-no demo,play play play,1,play,3,0,10,participants
-no demo,play play play,2,play,3,0,10,participants
-no demo,play play play,0,play,3,1,14,participants
-no demo,play play play,1,play,3,1,12,participants
-no demo,play play play,2,play,3,1,13,participants
+no teacher,play play play,0,play,3,0,7,participants
+no teacher,play play play,1,play,3,0,10,participants
+no teacher,play play play,2,play,3,0,10,participants
+no teacher,play play play,0,play,3,1,14,participants
+no teacher,play play play,1,play,3,1,12,participants
+no teacher,play play play,2,play,3,1,13,participants
 expert,play watch play,0,play,4,0,8,participants
 expert,play watch play,1,watch,4,0,19,participants
 expert,play watch play,2,play,4,0,21,participants
@@ -3219,12 +3125,12 @@ expert,watch play play,2,play,0,0,13,participants
 expert,watch play play,0,watch,0,1,16,participants
 expert,watch play play,1,play,0,1,12,participants
 expert,watch play play,2,play,0,1,12,participants
-no demo,play play play,0,play,1,0,13,participants
-no demo,play play play,1,play,1,0,20,participants
-no demo,play play play,2,play,1,0,22,participants
-no demo,play play play,0,play,1,1,17,participants
-no demo,play play play,1,play,1,1,20,participants
-no demo,play play play,2,play,1,1,20,participants
+no teacher,play play play,0,play,1,0,13,participants
+no teacher,play play play,1,play,1,0,20,participants
+no teacher,play play play,2,play,1,0,22,participants
+no teacher,play play play,0,play,1,1,17,participants
+no teacher,play play play,1,play,1,1,20,participants
+no teacher,play play play,2,play,1,1,20,participants
 novice,watch play play,0,watch,2,0,15,participants
 novice,watch play play,1,play,2,0,17,participants
 novice,watch play play,2,play,2,0,20,participants
@@ -3255,12 +3161,12 @@ expert,play watch play,2,play,1,0,23,participants
 expert,play watch play,0,play,1,1,13,participants
 expert,play watch play,1,watch,1,1,11,participants
 expert,play watch play,2,play,1,1,20,participants
-no demo,play play play,0,play,2,0,11,participants
-no demo,play play play,1,play,2,0,14,participants
-no demo,play play play,2,play,2,0,21,participants
-no demo,play play play,0,play,2,1,12,participants
-no demo,play play play,1,play,2,1,10,participants
-no demo,play play play,2,play,2,1,8,participants
+no teacher,play play play,0,play,2,0,11,participants
+no teacher,play play play,1,play,2,0,14,participants
+no teacher,play play play,2,play,2,0,21,participants
+no teacher,play play play,0,play,2,1,12,participants
+no teacher,play play play,1,play,2,1,10,participants
+no teacher,play play play,2,play,2,1,8,participants
 novice,watch play play,0,watch,3,0,10,participants
 novice,watch play play,1,play,3,0,18,participants
 novice,watch play play,2,play,3,0,9,participants
@@ -3279,12 +3185,12 @@ novice,watch play play,2,play,0,0,20,participants
 novice,watch play play,0,watch,0,1,9,participants
 novice,watch play play,1,play,0,1,18,participants
 novice,watch play play,2,play,0,1,22,participants
-no demo,play play play,0,play,1,0,20,participants
-no demo,play play play,1,play,1,0,17,participants
-no demo,play play play,2,play,1,0,10,participants
-no demo,play play play,0,play,1,1,10,participants
-no demo,play play play,1,play,1,1,9,participants
-no demo,play play play,2,play,1,1,19,participants
+no teacher,play play play,0,play,1,0,20,participants
+no teacher,play play play,1,play,1,0,17,participants
+no teacher,play play play,2,play,1,0,10,participants
+no teacher,play play play,0,play,1,1,10,participants
+no teacher,play play play,1,play,1,1,9,participants
+no teacher,play play play,2,play,1,1,19,participants
 expert,play watch play,0,play,2,0,14,participants
 expert,play watch play,1,watch,2,0,21,participants
 expert,play watch play,2,play,2,0,24,participants
@@ -3303,12 +3209,12 @@ novice,play watch play,2,play,4,0,16,participants
 novice,play watch play,0,play,4,1,16,participants
 novice,play watch play,1,watch,4,1,13,participants
 novice,play watch play,2,play,4,1,14,participants
-no demo,play play play,0,play,0,0,11,participants
-no demo,play play play,1,play,0,0,17,participants
-no demo,play play play,2,play,0,0,13,participants
-no demo,play play play,0,play,0,1,18,participants
-no demo,play play play,1,play,0,1,13,participants
-no demo,play play play,2,play,0,1,6,participants
+no teacher,play play play,0,play,0,0,11,participants
+no teacher,play play play,1,play,0,0,17,participants
+no teacher,play play play,2,play,0,0,13,participants
+no teacher,play play play,0,play,0,1,18,participants
+no teacher,play play play,1,play,0,1,13,participants
+no teacher,play play play,2,play,0,1,6,participants
 novice,watch play play,0,watch,1,0,17,participants
 novice,watch play play,1,play,1,0,22,participants
 novice,watch play play,2,play,1,0,12,participants
@@ -3351,24 +3257,24 @@ expert,watch play play,2,play,2,0,16,participants
 expert,watch play play,0,watch,2,1,7,participants
 expert,watch play play,1,play,2,1,10,participants
 expert,watch play play,2,play,2,1,14,participants
-no demo,play play play,0,play,3,0,15,participants
-no demo,play play play,1,play,3,0,17,participants
-no demo,play play play,2,play,3,0,10,participants
-no demo,play play play,0,play,3,1,15,participants
-no demo,play play play,1,play,3,1,19,participants
-no demo,play play play,2,play,3,1,17,participants
+no teacher,play play play,0,play,3,0,15,participants
+no teacher,play play play,1,play,3,0,17,participants
+no teacher,play play play,2,play,3,0,10,participants
+no teacher,play play play,0,play,3,1,15,participants
+no teacher,play play play,1,play,3,1,19,participants
+no teacher,play play play,2,play,3,1,17,participants
 expert,play watch play,0,play,4,0,8,participants
 expert,play watch play,1,watch,4,0,21,participants
 expert,play watch play,2,play,4,0,17,participants
 expert,play watch play,0,play,4,1,16,participants
 expert,play watch play,1,watch,4,1,19,participants
 expert,play watch play,2,play,4,1,20,participants
-no demo,play play play,0,play,0,0,17,participants
-no demo,play play play,1,play,0,0,22,participants
-no demo,play play play,2,play,0,0,21,participants
-no demo,play play play,0,play,0,1,11,participants
-no demo,play play play,1,play,0,1,23,participants
-no demo,play play play,2,play,0,1,19,participants
+no teacher,play play play,0,play,0,0,17,participants
+no teacher,play play play,1,play,0,0,22,participants
+no teacher,play play play,2,play,0,0,21,participants
+no teacher,play play play,0,play,0,1,11,participants
+no teacher,play play play,1,play,0,1,23,participants
+no teacher,play play play,2,play,0,1,19,participants
 expert,play watch play,0,play,1,0,17,participants
 expert,play watch play,1,watch,1,0,13,participants
 expert,play watch play,2,play,1,0,16,participants
@@ -3417,12 +3323,12 @@ novice,watch play play,2,play,3,0,19,participants
 novice,watch play play,0,watch,3,1,13,participants
 novice,watch play play,1,play,3,1,23,participants
 novice,watch play play,2,play,3,1,18,participants
-no demo,play play play,0,play,4,0,13,participants
-no demo,play play play,1,play,4,0,23,participants
-no demo,play play play,2,play,4,0,21,participants
-no demo,play play play,0,play,4,1,9,participants
-no demo,play play play,1,play,4,1,20,participants
-no demo,play play play,2,play,4,1,14,participants
+no teacher,play play play,0,play,4,0,13,participants
+no teacher,play play play,1,play,4,0,23,participants
+no teacher,play play play,2,play,4,0,21,participants
+no teacher,play play play,0,play,4,1,9,participants
+no teacher,play play play,1,play,4,1,20,participants
+no teacher,play play play,2,play,4,1,14,participants
 novice,play watch play,0,play,0,0,11,participants
 novice,play watch play,1,watch,0,0,10,participants
 novice,play watch play,2,play,0,0,9,participants
@@ -3447,12 +3353,12 @@ expert,watch play play,2,play,3,0,22,participants
 expert,watch play play,0,watch,3,1,18,participants
 expert,watch play play,1,play,3,1,21,participants
 expert,watch play play,2,play,3,1,21,participants
-no demo,play play play,0,play,4,0,16,participants
-no demo,play play play,1,play,4,0,11,participants
-no demo,play play play,2,play,4,0,21,participants
-no demo,play play play,0,play,4,1,13,participants
-no demo,play play play,1,play,4,1,11,participants
-no demo,play play play,2,play,4,1,8,participants
+no teacher,play play play,0,play,4,0,16,participants
+no teacher,play play play,1,play,4,0,11,participants
+no teacher,play play play,2,play,4,0,21,participants
+no teacher,play play play,0,play,4,1,13,participants
+no teacher,play play play,1,play,4,1,11,participants
+no teacher,play play play,2,play,4,1,8,participants
 novice,play watch play,0,play,0,0,8,participants
 novice,play watch play,1,watch,0,0,16,participants
 novice,play watch play,2,play,0,0,14,participants
@@ -3465,12 +3371,12 @@ expert,watch play play,2,play,1,0,11,participants
 expert,watch play play,0,watch,1,1,14,participants
 expert,watch play play,1,play,1,1,11,participants
 expert,watch play play,2,play,1,1,10,participants
-no demo,play play play,0,play,2,0,7,participants
-no demo,play play play,1,play,2,0,12,participants
-no demo,play play play,2,play,2,0,11,participants
-no demo,play play play,0,play,2,1,17,participants
-no demo,play play play,1,play,2,1,13,participants
-no demo,play play play,2,play,2,1,9,participants
+no teacher,play play play,0,play,2,0,7,participants
+no teacher,play play play,1,play,2,0,12,participants
+no teacher,play play play,2,play,2,0,11,participants
+no teacher,play play play,0,play,2,1,17,participants
+no teacher,play play play,1,play,2,1,13,participants
+no teacher,play play play,2,play,2,1,9,participants
 novice,watch play play,0,watch,3,0,13,participants
 novice,watch play play,1,play,3,0,9,participants
 novice,watch play play,2,play,3,0,12,participants
@@ -3501,12 +3407,12 @@ expert,watch play play,2,play,2,0,17,participants
 expert,watch play play,0,watch,2,1,19,participants
 expert,watch play play,1,play,2,1,22,participants
 expert,watch play play,2,play,2,1,21,participants
-no demo,play play play,0,play,3,0,14,participants
-no demo,play play play,1,play,3,0,22,participants
-no demo,play play play,2,play,3,0,19,participants
-no demo,play play play,0,play,3,1,16,participants
-no demo,play play play,1,play,3,1,16,participants
-no demo,play play play,2,play,3,1,21,participants
+no teacher,play play play,0,play,3,0,14,participants
+no teacher,play play play,1,play,3,0,22,participants
+no teacher,play play play,2,play,3,0,19,participants
+no teacher,play play play,0,play,3,1,16,participants
+no teacher,play play play,1,play,3,1,16,participants
+no teacher,play play play,2,play,3,1,21,participants
 novice,play watch play,0,play,4,0,9,participants
 novice,play watch play,1,watch,4,0,8,participants
 novice,play watch play,2,play,4,0,12,participants
@@ -3519,12 +3425,12 @@ expert,play watch play,2,play,0,0,22,participants
 expert,play watch play,0,play,0,1,12,participants
 expert,play watch play,1,watch,0,1,18,participants
 expert,play watch play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,11,participants
-no demo,play play play,2,play,1,0,13,participants
-no demo,play play play,0,play,1,1,20,participants
-no demo,play play play,1,play,1,1,22,participants
-no demo,play play play,2,play,1,1,23,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,11,participants
+no teacher,play play play,2,play,1,0,13,participants
+no teacher,play play play,0,play,1,1,20,participants
+no teacher,play play play,1,play,1,1,22,participants
+no teacher,play play play,2,play,1,1,23,participants
 novice,play watch play,0,play,2,0,17,participants
 novice,play watch play,1,watch,2,0,14,participants
 novice,play watch play,2,play,2,0,17,participants
@@ -3543,12 +3449,12 @@ novice,watch play play,2,play,4,0,12,participants
 novice,watch play play,0,watch,4,1,11,participants
 novice,watch play play,1,play,4,1,9,participants
 novice,watch play play,2,play,4,1,14,participants
-no demo,play play play,0,play,0,0,18,participants
-no demo,play play play,1,play,0,0,13,participants
-no demo,play play play,2,play,0,0,14,participants
-no demo,play play play,0,play,0,1,15,participants
-no demo,play play play,1,play,0,1,12,participants
-no demo,play play play,2,play,0,1,11,participants
+no teacher,play play play,0,play,0,0,18,participants
+no teacher,play play play,1,play,0,0,13,participants
+no teacher,play play play,2,play,0,0,14,participants
+no teacher,play play play,0,play,0,1,15,participants
+no teacher,play play play,1,play,0,1,12,participants
+no teacher,play play play,2,play,0,1,11,participants
 expert,play watch play,0,play,1,0,6,participants
 expert,play watch play,1,watch,1,0,18,participants
 expert,play watch play,2,play,1,0,22,participants
@@ -3585,12 +3491,12 @@ novice,play watch play,2,play,1,0,9,participants
 novice,play watch play,0,play,1,1,11,participants
 novice,play watch play,1,watch,1,1,12,participants
 novice,play watch play,2,play,1,1,10,participants
-no demo,play play play,0,play,2,0,14,participants
-no demo,play play play,1,play,2,0,12,participants
-no demo,play play play,2,play,2,0,10,participants
-no demo,play play play,0,play,2,1,11,participants
-no demo,play play play,1,play,2,1,14,participants
-no demo,play play play,2,play,2,1,10,participants
+no teacher,play play play,0,play,2,0,14,participants
+no teacher,play play play,1,play,2,0,12,participants
+no teacher,play play play,2,play,2,0,10,participants
+no teacher,play play play,0,play,2,1,11,participants
+no teacher,play play play,1,play,2,1,14,participants
+no teacher,play play play,2,play,2,1,10,participants
 expert,watch play play,0,watch,3,0,17,participants
 expert,watch play play,1,play,3,0,6,participants
 expert,watch play play,2,play,3,0,12,participants
@@ -3615,12 +3521,12 @@ expert,play watch play,2,play,1,0,23,participants
 expert,play watch play,0,play,1,1,11,participants
 expert,play watch play,1,watch,1,1,18,participants
 expert,play watch play,2,play,1,1,18,participants
-no demo,play play play,0,play,2,0,7,participants
-no demo,play play play,1,play,2,0,12,participants
-no demo,play play play,2,play,2,0,9,participants
-no demo,play play play,0,play,2,1,20,participants
-no demo,play play play,1,play,2,1,9,participants
-no demo,play play play,2,play,2,1,15,participants
+no teacher,play play play,0,play,2,0,7,participants
+no teacher,play play play,1,play,2,0,12,participants
+no teacher,play play play,2,play,2,0,9,participants
+no teacher,play play play,0,play,2,1,20,participants
+no teacher,play play play,1,play,2,1,9,participants
+no teacher,play play play,2,play,2,1,15,participants
 novice,watch play play,0,watch,3,0,10,participants
 novice,watch play play,1,play,3,0,17,participants
 novice,watch play play,2,play,3,0,17,participants
@@ -3651,12 +3557,12 @@ expert,watch play play,2,play,2,0,19,participants
 expert,watch play play,0,watch,2,1,21,participants
 expert,watch play play,1,play,2,1,23,participants
 expert,watch play play,2,play,2,1,23,participants
-no demo,play play play,0,play,3,0,9,participants
-no demo,play play play,1,play,3,0,6,participants
-no demo,play play play,2,play,3,0,13,participants
-no demo,play play play,0,play,3,1,20,participants
-no demo,play play play,1,play,3,1,11,participants
-no demo,play play play,2,play,3,1,17,participants
+no teacher,play play play,0,play,3,0,9,participants
+no teacher,play play play,1,play,3,0,6,participants
+no teacher,play play play,2,play,3,0,13,participants
+no teacher,play play play,0,play,3,1,20,participants
+no teacher,play play play,1,play,3,1,11,participants
+no teacher,play play play,2,play,3,1,17,participants
 expert,play watch play,0,play,4,0,18,participants
 expert,play watch play,1,watch,4,0,11,participants
 expert,play watch play,2,play,4,0,14,participants
@@ -3669,12 +3575,12 @@ expert,play watch play,2,play,0,0,17,participants
 expert,play watch play,0,play,0,1,20,participants
 expert,play watch play,1,watch,0,1,17,participants
 expert,play watch play,2,play,0,1,22,participants
-no demo,play play play,0,play,1,0,12,participants
-no demo,play play play,1,play,1,0,15,participants
-no demo,play play play,2,play,1,0,14,participants
-no demo,play play play,0,play,1,1,18,participants
-no demo,play play play,1,play,1,1,12,participants
-no demo,play play play,2,play,1,1,16,participants
+no teacher,play play play,0,play,1,0,12,participants
+no teacher,play play play,1,play,1,0,15,participants
+no teacher,play play play,2,play,1,0,14,participants
+no teacher,play play play,0,play,1,1,18,participants
+no teacher,play play play,1,play,1,1,12,participants
+no teacher,play play play,2,play,1,1,16,participants
 novice,watch play play,0,watch,2,0,12,participants
 novice,watch play play,1,play,2,0,12,participants
 novice,watch play play,2,play,2,0,18,participants
@@ -3699,12 +3605,12 @@ expert,play watch play,2,play,0,0,19,participants
 expert,play watch play,0,play,0,1,22,participants
 expert,play watch play,1,watch,0,1,19,participants
 expert,play watch play,2,play,0,1,18,participants
-no demo,play play play,0,play,1,0,13,participants
-no demo,play play play,1,play,1,0,10,participants
-no demo,play play play,2,play,1,0,15,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,18,participants
-no demo,play play play,2,play,1,1,18,participants
+no teacher,play play play,0,play,1,0,13,participants
+no teacher,play play play,1,play,1,0,10,participants
+no teacher,play play play,2,play,1,0,15,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,18,participants
+no teacher,play play play,2,play,1,1,18,participants
 novice,watch play play,0,watch,2,0,8,participants
 novice,watch play play,1,play,2,0,12,participants
 novice,watch play play,2,play,2,0,15,participants
@@ -3741,24 +3647,24 @@ expert,watch play play,2,play,2,0,19,participants
 expert,watch play play,0,watch,2,1,10,participants
 expert,watch play play,1,play,2,1,10,participants
 expert,watch play play,2,play,2,1,21,participants
-no demo,play play play,0,play,3,0,14,participants
-no demo,play play play,1,play,3,0,17,participants
-no demo,play play play,2,play,3,0,22,participants
-no demo,play play play,0,play,3,1,14,participants
-no demo,play play play,1,play,3,1,18,participants
-no demo,play play play,2,play,3,1,15,participants
+no teacher,play play play,0,play,3,0,14,participants
+no teacher,play play play,1,play,3,0,17,participants
+no teacher,play play play,2,play,3,0,22,participants
+no teacher,play play play,0,play,3,1,14,participants
+no teacher,play play play,1,play,3,1,18,participants
+no teacher,play play play,2,play,3,1,15,participants
 novice,watch play play,0,watch,4,0,11,participants
 novice,watch play play,1,play,4,0,10,participants
 novice,watch play play,2,play,4,0,13,participants
 novice,watch play play,0,watch,4,1,9,participants
 novice,watch play play,1,play,4,1,21,participants
 novice,watch play play,2,play,4,1,20,participants
-no demo,play play play,0,play,0,0,5,participants
-no demo,play play play,1,play,0,0,11,participants
-no demo,play play play,2,play,0,0,11,participants
-no demo,play play play,0,play,0,1,12,participants
-no demo,play play play,1,play,0,1,12,participants
-no demo,play play play,2,play,0,1,21,participants
+no teacher,play play play,0,play,0,0,5,participants
+no teacher,play play play,1,play,0,0,11,participants
+no teacher,play play play,2,play,0,0,11,participants
+no teacher,play play play,0,play,0,1,12,participants
+no teacher,play play play,1,play,0,1,12,participants
+no teacher,play play play,2,play,0,1,21,participants
 novice,watch play play,0,watch,1,0,11,participants
 novice,watch play play,1,play,1,0,18,participants
 novice,watch play play,2,play,1,0,12,participants
@@ -3801,12 +3707,12 @@ novice,play watch play,2,play,2,0,20,participants
 novice,play watch play,0,play,2,1,14,participants
 novice,play watch play,1,watch,2,1,13,participants
 novice,play watch play,2,play,2,1,12,participants
-no demo,play play play,0,play,3,0,20,participants
-no demo,play play play,1,play,3,0,21,participants
-no demo,play play play,2,play,3,0,19,participants
-no demo,play play play,0,play,3,1,11,participants
-no demo,play play play,1,play,3,1,19,participants
-no demo,play play play,2,play,3,1,19,participants
+no teacher,play play play,0,play,3,0,20,participants
+no teacher,play play play,1,play,3,0,21,participants
+no teacher,play play play,2,play,3,0,19,participants
+no teacher,play play play,0,play,3,1,11,participants
+no teacher,play play play,1,play,3,1,19,participants
+no teacher,play play play,2,play,3,1,19,participants
 expert,play watch play,0,play,4,0,15,participants
 expert,play watch play,1,watch,4,0,17,participants
 expert,play watch play,2,play,4,0,15,participants
@@ -3825,12 +3731,12 @@ novice,watch play play,2,play,1,0,17,participants
 novice,watch play play,0,watch,1,1,11,participants
 novice,watch play play,1,play,1,1,13,participants
 novice,watch play play,2,play,1,1,18,participants
-no demo,play play play,0,play,2,0,5,participants
-no demo,play play play,1,play,2,0,17,participants
-no demo,play play play,2,play,2,0,10,participants
-no demo,play play play,0,play,2,1,17,participants
-no demo,play play play,1,play,2,1,13,participants
-no demo,play play play,2,play,2,1,14,participants
+no teacher,play play play,0,play,2,0,5,participants
+no teacher,play play play,1,play,2,0,17,participants
+no teacher,play play play,2,play,2,0,10,participants
+no teacher,play play play,0,play,2,1,17,participants
+no teacher,play play play,1,play,2,1,13,participants
+no teacher,play play play,2,play,2,1,14,participants
 expert,play watch play,0,play,3,0,13,participants
 expert,play watch play,1,watch,3,0,18,participants
 expert,play watch play,2,play,3,0,18,participants
@@ -3849,12 +3755,12 @@ novice,watch play play,2,play,0,0,13,participants
 novice,watch play play,0,watch,0,1,9,participants
 novice,watch play play,1,play,0,1,15,participants
 novice,watch play play,2,play,0,1,10,participants
-no demo,play play play,0,play,1,0,6,participants
-no demo,play play play,1,play,1,0,14,participants
-no demo,play play play,2,play,1,0,19,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,13,participants
-no demo,play play play,2,play,1,1,23,participants
+no teacher,play play play,0,play,1,0,6,participants
+no teacher,play play play,1,play,1,0,14,participants
+no teacher,play play play,2,play,1,0,19,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,13,participants
+no teacher,play play play,2,play,1,1,23,participants
 expert,watch play play,0,watch,2,0,17,participants
 expert,watch play play,1,play,2,0,20,participants
 expert,watch play play,2,play,2,0,16,participants
@@ -3873,12 +3779,12 @@ novice,play watch play,2,play,4,0,18,participants
 novice,play watch play,0,play,4,1,15,participants
 novice,play watch play,1,watch,4,1,17,participants
 novice,play watch play,2,play,4,1,21,participants
-no demo,play play play,0,play,0,0,12,participants
-no demo,play play play,1,play,0,0,10,participants
-no demo,play play play,2,play,0,0,22,participants
-no demo,play play play,0,play,0,1,15,participants
-no demo,play play play,1,play,0,1,14,participants
-no demo,play play play,2,play,0,1,12,participants
+no teacher,play play play,0,play,0,0,12,participants
+no teacher,play play play,1,play,0,0,10,participants
+no teacher,play play play,2,play,0,0,22,participants
+no teacher,play play play,0,play,0,1,15,participants
+no teacher,play play play,1,play,0,1,14,participants
+no teacher,play play play,2,play,0,1,12,participants
 expert,watch play play,0,watch,1,0,15,participants
 expert,watch play play,1,play,1,0,14,participants
 expert,watch play play,2,play,1,0,12,participants
@@ -3909,12 +3815,12 @@ novice,watch play play,2,play,0,0,23,participants
 novice,watch play play,0,watch,0,1,10,participants
 novice,watch play play,1,play,0,1,21,participants
 novice,watch play play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,8,participants
-no demo,play play play,2,play,1,0,12,participants
-no demo,play play play,0,play,1,1,9,participants
-no demo,play play play,1,play,1,1,16,participants
-no demo,play play play,2,play,1,1,20,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,8,participants
+no teacher,play play play,2,play,1,0,12,participants
+no teacher,play play play,0,play,1,1,9,participants
+no teacher,play play play,1,play,1,1,16,participants
+no teacher,play play play,2,play,1,1,20,participants
 novice,play watch play,0,play,2,0,10,participants
 novice,play watch play,1,watch,2,0,10,participants
 novice,play watch play,2,play,2,0,16,participants
@@ -3951,12 +3857,12 @@ expert,play watch play,2,play,2,0,18,participants
 expert,play watch play,0,play,2,1,19,participants
 expert,play watch play,1,watch,2,1,14,participants
 expert,play watch play,2,play,2,1,23,participants
-no demo,play play play,0,play,3,0,19,participants
-no demo,play play play,1,play,3,0,9,participants
-no demo,play play play,2,play,3,0,15,participants
-no demo,play play play,0,play,3,1,16,participants
-no demo,play play play,1,play,3,1,19,participants
-no demo,play play play,2,play,3,1,5,participants
+no teacher,play play play,0,play,3,0,19,participants
+no teacher,play play play,1,play,3,0,9,participants
+no teacher,play play play,2,play,3,0,15,participants
+no teacher,play play play,0,play,3,1,16,participants
+no teacher,play play play,1,play,3,1,19,participants
+no teacher,play play play,2,play,3,1,5,participants
 novice,play watch play,0,play,4,0,17,participants
 novice,play watch play,1,watch,4,0,12,participants
 novice,play watch play,2,play,4,0,19,participants
@@ -3975,12 +3881,12 @@ novice,play watch play,2,play,1,0,18,participants
 novice,play watch play,0,play,1,1,2,participants
 novice,play watch play,1,watch,1,1,10,participants
 novice,play watch play,2,play,1,1,12,participants
-no demo,play play play,0,play,2,0,22,participants
-no demo,play play play,1,play,2,0,17,participants
-no demo,play play play,2,play,2,0,11,participants
-no demo,play play play,0,play,2,1,19,participants
-no demo,play play play,1,play,2,1,10,participants
-no demo,play play play,2,play,2,1,9,participants
+no teacher,play play play,0,play,2,0,22,participants
+no teacher,play play play,1,play,2,0,17,participants
+no teacher,play play play,2,play,2,0,11,participants
+no teacher,play play play,0,play,2,1,19,participants
+no teacher,play play play,1,play,2,1,10,participants
+no teacher,play play play,2,play,2,1,9,participants
 novice,watch play play,0,watch,3,0,12,participants
 novice,watch play play,1,play,3,0,16,participants
 novice,watch play play,2,play,3,0,14,participants
@@ -3999,12 +3905,12 @@ novice,play watch play,2,play,0,0,17,participants
 novice,play watch play,0,play,0,1,13,participants
 novice,play watch play,1,watch,0,1,12,participants
 novice,play watch play,2,play,0,1,17,participants
-no demo,play play play,0,play,1,0,18,participants
-no demo,play play play,1,play,1,0,8,participants
-no demo,play play play,2,play,1,0,17,participants
-no demo,play play play,0,play,1,1,13,participants
-no demo,play play play,1,play,1,1,11,participants
-no demo,play play play,2,play,1,1,21,participants
+no teacher,play play play,0,play,1,0,18,participants
+no teacher,play play play,1,play,1,0,8,participants
+no teacher,play play play,2,play,1,0,17,participants
+no teacher,play play play,0,play,1,1,13,participants
+no teacher,play play play,1,play,1,1,11,participants
+no teacher,play play play,2,play,1,1,21,participants
 expert,play watch play,0,play,2,0,8,participants
 expert,play watch play,1,watch,2,0,15,participants
 expert,play watch play,2,play,2,0,21,participants
@@ -4035,12 +3941,12 @@ expert,play watch play,2,play,1,0,12,participants
 expert,play watch play,0,play,1,1,15,participants
 expert,play watch play,1,watch,1,1,15,participants
 expert,play watch play,2,play,1,1,18,participants
-no demo,play play play,0,play,2,0,22,participants
-no demo,play play play,1,play,2,0,7,participants
-no demo,play play play,2,play,2,0,12,participants
-no demo,play play play,0,play,2,1,16,participants
-no demo,play play play,1,play,2,1,13,participants
-no demo,play play play,2,play,2,1,12,participants
+no teacher,play play play,0,play,2,0,22,participants
+no teacher,play play play,1,play,2,0,7,participants
+no teacher,play play play,2,play,2,0,12,participants
+no teacher,play play play,0,play,2,1,16,participants
+no teacher,play play play,1,play,2,1,13,participants
+no teacher,play play play,2,play,2,1,12,participants
 novice,play watch play,0,play,3,0,14,participants
 novice,play watch play,1,watch,3,0,13,participants
 novice,play watch play,2,play,3,0,18,participants
@@ -4071,12 +3977,12 @@ expert,play watch play,2,play,2,0,21,participants
 expert,play watch play,0,play,2,1,12,participants
 expert,play watch play,1,watch,2,1,12,participants
 expert,play watch play,2,play,2,1,15,participants
-no demo,play play play,0,play,3,0,13,participants
-no demo,play play play,1,play,3,0,15,participants
-no demo,play play play,2,play,3,0,14,participants
-no demo,play play play,0,play,3,1,10,participants
-no demo,play play play,1,play,3,1,21,participants
-no demo,play play play,2,play,3,1,22,participants
+no teacher,play play play,0,play,3,0,13,participants
+no teacher,play play play,1,play,3,0,15,participants
+no teacher,play play play,2,play,3,0,14,participants
+no teacher,play play play,0,play,3,1,10,participants
+no teacher,play play play,1,play,3,1,21,participants
+no teacher,play play play,2,play,3,1,22,participants
 novice,watch play play,0,watch,4,0,13,participants
 novice,watch play play,1,play,4,0,21,participants
 novice,watch play play,2,play,4,0,21,participants
@@ -4095,12 +4001,12 @@ expert,play watch play,2,play,1,0,14,participants
 expert,play watch play,0,play,1,1,10,participants
 expert,play watch play,1,watch,1,1,18,participants
 expert,play watch play,2,play,1,1,17,participants
-no demo,play play play,0,play,2,0,16,participants
-no demo,play play play,1,play,2,0,12,participants
-no demo,play play play,2,play,2,0,16,participants
-no demo,play play play,0,play,2,1,16,participants
-no demo,play play play,1,play,2,1,14,participants
-no demo,play play play,2,play,2,1,10,participants
+no teacher,play play play,0,play,2,0,16,participants
+no teacher,play play play,1,play,2,0,12,participants
+no teacher,play play play,2,play,2,0,16,participants
+no teacher,play play play,0,play,2,1,16,participants
+no teacher,play play play,1,play,2,1,14,participants
+no teacher,play play play,2,play,2,1,10,participants
 novice,watch play play,0,watch,3,0,10,participants
 novice,watch play play,1,play,3,0,10,participants
 novice,watch play play,2,play,3,0,12,participants
@@ -4131,12 +4037,12 @@ expert,play watch play,2,play,2,0,17,participants
 expert,play watch play,0,play,2,1,14,participants
 expert,play watch play,1,watch,2,1,16,participants
 expert,play watch play,2,play,2,1,21,participants
-no demo,play play play,0,play,3,0,10,participants
-no demo,play play play,1,play,3,0,13,participants
-no demo,play play play,2,play,3,0,9,participants
-no demo,play play play,0,play,3,1,16,participants
-no demo,play play play,1,play,3,1,9,participants
-no demo,play play play,2,play,3,1,9,participants
+no teacher,play play play,0,play,3,0,10,participants
+no teacher,play play play,1,play,3,0,13,participants
+no teacher,play play play,2,play,3,0,9,participants
+no teacher,play play play,0,play,3,1,16,participants
+no teacher,play play play,1,play,3,1,9,participants
+no teacher,play play play,2,play,3,1,9,participants
 novice,watch play play,0,watch,4,0,10,participants
 novice,watch play play,1,play,4,0,19,participants
 novice,watch play play,2,play,4,0,21,participants
@@ -4155,12 +4061,12 @@ novice,watch play play,2,play,1,0,10,participants
 novice,watch play play,0,watch,1,1,11,participants
 novice,watch play play,1,play,1,1,14,participants
 novice,watch play play,2,play,1,1,13,participants
-no demo,play play play,0,play,2,0,23,participants
-no demo,play play play,1,play,2,0,22,participants
-no demo,play play play,2,play,2,0,22,participants
-no demo,play play play,0,play,2,1,10,participants
-no demo,play play play,1,play,2,1,11,participants
-no demo,play play play,2,play,2,1,12,participants
+no teacher,play play play,0,play,2,0,23,participants
+no teacher,play play play,1,play,2,0,22,participants
+no teacher,play play play,2,play,2,0,22,participants
+no teacher,play play play,0,play,2,1,10,participants
+no teacher,play play play,1,play,2,1,11,participants
+no teacher,play play play,2,play,2,1,12,participants
 expert,play watch play,0,play,3,0,11,participants
 expert,play watch play,1,watch,3,0,15,participants
 expert,play watch play,2,play,3,0,20,participants
@@ -4185,12 +4091,12 @@ novice,watch play play,2,play,1,0,16,participants
 novice,watch play play,0,watch,1,1,11,participants
 novice,watch play play,1,play,1,1,11,participants
 novice,watch play play,2,play,1,1,6,participants
-no demo,play play play,0,play,2,0,11,participants
-no demo,play play play,1,play,2,0,8,participants
-no demo,play play play,2,play,2,0,14,participants
-no demo,play play play,0,play,2,1,11,participants
-no demo,play play play,1,play,2,1,8,participants
-no demo,play play play,2,play,2,1,15,participants
+no teacher,play play play,0,play,2,0,11,participants
+no teacher,play play play,1,play,2,0,8,participants
+no teacher,play play play,2,play,2,0,14,participants
+no teacher,play play play,0,play,2,1,11,participants
+no teacher,play play play,1,play,2,1,8,participants
+no teacher,play play play,2,play,2,1,15,participants
 novice,play watch play,0,play,3,0,9,participants
 novice,play watch play,1,watch,3,0,9,participants
 novice,play watch play,2,play,3,0,10,participants
@@ -4227,24 +4133,24 @@ novice,watch play play,2,play,3,0,22,participants
 novice,watch play play,0,watch,3,1,10,participants
 novice,watch play play,1,play,3,1,12,participants
 novice,watch play play,2,play,3,1,11,participants
-no demo,play play play,0,play,4,0,17,participants
-no demo,play play play,1,play,4,0,20,participants
-no demo,play play play,2,play,4,0,19,participants
-no demo,play play play,0,play,4,1,7,participants
-no demo,play play play,1,play,4,1,18,participants
-no demo,play play play,2,play,4,1,20,participants
+no teacher,play play play,0,play,4,0,17,participants
+no teacher,play play play,1,play,4,0,20,participants
+no teacher,play play play,2,play,4,0,19,participants
+no teacher,play play play,0,play,4,1,7,participants
+no teacher,play play play,1,play,4,1,18,participants
+no teacher,play play play,2,play,4,1,20,participants
 novice,play watch play,0,play,0,0,11,participants
 novice,play watch play,1,watch,0,0,13,participants
 novice,play watch play,2,play,0,0,9,participants
 novice,play watch play,0,play,0,1,16,participants
 novice,play watch play,1,watch,0,1,16,participants
 novice,play watch play,2,play,0,1,22,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,15,participants
-no demo,play play play,2,play,1,0,14,participants
-no demo,play play play,0,play,1,1,15,participants
-no demo,play play play,1,play,1,1,13,participants
-no demo,play play play,2,play,1,1,13,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,15,participants
+no teacher,play play play,2,play,1,0,14,participants
+no teacher,play play play,0,play,1,1,15,participants
+no teacher,play play play,1,play,1,1,13,participants
+no teacher,play play play,2,play,1,1,13,participants
 expert,watch play play,0,watch,2,0,15,participants
 expert,watch play play,1,play,2,0,18,participants
 expert,watch play play,2,play,2,0,20,participants
@@ -4275,12 +4181,12 @@ expert,play watch play,2,play,1,0,16,participants
 expert,play watch play,0,play,1,1,10,participants
 expert,play watch play,1,watch,1,1,14,participants
 expert,play watch play,2,play,1,1,11,participants
-no demo,play play play,0,play,2,0,14,participants
-no demo,play play play,1,play,2,0,14,participants
-no demo,play play play,2,play,2,0,13,participants
-no demo,play play play,0,play,2,1,14,participants
-no demo,play play play,1,play,2,1,18,participants
-no demo,play play play,2,play,2,1,11,participants
+no teacher,play play play,0,play,2,0,14,participants
+no teacher,play play play,1,play,2,0,14,participants
+no teacher,play play play,2,play,2,0,13,participants
+no teacher,play play play,0,play,2,1,14,participants
+no teacher,play play play,1,play,2,1,18,participants
+no teacher,play play play,2,play,2,1,11,participants
 expert,watch play play,0,watch,3,0,18,participants
 expert,watch play play,1,play,3,0,17,participants
 expert,watch play play,2,play,3,0,7,participants
@@ -4305,12 +4211,12 @@ novice,watch play play,2,play,1,0,14,participants
 novice,watch play play,0,watch,1,1,11,participants
 novice,watch play play,1,play,1,1,11,participants
 novice,watch play play,2,play,1,1,11,participants
-no demo,play play play,0,play,2,0,11,participants
-no demo,play play play,1,play,2,0,12,participants
-no demo,play play play,2,play,2,0,13,participants
-no demo,play play play,0,play,2,1,14,participants
-no demo,play play play,1,play,2,1,17,participants
-no demo,play play play,2,play,2,1,12,participants
+no teacher,play play play,0,play,2,0,11,participants
+no teacher,play play play,1,play,2,0,12,participants
+no teacher,play play play,2,play,2,0,13,participants
+no teacher,play play play,0,play,2,1,14,participants
+no teacher,play play play,1,play,2,1,17,participants
+no teacher,play play play,2,play,2,1,12,participants
 expert,watch play play,0,watch,3,0,13,participants
 expert,watch play play,1,play,3,0,13,participants
 expert,watch play play,2,play,3,0,13,participants
@@ -4323,12 +4229,12 @@ expert,play watch play,2,play,4,0,17,participants
 expert,play watch play,0,play,4,1,18,participants
 expert,play watch play,1,watch,4,1,20,participants
 expert,play watch play,2,play,4,1,15,participants
-no demo,play play play,0,play,0,0,10,participants
-no demo,play play play,1,play,0,0,14,participants
-no demo,play play play,2,play,0,0,13,participants
-no demo,play play play,0,play,0,1,10,participants
-no demo,play play play,1,play,0,1,18,participants
-no demo,play play play,2,play,0,1,20,participants
+no teacher,play play play,0,play,0,0,10,participants
+no teacher,play play play,1,play,0,0,14,participants
+no teacher,play play play,2,play,0,0,13,participants
+no teacher,play play play,0,play,0,1,10,participants
+no teacher,play play play,1,play,0,1,18,participants
+no teacher,play play play,2,play,0,1,20,participants
 novice,watch play play,0,watch,1,0,7,participants
 novice,watch play play,1,play,1,0,13,participants
 novice,watch play play,2,play,1,0,7,participants
@@ -4365,12 +4271,12 @@ expert,watch play play,2,play,1,0,18,participants
 expert,watch play play,0,watch,1,1,19,participants
 expert,watch play play,1,play,1,1,22,participants
 expert,watch play play,2,play,1,1,22,participants
-no demo,play play play,0,play,2,0,12,participants
-no demo,play play play,1,play,2,0,20,participants
-no demo,play play play,2,play,2,0,19,participants
-no demo,play play play,0,play,2,1,15,participants
-no demo,play play play,1,play,2,1,9,participants
-no demo,play play play,2,play,2,1,3,participants
+no teacher,play play play,0,play,2,0,12,participants
+no teacher,play play play,1,play,2,0,20,participants
+no teacher,play play play,2,play,2,0,19,participants
+no teacher,play play play,0,play,2,1,15,participants
+no teacher,play play play,1,play,2,1,9,participants
+no teacher,play play play,2,play,2,1,3,participants
 expert,play watch play,0,play,3,0,20,participants
 expert,play watch play,1,watch,3,0,14,participants
 expert,play watch play,2,play,3,0,24,participants
@@ -4407,70 +4313,12 @@ novice,play watch play,2,play,3,0,13,participants
 novice,play watch play,0,play,3,1,17,participants
 novice,play watch play,1,watch,3,1,14,participants
 novice,play watch play,2,play,3,1,17,participants
-no demo,play play play,0,play,4,0,11,participants
-no demo,play play play,1,play,4,0,12,participants
-no demo,play play play,2,play,4,0,10,participants
-no demo,play play play,0,play,4,1,13,participants
-no demo,play play play,1,play,4,1,10,participants
-no demo,play play play,2,play,4,1,10,participants
-novice,watch play play,0,watch,0,0,10,participants
-novice,watch play play,1,play,0,0,13,participants
-novice,watch play play,2,play,0,0,15,participants
-novice,watch play play,0,watch,0,1,12,participants
-novice,watch play play,1,play,0,1,16,participants
-novice,watch play play,2,play,0,1,13,participants
-novice,play watch play,0,play,1,0,13,participants
-novice,play watch play,1,watch,1,0,14,participants
-novice,play watch play,2,play,1,0,12,participants
-novice,play watch play,0,play,1,1,6,participants
-novice,play watch play,1,watch,1,1,12,participants
-novice,play watch play,2,play,1,1,8,participants
-expert,watch play play,1,play,2,0,16,participants
-expert,watch play play,2,play,2,0,14,participants
-expert,watch play play,0,watch,2,1,16,participants
-expert,watch play play,1,play,2,1,21,participants
-expert,watch play play,2,play,2,1,20,participants
-no demo,play play play,0,play,3,0,13,participants
-no demo,play play play,1,play,3,0,15,participants
-no demo,play play play,2,play,3,0,14,participants
-no demo,play play play,0,play,3,1,13,participants
-no demo,play play play,1,play,3,1,18,participants
-no demo,play play play,2,play,3,1,5,participants
-expert,play watch play,0,play,4,0,15,participants
-expert,play watch play,1,watch,4,0,16,participants
-expert,play watch play,2,play,4,0,21,participants
-expert,play watch play,0,play,4,1,15,participants
-expert,play watch play,1,watch,4,1,19,participants
-expert,play watch play,2,play,4,1,22,participants
-novice,play watch play,0,play,0,0,13,participants
-novice,play watch play,1,watch,0,0,11,participants
-novice,play watch play,2,play,0,0,8,participants
-novice,play watch play,0,play,0,1,15,participants
-novice,play watch play,1,watch,0,1,8,participants
-novice,play watch play,2,play,0,1,10,participants
-no demo,play play play,0,play,1,0,12,participants
-no demo,play play play,1,play,1,0,19,participants
-no demo,play play play,2,play,1,0,17,participants
-no demo,play play play,0,play,1,1,7,participants
-no demo,play play play,1,play,1,1,15,participants
-no demo,play play play,2,play,1,1,16,participants
-novice,watch play play,0,watch,2,0,10,participants
-novice,watch play play,1,play,2,0,20,participants
-novice,watch play play,2,play,2,0,7,participants
-novice,watch play play,1,play,2,1,13,participants
-novice,watch play play,2,play,2,1,12,participants
-expert,play watch play,0,play,3,0,8,participants
-expert,play watch play,1,watch,3,0,18,participants
-expert,play watch play,2,play,3,0,10,participants
-expert,play watch play,0,play,3,1,10,participants
-expert,play watch play,1,watch,3,1,13,participants
-expert,play watch play,2,play,3,1,8,participants
-expert,watch play play,0,watch,4,0,17,participants
-expert,watch play play,1,play,4,0,18,participants
-expert,watch play play,2,play,4,0,11,participants
-expert,watch play play,0,watch,4,1,19,participants
-expert,watch play play,1,play,4,1,17,participants
-expert,watch play play,2,play,4,1,18,participants
+no teacher,play play play,0,play,4,0,11,participants
+no teacher,play play play,1,play,4,0,12,participants
+no teacher,play play play,2,play,4,0,10,participants
+no teacher,play play play,0,play,4,1,13,participants
+no teacher,play play play,1,play,4,1,10,participants
+no teacher,play play play,2,play,4,1,10,participants
 expert,play watch play,0,play,0,0,10,participants
 expert,play watch play,1,watch,0,0,15,participants
 expert,play watch play,2,play,0,0,11,participants
@@ -4495,52 +4343,12 @@ novice,watch play play,2,play,3,0,12,participants
 novice,watch play play,0,watch,3,1,14,participants
 novice,watch play play,1,play,3,1,15,participants
 novice,watch play play,2,play,3,1,14,participants
-no demo,play play play,0,play,4,0,18,participants
-no demo,play play play,1,play,4,0,19,participants
-no demo,play play play,2,play,4,0,17,participants
-no demo,play play play,0,play,4,1,19,participants
-no demo,play play play,1,play,4,1,20,participants
-no demo,play play play,2,play,4,1,20,participants
-no demo,play play play,0,play,0,0,10,participants
-no demo,play play play,1,play,0,0,6,participants
-no demo,play play play,2,play,0,0,11,participants
-novice,play watch play,0,play,0,0,12,participants
-novice,play watch play,1,watch,0,0,11,participants
-novice,play watch play,2,play,0,0,15,participants
-no demo,play play play,0,play,0,1,9,participants
-no demo,play play play,1,play,0,1,11,participants
-no demo,play play play,2,play,0,1,12,participants
-novice,play watch play,0,play,0,1,11,participants
-novice,play watch play,1,watch,0,1,13,participants
-novice,play watch play,2,play,0,1,12,participants
-novice,watch play play,0,watch,1,0,13,participants
-novice,watch play play,1,play,1,0,19,participants
-novice,watch play play,2,play,1,0,17,participants
-novice,watch play play,0,watch,1,1,15,participants
-novice,watch play play,1,play,1,1,14,participants
-novice,watch play play,2,play,1,1,10,participants
-novice,play watch play,0,play,2,0,14,participants
-novice,play watch play,1,watch,2,0,17,participants
-novice,play watch play,2,play,2,0,19,participants
-novice,play watch play,0,play,2,1,11,participants
-novice,play watch play,1,watch,2,1,16,participants
-novice,play watch play,2,play,2,1,12,participants
-no demo,play play play,0,play,3,0,10,participants
-no demo,play play play,1,play,3,0,12,participants
-no demo,play play play,2,play,3,0,12,participants
-expert,watch play play,0,watch,3,0,17,participants
-expert,watch play play,1,play,3,0,20,participants
-expert,watch play play,2,play,3,0,17,participants
-no demo,play play play,0,play,3,1,16,participants
-no demo,play play play,1,play,3,1,14,participants
-no demo,play play play,2,play,3,1,11,participants
-expert,watch play play,0,watch,3,1,19,participants
-expert,watch play play,0,watch,4,0,19,participants
-expert,watch play play,1,play,4,0,18,participants
-expert,watch play play,2,play,4,0,12,participants
-expert,watch play play,0,watch,4,1,19,participants
-expert,watch play play,1,play,4,1,12,participants
-expert,watch play play,2,play,4,1,13,participants
+no teacher,play play play,0,play,4,0,18,participants
+no teacher,play play play,1,play,4,0,19,participants
+no teacher,play play play,2,play,4,0,17,participants
+no teacher,play play play,0,play,4,1,19,participants
+no teacher,play play play,1,play,4,1,20,participants
+no teacher,play play play,2,play,4,1,20,participants
 novice,watch play play,0,watch,0,0,10,participants
 novice,watch play play,1,play,0,0,10,participants
 novice,watch play play,2,play,0,0,8,participants
@@ -4559,12 +4367,12 @@ novice,play watch play,2,play,2,0,11,participants
 novice,play watch play,0,play,2,1,14,participants
 novice,play watch play,1,watch,2,1,15,participants
 novice,play watch play,2,play,2,1,19,participants
-no demo,play play play,0,play,3,0,9,participants
-no demo,play play play,1,play,3,0,10,participants
-no demo,play play play,2,play,3,0,11,participants
-no demo,play play play,0,play,3,1,15,participants
-no demo,play play play,1,play,3,1,17,participants
-no demo,play play play,2,play,3,1,23,participants
+no teacher,play play play,0,play,3,0,9,participants
+no teacher,play play play,1,play,3,0,10,participants
+no teacher,play play play,2,play,3,0,11,participants
+no teacher,play play play,0,play,3,1,15,participants
+no teacher,play play play,1,play,3,1,17,participants
+no teacher,play play play,2,play,3,1,23,participants
 expert,watch play play,0,watch,4,0,18,participants
 expert,watch play play,1,play,4,0,17,participants
 expert,watch play play,2,play,4,0,13,participants
@@ -4589,12 +4397,12 @@ novice,play watch play,2,play,2,0,12,participants
 novice,play watch play,0,play,2,1,13,participants
 novice,play watch play,1,watch,2,1,12,participants
 novice,play watch play,2,play,2,1,18,participants
-no demo,play play play,0,play,3,0,5,participants
-no demo,play play play,1,play,3,0,14,participants
-no demo,play play play,2,play,3,0,14,participants
-no demo,play play play,0,play,3,1,12,participants
-no demo,play play play,1,play,3,1,10,participants
-no demo,play play play,2,play,3,1,16,participants
+no teacher,play play play,0,play,3,0,5,participants
+no teacher,play play play,1,play,3,0,14,participants
+no teacher,play play play,2,play,3,0,14,participants
+no teacher,play play play,0,play,3,1,12,participants
+no teacher,play play play,1,play,3,1,10,participants
+no teacher,play play play,2,play,3,1,16,participants
 expert,watch play play,0,watch,4,0,18,participants
 expert,watch play play,1,play,4,0,24,participants
 expert,watch play play,2,play,4,0,17,participants
@@ -4625,12 +4433,12 @@ novice,play watch play,2,play,3,0,14,participants
 novice,play watch play,0,play,3,1,22,participants
 novice,play watch play,1,watch,3,1,11,participants
 novice,play watch play,2,play,3,1,5,participants
-no demo,play play play,0,play,4,0,18,participants
-no demo,play play play,1,play,4,0,12,participants
-no demo,play play play,2,play,4,0,19,participants
-no demo,play play play,0,play,4,1,8,participants
-no demo,play play play,1,play,4,1,12,participants
-no demo,play play play,2,play,4,1,22,participants
+no teacher,play play play,0,play,4,0,18,participants
+no teacher,play play play,1,play,4,0,12,participants
+no teacher,play play play,2,play,4,0,19,participants
+no teacher,play play play,0,play,4,1,8,participants
+no teacher,play play play,1,play,4,1,12,participants
+no teacher,play play play,2,play,4,1,22,participants
 novice,play watch play,0,play,0,0,14,participants
 novice,play watch play,1,watch,0,0,14,participants
 novice,play watch play,2,play,0,0,13,participants
@@ -4643,12 +4451,12 @@ expert,watch play play,2,play,1,0,13,participants
 expert,watch play play,0,watch,1,1,17,participants
 expert,watch play play,1,play,1,1,13,participants
 expert,watch play play,2,play,1,1,18,participants
-no demo,play play play,0,play,2,0,15,participants
-no demo,play play play,1,play,2,0,13,participants
-no demo,play play play,2,play,2,0,14,participants
-no demo,play play play,0,play,2,1,16,participants
-no demo,play play play,1,play,2,1,19,participants
-no demo,play play play,2,play,2,1,12,participants
+no teacher,play play play,0,play,2,0,15,participants
+no teacher,play play play,1,play,2,0,13,participants
+no teacher,play play play,2,play,2,0,14,participants
+no teacher,play play play,0,play,2,1,16,participants
+no teacher,play play play,1,play,2,1,19,participants
+no teacher,play play play,2,play,2,1,12,participants
 expert,play watch play,0,play,3,0,8,participants
 expert,play watch play,1,watch,3,0,17,participants
 expert,play watch play,2,play,3,0,22,participants
@@ -4667,12 +4475,12 @@ expert,play watch play,2,play,0,0,15,participants
 expert,play watch play,0,play,0,1,16,participants
 expert,play watch play,1,watch,0,1,18,participants
 expert,play watch play,2,play,0,1,20,participants
-no demo,play play play,0,play,1,0,18,participants
-no demo,play play play,1,play,1,0,11,participants
-no demo,play play play,2,play,1,0,10,participants
-no demo,play play play,0,play,1,1,15,participants
-no demo,play play play,1,play,1,1,19,participants
-no demo,play play play,2,play,1,1,21,participants
+no teacher,play play play,0,play,1,0,18,participants
+no teacher,play play play,1,play,1,0,11,participants
+no teacher,play play play,2,play,1,0,10,participants
+no teacher,play play play,0,play,1,1,15,participants
+no teacher,play play play,1,play,1,1,19,participants
+no teacher,play play play,2,play,1,1,21,participants
 expert,watch play play,0,watch,2,0,13,participants
 expert,watch play play,1,play,2,0,22,participants
 expert,watch play play,2,play,2,0,20,participants
@@ -4697,12 +4505,12 @@ novice,watch play play,2,play,0,0,14,participants
 novice,watch play play,0,watch,0,1,12,participants
 novice,watch play play,1,play,0,1,15,participants
 novice,watch play play,2,play,0,1,13,participants
-no demo,play play play,0,play,1,0,11,participants
-no demo,play play play,1,play,1,0,10,participants
-no demo,play play play,2,play,1,0,17,participants
-no demo,play play play,0,play,1,1,12,participants
-no demo,play play play,1,play,1,1,11,participants
-no demo,play play play,2,play,1,1,15,participants
+no teacher,play play play,0,play,1,0,11,participants
+no teacher,play play play,1,play,1,0,10,participants
+no teacher,play play play,2,play,1,0,17,participants
+no teacher,play play play,0,play,1,1,12,participants
+no teacher,play play play,1,play,1,1,11,participants
+no teacher,play play play,2,play,1,1,15,participants
 expert,watch play play,0,watch,2,0,12,participants
 expert,watch play play,1,play,2,0,11,participants
 expert,watch play play,2,play,2,0,16,participants
@@ -4733,12 +4541,12 @@ expert,watch play play,2,play,1,0,12,participants
 expert,watch play play,0,watch,1,1,14,participants
 expert,watch play play,1,play,1,1,19,participants
 expert,watch play play,2,play,1,1,17,participants
-no demo,play play play,0,play,2,0,19,participants
-no demo,play play play,1,play,2,0,8,participants
-no demo,play play play,2,play,2,0,10,participants
-no demo,play play play,0,play,2,1,14,participants
-no demo,play play play,1,play,2,1,12,participants
-no demo,play play play,2,play,2,1,22,participants
+no teacher,play play play,0,play,2,0,19,participants
+no teacher,play play play,1,play,2,0,8,participants
+no teacher,play play play,2,play,2,0,10,participants
+no teacher,play play play,0,play,2,1,14,participants
+no teacher,play play play,1,play,2,1,12,participants
+no teacher,play play play,2,play,2,1,22,participants
 novice,watch play play,0,watch,3,0,13,participants
 novice,watch play play,1,play,3,0,14,participants
 novice,watch play play,2,play,3,0,8,participants
@@ -4769,12 +4577,12 @@ novice,watch play play,2,play,2,0,13,participants
 novice,watch play play,0,watch,2,1,8,participants
 novice,watch play play,1,play,2,1,18,participants
 novice,watch play play,2,play,2,1,22,participants
-no demo,play play play,0,play,3,0,13,participants
-no demo,play play play,1,play,3,0,12,participants
-no demo,play play play,2,play,3,0,10,participants
-no demo,play play play,0,play,3,1,21,participants
-no demo,play play play,1,play,3,1,19,participants
-no demo,play play play,2,play,3,1,13,participants
+no teacher,play play play,0,play,3,0,13,participants
+no teacher,play play play,1,play,3,0,12,participants
+no teacher,play play play,2,play,3,0,10,participants
+no teacher,play play play,0,play,3,1,21,participants
+no teacher,play play play,1,play,3,1,19,participants
+no teacher,play play play,2,play,3,1,13,participants
 expert,play watch play,0,play,4,0,15,participants
 expert,play watch play,1,watch,4,0,17,participants
 expert,play watch play,2,play,4,0,18,participants
