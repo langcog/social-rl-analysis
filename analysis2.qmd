@@ -1,0 +1,423 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+Packages.
+```{r}
+library(here)
+library(tidyverse)
+library(janitor)
+library(lme4)
+```
+
+Filtering/Preprocessing
+```{r}
+demographics <- read_csv(here("data","prolific_demographics_experiment2.csv")) 
+experiment <- read_csv(here("data", "amg_gamelogs_experiment2.csv")) |>
+  clean_names() 
+
+# Get list of participants with a return code and who are not colorblind
+filtered_demographics_df <- demographics |>
+  filter(`Completion code` == 'CTVM94DF') |>
+  filter(Colourblindness != "Yes, I'm colourblind")
+participant_ids <- filtered_demographics_df$`Participant id`
+prolific_ids_with_logging_errors <- c('5eaa5d8b040c211e56dc98c0', '5f1215c24862ae13032bad4e', '610898813e48dc2864965122', '655fd299a33617af94bb00ee', '6561f9edfd7315a2f858adff', '656f47c38d6a2aa50bccb845')
+
+# Filter Out Participant, and other
+prolific_ids_to_remove <- experiment |>
+    filter(refresh_count > 0) |>
+    distinct(prolific_id) |>
+    pull(prolific_id)
+
+filtered_experiment_df <- experiment |>
+  filter(prolific_id %in% participant_ids) |> # Keep only participants with no colorblindness and a return code
+  filter(prolific_id != '6509ef2182c4abf47b1cb961') |> # user gas a watch game_type with block_index=2 -- bug, use  filter(block_index == 2, game_type == 'watch') to find
+  filter(game_type != 'practice') |> # filter out practice trials 
+  filter(game_type != 'complete') |> # filter out complete trials -- note that they completed the experiment
+  filter(!prolific_id %in% prolific_ids_to_remove) |> # filter out participants who refreshed their page
+  filter(!prolific_id %in% prolific_ids_with_logging_errors) |> # filter out participants with logging errors
+  select(-id, -`v`, -payoffs, -policy) 
+# 1
+filtered_experiment_df
+
+# Preprocessing 
+preprocessed_experiment_df <-  filtered_experiment_df |>
+  mutate(
+    teacher = ifelse(block_id == "block_type3", "None", teacher),  # Updating 'teacher' column
+    block_condition = case_when(
+      block_id == "block_type1" ~ "play watch play",
+      block_id == "block_type2" ~ "watch play play",
+      block_id == "block_type3" ~ "play play play",
+      TRUE ~ NA_character_  # Handle other cases (if any)
+    )
+  ) |>
+  mutate(teacher = ifelse(block_id == "block_type3", "no teacher", teacher)) |>
+  group_by(prolific_id, condition_index, block_condition) |>
+  mutate(teacher = ifelse(all(is.na(teacher)), NA, first(na.omit(teacher))))  |> # Replace NA values in 'teacher' column with the non-NA value in the group
+  #arrange(prolific_id, condition_index, block_index, game_type) |>
+  ungroup() |>
+  rename('teacher_condition' = 'teacher')
+write_csv(preprocessed_experiment_df, here("data","preprocessed_gamelogs_experiment2.csv"))
+# 2
+preprocessed_experiment_df
+
+# Summarized Human Scores
+human_scores <- preprocessed_experiment_df |>
+  select(prolific_id, step, position, action, block_condition, teacher_condition, game_type, block_id, condition_index, block_index, condition_count_index , total_reward, refresh_count) |>
+  group_by(prolific_id, condition_index, condition_count_index, block_condition, teacher_condition, block_index, game_type) |>
+  summarise(total_reward = max(total_reward)) |>
+  ungroup() |>
+  select(teacher_condition, block_condition, block_index, game_type, condition_index, condition_count_index, total_reward)
+human_scores$method <- "Humans"
+write_csv(human_scores, here("data","exp2_human_performance.csv"))
+# 3
+human_scores
+
+# compute avg time taken to complete
+filtered_experiment_df |>
+  group_by(prolific_id) |>
+  summarise(time = max(timestamp) - min(timestamp)) |>
+  ungroup()
+```
+Human Performance
+```{r}
+human_mean_block_scores <- human_scores |>
+  group_by(teacher_condition, block_condition, block_index, game_type) |>
+  summarize(mean_reward = mean(total_reward),
+            sd_reward = sd(total_reward),
+            sem_reward = sd(total_reward)/sqrt(length(total_reward)),
+            ci_reward = 1.96 * sem_reward) 
+human_mean_block_scores
+
+shaded_bands <- data.frame(
+  block_condition = unique(human_mean_block_scores$block_condition),
+  xmin = c(0.5, -0.5, 0),  # These should be the start positions of 'watch' game types
+  xmax = c(1.5, 0.5, 0)   # These should be the end positions of 'watch' game types
+)
+
+
+p <- ggplot(human_mean_block_scores, 
+       aes(x = block_index, y = mean_reward, col = teacher_condition)) +
+  facet_wrap(~block_condition) + 
+  geom_rect(data = shaded_bands, aes(xmin = xmin, xmax = xmax, ymin = -Inf, ymax = Inf),
+            inherit.aes = FALSE, fill = "red", alpha = 0.3) + 
+  geom_pointrange(aes(shape = game_type, ymin = mean_reward - ci_reward, 
+                      ymax = mean_reward + ci_reward), 
+                  position = position_dodge(width = .1)) +
+  labs(x='Block Condition Index', y = "Mean Reward", color='Teacher', shape="Game") +
+    theme(panel.spacing.x = unit(1.5, "lines"), 
+        panel.spacing.y = unit(0.7, "lines"), 
+        legend.position = "top",
+        text = element_text(size = 14),  # Base size for all text
+        axis.title = element_text(size = 12),  # Size for axis titles
+        axis.text = element_text(size = 14),  # Size for axis text
+        legend.text = element_text(size = 12)) +  # Size for legend text
+  geom_line()+
+  ylim(10, 20) +
+  scale_x_continuous(breaks = seq(0, max(human_mean_block_scores$block_index), by = 1))
+ggsave(here("figures","exp2_results.png"), plot = p, width = 7, height = 4)
+p
+
+human_mean_block_scores <- human_mean_block_scores |>
+  filter(!game_type == 'watch') |>
+  mutate(block_index_char = case_when(
+    block_condition == "play watch play" & block_index == 0 ~ "1st-Play",
+    block_condition == "play watch play" & block_index == 2 ~ "2nd-Play",
+    block_condition == "watch play play" & block_index == 1 ~ "1st-Play",
+    block_condition == "watch play play" & block_index == 2 ~ "2nd-Play",
+    block_condition == "play play play" & block_index == 0 ~ "1st-Play",
+    block_condition == "play play play" & block_index == 1 ~ "2nd-Play",
+    block_condition == "play play play" & block_index == 2 ~ "3rd-Play",
+    TRUE ~ as.character(block_index)  # Keep other values as they are, converting to character
+  )) |>
+  filter(!(block_condition == "play play play" & block_index == 2)) |>
+  mutate(play_index = case_when(
+    block_index_char == "1st-Play" ~ 0,
+    block_index_char == "2nd-Play" ~ 1,
+    TRUE ~ NA_real_  # Assign NA for cases that do not match the above conditions
+  ))
+human_mean_block_scores
+
+
+p <- ggplot(human_mean_block_scores, 
+       aes(x = play_index, y = mean_reward, col = teacher_condition)) +
+  facet_wrap(~block_condition) + 
+  geom_pointrange(aes(ymin = mean_reward - ci_reward, 
+                      ymax = mean_reward + ci_reward), 
+                  position = position_dodge(width = .1)) +
+  labs(x='', y = "Mean Reward", color="Teacher Condition") +
+  geom_line() +
+  ylim(10, 20) +
+  scale_x_continuous(breaks = unique(human_mean_block_scores$play_index),
+                     labels = unique(human_mean_block_scores$block_index_char)) + 
+  theme(panel.spacing.x = unit(1.5, "lines"), 
+        panel.spacing.y = unit(0.7, "lines"), 
+        legend.position = "top",
+        text = element_text(size = 14),  # Base size for all text
+        axis.title = element_text(size = 14),  # Size for axis titles
+        axis.text = element_text(size = 16),  # Size for axis text
+        legend.text = element_text(size = 10)) +  # Size for legend text
+  guides(color = guide_legend(nrow = 1, byrow = TRUE))
+p
+
+ggsave(here("figures","human_performance_1stplay_2ndplay.png"), plot = p, width = 7, height = 2.5)
+
+# T-test comparing the total reward in 2nd play in play play play and 2nd play in play watch play expert
+t_test_results <- human_scores |>
+  filter((block_index == 1 & teacher_condition == "no teacher" & block_condition == "play play play") |
+         (block_index == 2 & teacher_condition == "expert" & block_condition == "play watch play")) |>
+  do(t_test = t.test(total_reward ~ block_condition, data = .))
+
+# Print the t-test result
+print(t_test_results$t_test)
+
+# T-test comparing the total reward in 2nd play in play play play and 2nd play in play watch play expert
+t_test_results <- human_scores |>
+  filter((block_index == 1 & teacher_condition == "no teacher" & block_condition == "play play play") |
+         (block_index == 2 & teacher_condition == "expert" & block_condition == "watch play play")) |>
+  do(t_test = t.test(total_reward ~ block_condition, data = .))
+
+# Print the t-test result
+print(t_test_results$t_test)
+
+# T-test comparing the total reward in 2nd play in play play play and 2nd play in play watch play expert
+t_test_results <- human_scores |>
+  filter((block_index == 1 & teacher_condition == "no teacher" & block_condition == "play play play") |
+         (block_index == 2 & teacher_condition == "novice" & block_condition == "play watch play")) |>
+  do(t_test = t.test(total_reward ~ block_condition, data = .))
+
+# Print the t-test result
+print(t_test_results$t_test)
+
+# T-test comparing the total reward in 2nd play in play play play and 2nd play in play watch play expert
+t_test_results <- human_scores |>
+  filter((block_index == 1 & teacher_condition == "no teacher" & block_condition == "play play play") |
+         (block_index == 2 & teacher_condition == "novice" & block_condition == "watch play play")) |>
+  do(t_test = t.test(total_reward ~ block_condition, data = .))
+
+# Print the t-test result
+print(t_test_results$t_test)
+
+
+
+```
+Human-Model Comparison
+```{r}
+human_scores
+
+model_scores <- read_csv(here("data", "exp2_model_performance.csv"))
+model_scores
+
+combined_scores <- bind_rows(human_scores, model_scores)
+combined_scores
+
+mean_block_scores <- combined_scores |>
+  group_by(teacher_condition, block_condition, block_index, game_type, method) |>
+  summarize(mean_reward = mean(total_reward),
+            sd_reward = sd(total_reward),
+            sem_reward = sd(total_reward)/sqrt(length(total_reward)),
+            ci_reward = 1.96 * sem_reward)
+
+mean_block_scores <- mean_block_scores |>
+  filter(!game_type == 'watch') |>
+    mutate(block_index_char = case_when(
+    block_condition == "play watch play" & block_index == 0 ~ "1st-Play",
+    block_condition == "play watch play" & block_index == 2 ~ "2nd-Play",
+    block_condition == "watch play play" & block_index == 1 ~ "1st-Play",
+    block_condition == "watch play play" & block_index == 2 ~ "2nd-Play",
+    block_condition == "play play play" & block_index == 0 ~ "1st-Play",
+    block_condition == "play play play" & block_index == 1 ~ "2nd-Play",
+    block_condition == "play play play" & block_index == 2 ~ "3rd-Play",
+    TRUE ~ as.character(block_index)  # Keep other values as they are, converting to character
+  )) |>
+  filter(!(block_condition == "play play play" & block_index == 2)) |>
+  mutate(play_index = case_when(
+    block_index_char == "1st-Play" ~ 0,
+    block_index_char == "2nd-Play" ~ 1,
+    TRUE ~ NA_real_  # Assign NA for cases that do not match the above conditions
+  ))
+mean_block_scores$method <- factor(mean_block_scores$method, levels = c("Humans", "Thompson-Naive", "Thompson-Predict", "Thompson-Lesion"))
+mean_block_scores
+
+# Add a new column for identifying where to mask the grid
+mean_block_scores$mask_grid <- with(mean_block_scores, ifelse(method != "Humans", TRUE, FALSE))
+
+p <- ggplot(mean_block_scores, aes(x = play_index, y = mean_reward, col = teacher_condition)) +
+  facet_grid(method ~ block_condition) +
+  geom_rect(data = subset(mean_block_scores, mask_grid), 
+            aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf), 
+            fill = "white", alpha = 1) +
+  geom_pointrange(aes(ymin = mean_reward - ci_reward, ymax = mean_reward + ci_reward), 
+                  position = position_dodge(width = .1)) +
+  labs(x='', y = "Mean Reward", color = "Teacher") +
+  geom_line() +
+  ylim(11, 19) +
+  scale_x_continuous(breaks = unique(mean_block_scores$play_index),
+                     labels = unique(mean_block_scores$block_index_char)) + 
+  theme(panel.spacing.x = unit(1.5, "lines"), 
+        panel.spacing.y = unit(0.7, "lines"), 
+        legend.position = "top",
+        text = element_text(size = 26), 
+        axis.title = element_text(size = 26), 
+        axis.text = element_text(size = 14), 
+        legend.text = element_text(size = 20)) + 
+  guides(color = guide_legend(nrow = 1, byrow = TRUE))
+
+p
+ggsave(here("figures","model_performance_1stplay_2ndplay.png"), plot = p, width = 10, height = 14)
+
+
+print('here') 
+any(is.na(mean_block_scores))
+any(is.na(mean_block_scores$teacher_condition))
+any(is.na(mean_block_scores$block_condition))
+any(is.na(mean_block_scores$block_index))
+any(is.na(mean_block_scores$mean_reward))
+any(is.na(mean_block_scores$block_index_char))
+any(is.na(mean_block_scores$ci_reward))
+any(is.na(mean_block_scores$method))
+
+
+t_test_results <- model_scores |>
+  filter(method=='Thompson-Predict') |>
+  filter((block_index == 2 & teacher_condition == "expert" & block_condition == "play watch play") |
+         (block_index == 2 & teacher_condition == "expert" & block_condition == "watch play play")) |>
+  do(t_test = t.test(total_reward ~ block_condition, data = .))
+
+# Print the t-test result
+print(t_test_results$t_test)
+
+
+```
+
+Mixed Effects Model
+```{r}
+
+human_final_play_rewards <- preprocessed_experiment_df |>
+
+  select(prolific_id, step, position, action, block_condition, teacher_condition, game_type, block_id, condition_index, block_index, condition_count_index , total_reward, refresh_count) |>
+  group_by(prolific_id, condition_count_index, block_condition, teacher_condition, block_index, game_type) |>
+  summarise(total_reward = max(total_reward)) |>
+    filter(block_index == 2) |>
+  filter(block_condition!='play play play') |>
+  ungroup() |>
+  select(prolific_id, teacher_condition, block_condition, block_index, game_type, condition_count_index, total_reward)
+
+human_final_play_rewards
+
+lm <- lmer(total_reward ~ block_condition * teacher_condition + (block_condition * teacher_condition | prolific_id), data=human_final_play_rewards)
+summary(lm)
+sjPlot:: tab_model(lm, show.df=TRUE)
+```
+
+Mean Correlation of Direct Human-Model Reward 
+```{r}
+
+# Example data frames
+
+#df1 <- data.frame(human_play_reward_1 = rnorm(10), human_play_reward_2 = rnorm(10), model_play_reward_1 = rnorm(10), model_play_reward_2 = rnorm(10), D = sampleD)
+#df2 <- data.frame(human_play_reward_1 = rnorm(10), human_play_reward_2 = rnorm(10), model_play_reward_1 = rnorm(10), model_play_reward_2 = rnorm(10), D = sampleD)
+
+human_model<- read_csv(here("data", "exp2_human_model_play_rewards.csv"))
+
+novice <- human_model |> 
+  filter(teacher_condition == 'novice') |>
+  arrange(trial, block_condition, method)
+
+expert <- human_model |> 
+  filter(teacher_condition == 'expert') |>
+  arrange(trial, block_condition, method)
+
+df1 <- novice |>
+select(-human_play_reward_3, -model_play_reward_3)
+df2 <- expert |>
+select(-human_play_reward_3, -model_play_reward_3)
+
+  
+
+
+# Identify columns starting with H and M
+columns_H <- grep("^human_play_reward", names(df1), value = TRUE)
+columns_M <- grep("^model_play_reward", names(df1), value = TRUE)
+
+# Function to perform row-wise correlation
+rowwise_correlation <- function(index, df1, df2, cols_H, cols_M) {
+  # Extract and combine H and M columns for the specific row
+  h_values <- unlist(df1[index, cols_H])
+  h_values <- c(h_values, unlist(df2[index, cols_H]))
+  m_values <- unlist(df1[index, cols_M])
+  m_values <- c(m_values, unlist(df2[index, cols_M]))
+
+  # Calculate correlation
+  cor(h_values, m_values)
+}
+
+# Calculate row-wise correlations
+nrows <- nrow(df1)
+correlations <- sapply(1:nrows, rowwise_correlation, df1 = df1, df2 = df2, cols_H = columns_H, cols_M = columns_M)
+
+correlations
+
+
+# Create a new dataframe to store the results
+results_df <- data.frame(
+  Correlation = correlations,
+  block_condition = df1$block_condition,
+  method = df1$method
+)
+
+results_df$Correlation[is.na(results_df$Correlation)] <- 0
+
+# View the results
+results_df
+
+condition_cor <- results_df %>%
+  group_by(block_condition, method) %>%
+  summarize(mean_cor = mean(Correlation),
+            sd_cor = sd(Correlation),
+            sem_cor = sd(Correlation)/sqrt(length(Correlation)),
+            ci_cor = 1.96 * sem_cor)
+condition_cor
+
+```
+Correlation of Human to Model Mean Rewards
+```{r}
+#condition_ = 'play watch play'
+condition_ = 'watch play play'
+thompson_rewards <- mean_block_scores |>
+  filter(block_condition == condition_) |>
+  filter(method == 'Thompson-Predict') |> 
+  arrange(teacher_condition, block_index)
+
+thompson_lesion_rewards <- mean_block_scores |>
+  filter(block_condition == condition_) |>
+  filter(method == 'Thompson-Lesion') |> 
+  arrange(teacher_condition, block_index)
+
+thompson_naive_rewards <- mean_block_scores |>
+  filter(block_condition == condition_) |>
+  filter(method == 'Thompson-Naive') |> 
+  arrange(teacher_condition, block_index)
+
+
+human_rewards <- mean_block_scores |>
+  filter(block_condition == condition_) |>
+  filter(method == 'Humans') |> 
+  arrange(teacher_condition, block_index)
+human_rewards
+
+cor_test_result <- cor.test(human_rewards$mean_reward, thompson_rewards$mean_reward)
+print(cor_test_result)
+
+cor_test_result <- cor.test(human_rewards$mean_reward, thompson_lesion_rewards$mean_reward)
+print(cor_test_result)
+
+cor_test_result <- cor.test(human_rewards$mean_reward, thompson_naive_rewards$mean_reward)
+print(cor_test_result)
+
+```
+
+
+
