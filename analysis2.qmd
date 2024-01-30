@@ -5,6 +5,7 @@ editor: visual
 ---
 
 Packages.
+
 ```{r}
 library(here)
 library(tidyverse)
@@ -13,6 +14,7 @@ library(lme4)
 ```
 
 Filtering/Preprocessing
+
 ```{r}
 demographics <- read_csv(here("data","prolific_demographics_experiment2.csv")) 
 experiment <- read_csv(here("data", "amg_gamelogs_experiment2.csv")) |>
@@ -81,7 +83,9 @@ filtered_experiment_df |>
   summarise(time = max(timestamp) - min(timestamp)) |>
   ungroup()
 ```
+
 Human Performance
+
 ```{r}
 human_mean_block_scores <- human_scores |>
   group_by(teacher_condition, block_condition, block_index, game_type) |>
@@ -203,7 +207,9 @@ print(t_test_results$t_test)
 
 
 ```
+
 Human-Model Comparison
+
 ```{r}
 human_scores
 
@@ -293,26 +299,30 @@ print(t_test_results$t_test)
 ```
 
 Mixed Effects Model
+
 ```{r}
 
 human_final_play_rewards <- preprocessed_experiment_df |>
-
   select(prolific_id, step, position, action, block_condition, teacher_condition, game_type, block_id, condition_index, block_index, condition_count_index , total_reward, refresh_count) |>
   group_by(prolific_id, condition_count_index, block_condition, teacher_condition, block_index, game_type) |>
   summarise(total_reward = max(total_reward)) |>
     filter(block_index == 2) |>
-  filter(block_condition!='play play play') |>
+  # filter(block_condition!='play play play') |>
   ungroup() |>
   select(prolific_id, teacher_condition, block_condition, block_index, game_type, condition_count_index, total_reward)
 
 human_final_play_rewards
 
-lm <- lmer(total_reward ~ block_condition * teacher_condition + (block_condition * teacher_condition | prolific_id), data=human_final_play_rewards)
+lm <- lmer(total_reward ~ block_condition * teacher_condition + 
+             (block_condition * teacher_condition | prolific_id), 
+           data = human_final_play_rewards)
+
 summary(lm)
 sjPlot:: tab_model(lm, show.df=TRUE)
 ```
 
-Mean Correlation of Direct Human-Model Reward 
+Mean Correlation of Direct Human-Model Reward
+
 ```{r}
 
 # Example data frames
@@ -382,7 +392,9 @@ condition_cor <- results_df %>%
 condition_cor
 
 ```
+
 Correlation of Human to Model Mean Rewards
+
 ```{r}
 #condition_ = 'play watch play'
 condition_ = 'watch play play'
@@ -418,6 +430,3 @@ cor_test_result <- cor.test(human_rewards$mean_reward, thompson_naive_rewards$me
 print(cor_test_result)
 
 ```
-
-
-
