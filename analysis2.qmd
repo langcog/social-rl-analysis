@@ -11,6 +11,7 @@ library(here)
 library(tidyverse)
 library(janitor)
 library(lme4)
+library(ggthemes)
 ```
 
 Filtering/Preprocessing
@@ -71,7 +72,7 @@ human_scores <- preprocessed_experiment_df |>
   group_by(prolific_id, condition_index, condition_count_index, block_condition, teacher_condition, block_index, game_type) |>
   summarise(total_reward = max(total_reward)) |>
   ungroup() |>
-  select(teacher_condition, block_condition, block_index, game_type, condition_index, condition_count_index, total_reward)
+  select(prolific_id, teacher_condition, block_condition, block_index, game_type, condition_index, condition_count_index, total_reward)
 human_scores$method <- "Humans"
 write_csv(human_scores, here("data","exp2_human_performance.csv"))
 # 3
@@ -213,7 +214,8 @@ Human-Model Comparison
 ```{r}
 human_scores
 
-model_scores <- read_csv(here("data", "exp2_model_performance.csv"))
+#model_scores <- read_csv(here("data", "exp2_model_performance.csv"))
+model_scores <- read_csv(here("data/experiment_experiment2_solver_Thompson_network_arch_fc_hiddenDim_1024_oneHot_True_numArms_12_obsWindow_24", "model_performance.csv"))
 model_scores
 
 combined_scores <- bind_rows(human_scores, model_scores)
@@ -243,25 +245,30 @@ mean_block_scores <- mean_block_scores |>
     block_index_char == "1st-Play" ~ 0,
     block_index_char == "2nd-Play" ~ 1,
     TRUE ~ NA_real_  # Assign NA for cases that do not match the above conditions
-  ))
+  )) |>
+  mutate(HumanOrModel = if_else(method=="Humans", method, "Model")) 
 mean_block_scores$method <- factor(mean_block_scores$method, levels = c("Humans", "Thompson-Naive", "Thompson-Predict", "Thompson-Lesion"))
 mean_block_scores
+
+
 
 # Add a new column for identifying where to mask the grid
 mean_block_scores$mask_grid <- with(mean_block_scores, ifelse(method != "Humans", TRUE, FALSE))
 
 p <- ggplot(mean_block_scores, aes(x = play_index, y = mean_reward, col = teacher_condition)) +
   facet_grid(method ~ block_condition) +
-  geom_rect(data = subset(mean_block_scores, mask_grid), 
-            aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf), 
-            fill = "white", alpha = 1) +
+  #geom_rect(data = subset(mean_block_scores, mask_grid), 
+  #          aes(xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf), 
+  #          fill = "white", alpha = 1) +
   geom_pointrange(aes(ymin = mean_reward - ci_reward, ymax = mean_reward + ci_reward), 
                   position = position_dodge(width = .1)) +
   labs(x='', y = "Mean Reward", color = "Teacher") +
-  geom_line() +
+  geom_line(aes(linetype=HumanOrModel)) +
   ylim(11, 19) +
   scale_x_continuous(breaks = unique(mean_block_scores$play_index),
                      labels = unique(mean_block_scores$block_index_char)) + 
+  scale_color_manual(values=c("expert" = "#4477AA", "novice" = "#CC6677"), na.value = 'black') +
+  theme_bw() +
   theme(panel.spacing.x = unit(1.5, "lines"), 
         panel.spacing.y = unit(0.7, "lines"), 
         legend.position = "top",
@@ -269,7 +276,9 @@ p <- ggplot(mean_block_scores, aes(x = play_index, y = mean_reward, col = teache
         axis.title = element_text(size = 26), 
         axis.text = element_text(size = 14), 
         legend.text = element_text(size = 20)) + 
-  guides(color = guide_legend(nrow = 1, byrow = TRUE))
+  guides(color = guide_legend(nrow = 1, byrow = TRUE), 
+         linetype = "none") 
+  
 
 p
 ggsave(here("figures","model_performance_1stplay_2ndplay.png"), plot = p, width = 10, height = 14)
@@ -312,6 +321,8 @@ human_final_play_rewards <- preprocessed_experiment_df |>
   select(prolific_id, teacher_condition, block_condition, block_index, game_type, condition_count_index, total_reward)
 
 human_final_play_rewards
+
+#human_final_play_rewards$block_condition <- factor(human_final_play_rewards$block_condition, levels = c("play watch play", "watch play play", "play play play"))
 
 lm <- lmer(total_reward ~ block_condition * teacher_condition + 
              (block_condition * teacher_condition | prolific_id), 
@@ -429,4 +440,39 @@ print(cor_test_result)
 cor_test_result <- cor.test(human_rewards$mean_reward, thompson_naive_rewards$mean_reward)
 print(cor_test_result)
 
+```
+
+
+```{r}
+temp1 <- human_scores |>
+  filter(game_type!='watch') |>
+  arrange(prolific_id, block_condition, teacher_condition, condition_index, game_type, block_condition, condition_count_index)
+temp1
+
+
+model_scores <- read_csv(here("data/experiment_experiment2_solver_Thompson_network_arch_fc_hiddenDim_1024_oneHot_True_numArms_12_obsWindow_24", "model_performance.csv"))
+temp2 <- model_scores |>
+  filter(method == 'Thompson-Predict') |>
+  arrange(prolific_id, block_condition, teacher_condition, condition_index, game_type, block_condition, condition_count_index)
+temp2
+
+temp3 <- model_scores |>
+  filter(method == 'Thompson-Naive') |>
+  arrange(prolific_id, block_condition, teacher_condition, condition_index, game_type, block_condition, condition_count_index)
+temp3
+
+temp4 <- model_scores |>
+  filter(method == 'Thompson-Lesion') |>
+  arrange(prolific_id, block_condition, teacher_condition, condition_index, game_type, block_condition, condition_count_index)
+temp4
+
+
+cor.test(temp1$total_reward, temp2$total_reward)
+
+cor.test(temp1$total_reward, temp3$total_reward)
+
+cor.test(temp1$total_reward, temp4$total_reward)
+
+#rmse <- sqrt(mean((temp1$total_reward - temp2$total_reward)^2))
+#rmse
 ```
