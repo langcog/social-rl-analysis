@@ -1,0 +1,349 @@
+---
+title: "Analysis for Transfer Experiment"
+format: html
+editor: visual
+---
+
+
+Packages.
+
+```{r}
+library(here)
+library(tidyverse)
+library(janitor)
+library(lme4)
+library(ggthemes)
+```
+
+```{r}
+pilotA_data <- read_csv(here("data","amg_gamelogs_socialtransfer_experiment_pilota.csv")) 
+pilotA_data <- pilotA_data |> 
+  filter(game_type != 'practice') |>
+  filter(game_type != 'complete') |>
+  filter(prolific_id != 'julio_test') |>
+  group_by(prolific_id, session_index, session_id, game_type,
+           game_sequence, teacher, transfer, block_index) |>
+  summarise(total_reward = max(game_total_reward)) |>
+  ungroup()
+  
+
+pilotA_data
+
+
+# Calculate mean and standard error for total_reward
+data_summary <- pilotA_data %>%
+  group_by(transfer, teacher, game_sequence, block_index) %>%
+  summarise(
+    mean_reward = mean(total_reward),
+    se_reward = sd(total_reward) / sqrt(n()),  # Standard error
+    .groups = 'drop'  # This ensures the result is not grouped
+  )
+
+data_summary
+```
+
+
+```{r}
+# Create the plot
+ggplot(data_summary, aes(x = block_index, y = mean_reward, group = teacher, color = teacher)) +
+  geom_line() +  # Line for mean rewards
+  geom_errorbar(aes(ymin = mean_reward - se_reward, ymax = mean_reward + se_reward), width = 0.1) +
+  facet_grid(game_sequence ~ transfer, scales = "free_x") +  # Organizing plots by game sequence and transfer
+  scale_color_manual(values = c("expert" = "blue", "novice" = "red", "none" = "green")) +
+  labs(title = "Game Reward Analysis (Mean and SE)",
+       x = "Game Index",
+       y = "Mean Total Reward") +
+  theme_minimal() +
+  theme(strip.background = element_blank(), 
+        strip.text.x = element_text(size = 12, face = "bold"), 
+        strip.text.y = element_text(size = 12, face = "bold"),
+        legend.position = "bottom",
+        legend.title = element_blank())
+```
+
+
+
+```{r}
+
+# Mapping block_index values
+data_summary$block_index_mapped <- dplyr::recode(data_summary$block_index,
+                                                 `0` = 24,
+                                                 `1` = 48,
+                                                 `2` = 52,
+                                                 `3` = 76)
+
+# Create the plot with the adjusted facet grid layout using the mapped block_index
+
+#data_summary$transfer <- factor(data_summary$transfer, labels = c("Transfer: True", "Transfer: False"))
+
+# Correctly assigning factor levels and labels
+data_summary$transfer <- factor(data_summary$transfer, levels = c(TRUE, FALSE), labels = c("Transfer: True", "Transfer: False"))
+
+
+p <- ggplot(data_summary, aes(x = block_index_mapped, y = mean_reward, group = teacher, color = teacher)) +
+  geom_line() +  # Line for mean rewards
+  geom_errorbar(aes(ymin = mean_reward - se_reward, ymax = mean_reward + se_reward), width = 0.1) +
+  facet_grid(transfer ~ game_sequence, scales = "free_x") +  # Adjusted for Transfer on rows and Game Sequence on columns
+  scale_color_manual(values = c("expert" = "blue", "novice" = "red", "none" = "green")) +
+  scale_x_continuous(breaks = c(24, 48, 52, 76), labels = c("24", "48", "52", "76")) +  # Set custom x-axis ticks
+  labs(title = "Game Reward Analysis (Mean and SE)",
+       x = "Number of Trials (Shots)",
+       y = "Mean Total Reward") +
+  theme_minimal() +
+  theme(strip.background = element_blank(), 
+        strip.text.x = element_text(size = 12, face = "bold"), 
+        strip.text.y = element_text(size = 12, face = "bold"),
+        legend.position = "bottom",
+        legend.title = element_blank())
+
+
+ggsave(here("figures", "exploratory_plot1.png"), plot = p, width = 7.5, height = 5)
+
+# Display the plot
+p
+```
+```{r}
+pilotB_prolific_data <- read_csv(here("data","socialtransferbandits_pilotb_prolific_export.csv"))
+pilotB_prolific_data
+
+pilotB_prolific_data_filtered <- pilotB_prolific_data |>
+  dplyr::filter(!(Status == "RETURNED" | grepl("^Yes", Colourblindness)))
+
+pilotB_prolific_data_filtered
+```
+
+```{r}
+pilotB_data <- read_csv(here("data","socialtransferbandits_pilotb_amg_gamelogs.csv")) 
+pilotB_data <- pilotB_data |>
+  filter(prolific_id %in% pilotB_prolific_data_filtered$`Participant id`) |>
+  filter(game_type != 'practice') |>
+  filter(game_type != 'complete') |>
+  filter(prolific_id != 'julio_test') |>
+  group_by(prolific_id, session_index, session_id, game_type,
+           game_sequence, teacher, transfer, block_index) |>
+  summarise(total_reward = max(game_total_reward)) |>
+  ungroup()
+  
+pilotB_data
+
+# Calculate mean and standard error for total_reward
+data_summary <- pilotB_data %>%
+  group_by(transfer, teacher, game_sequence, block_index) %>%
+  summarise(
+    mean_reward = mean(total_reward),
+    se_reward = sd(total_reward) / sqrt(n()),  # Standard error
+    .groups = 'drop'  # This ensures the result is not grouped
+  )
+
+data_summary
+```
+
+```{r}
+# Mapping block_index values
+data_summary <- data_summary %>%
+  mutate(block_index_mapped = case_when(
+    game_sequence == "play-play-play" & block_index == 0 ~ 24,
+    game_sequence == "play-play-play" & block_index == 1 ~ 48,
+    game_sequence == "play-play-play" & block_index == 2 ~ 72,
+    game_sequence != "play-play-play" & block_index == 0 ~ 24,
+    game_sequence != "play-play-play" & block_index == 1 ~ 48,
+    game_sequence != "play-play-play" & block_index == 2 ~ 52,
+    game_sequence != "play-play-play" & block_index == 3 ~ 76,
+    TRUE ~ NA_real_  # This line ensures that any other cases result in NA
+  ))
+
+# Correctly assigning factor levels and labels for game_sequence
+data_summary$game_sequence <- factor(data_summary$game_sequence, 
+                                     levels = c("play-play-play", 
+                                                "play-watch-indicate-play", 
+                                                "play-play-indicate-play"))
+
+# Correctly assigning factor levels and labels for transfer with False first
+data_summary$transfer <- factor(data_summary$transfer, levels = c(FALSE, TRUE), labels = c("Transfer: False", "Transfer: True"))
+
+# Create the plot with the adjusted facet grid layout using the mapped block_index
+p <- ggplot(data_summary, aes(x = block_index_mapped, y = mean_reward, group = teacher, color = teacher)) +
+  geom_line() +  # Line for mean rewards
+  geom_errorbar(aes(ymin = mean_reward - se_reward, ymax = mean_reward + se_reward), width = 0.1) +
+  facet_grid(transfer ~ game_sequence, scales = "free_x") +  # Adjusted for Transfer on rows and Game Sequence on columns
+  scale_color_manual(values = c("expert" = "blue", "novice" = "red", "none" = "green")) +
+  scale_x_continuous(breaks = c(24, 48, 52, 76), labels = c("24", "48", "52", "76")) +  # Set custom x-axis ticks
+  labs(title = "Game Reward Analysis (Mean and SE)",
+       x = "Number of Trials (Shots)",
+       y = "Mean Total Reward") +
+  theme_minimal() +
+  theme(strip.background = element_blank(), 
+        strip.text.x = element_text(size = 12, face = "bold"), 
+        strip.text.y = element_text(size = 12, face = "bold"),
+        legend.position = "bottom",
+        legend.title = element_blank())
+
+# Save and display the plot
+ggsave(here("figures", "transfer_pilotb.png"), plot = p, width = 7.5, height = 5)
+
+# Display the plot
+p
+```
+
+## Pilot Filter Data
+```{r}
+pilotC_demographics_raw <- read_csv(here("data","socialtransferbandits_pilotc_prolific_demographics.csv"))
+pilotC_demographics_filtered <- pilotC_demographics_raw |>
+  dplyr::filter(!(Status == "RETURNED" | Status == "TIMED-OUT" | grepl("^Yes", Colourblindness)))
+pilotC_demographics_filtered
+
+pilotC_data_raw <- read_csv(here("data","socialtransferbandits_pilotc_amg_gamelogs.csv")) 
+pilotC_data_raw
+pilotC_data_filtered <- pilotC_data_raw |>
+  filter(prolific_id %in% pilotC_demographics_filtered$`Participant id`) |>
+  filter(game_type != 'practice') |>
+  filter(game_type != 'complete') |>
+  filter(prolific_id != 'julio_test') 
+pilotC_data_filtered
+```
+
+```{r}
+
+```
+## Mean Total Reward Plots
+```{r}
+# Calculate mean and standard error for total_reward
+data_summary <- pilotC_data_filtered %>%
+  group_by(prolific_id, session_index, session_id, game_type,
+           game_sequence, teacher, transfer, block_index) |>
+  summarise(total_reward = max(game_total_reward)) |>
+  ungroup() |>
+  group_by(transfer, teacher, game_sequence, block_index) |>
+  summarise(
+    mean_reward = mean(total_reward),
+    se_reward = sd(total_reward) / sqrt(n()),  # Standard error
+    .groups = 'drop'  # This ensures the result is not grouped
+  )
+
+data_summary
+
+# Mapping block_index values
+data_summary <- data_summary |>
+  mutate(block_index_mapped = case_when(
+    game_sequence == "play-play-play" & block_index == 0 ~ 24,
+    game_sequence == "play-play-play" & block_index == 1 ~ 48,
+    game_sequence == "play-play-play" & block_index == 2 ~ 72,
+    game_sequence != "play-play-play" & block_index == 0 ~ 24,
+    game_sequence != "play-play-play" & block_index == 1 ~ 48,
+    game_sequence != "play-play-play" & block_index == 2 ~ 52,
+    game_sequence != "play-play-play" & block_index == 3 ~ 76,
+    TRUE ~ NA_real_  # This line ensures that any other cases result in NA
+  ))
+
+# Correctly assigning factor levels and labels for game_sequence
+data_summary$game_sequence <- factor(data_summary$game_sequence, 
+                                     levels = c("play-play-play", 
+                                                "play-watch-indicate-play", 
+                                                "play-play-indicate-play"))
+
+# Correctly assigning factor levels and labels for transfer with False first
+data_summary$transfer <- factor(data_summary$transfer, levels = c(FALSE, TRUE), labels = c("Transfer: False", "Transfer: True"))
+
+# Create the plot with the adjusted facet grid layout using the mapped block_index
+p <- ggplot(data_summary, aes(x = block_index_mapped, y = mean_reward, group = teacher, color = teacher)) +
+  geom_line() +  # Line for mean rewards
+  geom_errorbar(aes(ymin = mean_reward - se_reward, ymax = mean_reward + se_reward), width = 0.1) +
+  facet_grid(transfer ~ game_sequence, scales = "free_x") +  # Adjusted for Transfer on rows and Game Sequence on columns
+  scale_color_manual(values = c("expert" = "blue", "novice" = "red", "none" = "green")) +
+  scale_x_continuous(breaks = c(24, 48, 52, 76), labels = c("24", "48", "52", "76")) +  # Set custom x-axis ticks
+  labs(title = "Game Reward Analysis (Mean and SE)",
+       x = "Number of Trials (Shots)",
+       y = "Mean Total Reward") +
+  theme_minimal() +
+  theme(strip.background = element_blank(), 
+        strip.text.x = element_text(size = 12, face = "bold"), 
+        strip.text.y = element_text(size = 12, face = "bold"),
+        legend.position = "bottom",
+        legend.title = element_blank())
+
+# Save and display the plot
+ggsave(here("figures", "transfer_pilotc_reward.png"), plot = p, width = 7.5, height = 5, bg="white")
+
+# Display the plot
+p
+```
+
+
+## Mean Entropy Plots
+```{r}
+# Function to calculate entropy
+calculate_entropy <- function(x) {
+  # Calculate the proportion of each unique position
+  p <- table(x) / length(x)
+  # Calculate entropy
+  entropy <- -sum(p * log2(p))
+  return(entropy)
+}
+
+# Filter the data to include only rows where action is 'shoot' or 'indicate'
+filtered_data <- pilotC_data_filtered %>%
+  filter(action %in% c("shoot", "indicate"))
+
+# Compute the entropy of position within each group
+entropy_summary <- filtered_data %>%
+  group_by(prolific_id, session_index, session_id, game_type,
+           game_sequence, teacher, transfer, block_index) %>%
+  summarise(position_entropy = calculate_entropy(position)) %>%
+  ungroup()
+
+# Calculate the mean of the position entropy and its standard error
+mean_entropy_summary <- entropy_summary %>%
+  group_by(transfer, teacher, game_sequence, block_index) %>%
+  summarise(
+    mean_position_entropy = mean(position_entropy, na.rm = TRUE),
+    se_position_entropy = sd(position_entropy, na.rm = TRUE) / sqrt(n()),  # Standard error
+    .groups = 'drop'
+  )
+
+mean_entropy_summary
+
+# Mapping block_index values
+mean_entropy_summary <- mean_entropy_summary %>%
+  mutate(block_index_mapped = case_when(
+    game_sequence == "play-play-play" & block_index == 0 ~ 24,
+    game_sequence == "play-play-play" & block_index == 1 ~ 48,
+    game_sequence == "play-play-play" & block_index == 2 ~ 72,
+    game_sequence != "play-play-play" & block_index == 0 ~ 24,
+    game_sequence != "play-play-play" & block_index == 1 ~ 48,
+    game_sequence != "play-play-play" & block_index == 2 ~ 52,
+    game_sequence != "play-play-play" & block_index == 3 ~ 76,
+    TRUE ~ NA_real_  # This line ensures that any other cases result in NA
+  ))
+
+# Correctly assigning factor levels and labels for game_sequence
+mean_entropy_summary$game_sequence <- factor(mean_entropy_summary$game_sequence, 
+                                     levels = c("play-play-play", 
+                                                "play-watch-indicate-play", 
+                                                "play-play-indicate-play"))
+
+# Correctly assigning factor levels and labels for transfer with False first
+mean_entropy_summary$transfer <- factor(mean_entropy_summary$transfer, levels = c(FALSE, TRUE), labels = c("Transfer: False", "Transfer: True"))
+
+# Create the plot with the adjusted facet grid layout using the mapped block_index
+p <- ggplot(mean_entropy_summary, aes(x = block_index_mapped, y = mean_position_entropy, group = teacher, color = teacher)) +
+  geom_line() +  # Line for mean rewards
+  geom_errorbar(aes(ymin = mean_position_entropy - se_position_entropy, ymax = mean_position_entropy + se_position_entropy), width = 0.1) +
+  facet_grid(transfer ~ game_sequence, scales = "free_x") +  # Adjusted for Transfer on rows and Game Sequence on columns
+  scale_color_manual(values = c("expert" = "blue", "novice" = "red", "none" = "green")) +
+  scale_x_continuous(breaks = c(24, 48, 52, 76), labels = c("24", "48", "52", "76")) +  # Set custom x-axis ticks
+  labs(title = "Game Reward Analysis (Mean and SE)",
+       x = "Number of Trials (Shots)",
+       y = "Mean Position Entropy") +
+  theme_minimal() +
+  theme(strip.background = element_blank(), 
+        strip.text.x = element_text(size = 12, face = "bold"), 
+        strip.text.y = element_text(size = 12, face = "bold"),
+        legend.position = "bottom",
+        legend.title = element_blank())
+
+# Save and display the plot
+ggsave(here("figures", "transfer_pilotc_entropy.png"), plot = p, width = 7.5, height = 5, bg="white")
+
+# Display the plot
+p
+```
